@@ -112,20 +112,23 @@
         Next
     End Sub
 
-    'Public Sub SymetricGraphics6(ax As Single, bx As Single, ay As Single, by As Single, n As Integer)
-    '    Dim x1, y1, x2, y2, vi1, r1, vi2, r2 As Single
-    '    Dim i As UInt16
-    '    x1 = ax : y2 = Height
-    '    vi1 = ax : r1 = (bx - ax) / n : vi2 = ()
-    '    x2 = bx
-    '    r2 = (bx - ax) / n : vi2 = r2
-    '    graphic.DrawRectangle(Pens.Black, ax, Width, bx + ax, Height - Width)
-    '    For i = 1 To n
-    '        y1 = vi1 + (i - 1) * r1
-    '        x2 = vi2 + (i - 1) * r2
-    '        graphic.DrawLine(Pens.Blue, x1, y1, x2, y2)
-    '    Next
-    'End Sub
+    Public Sub SymetricGraphics6(ax As Single, bx As Single, ay As Single, by As Single, n As Integer)
+        Dim x1, y1, x2, y2, vi1, vi2, r1, r2, mx, my As Single
+        Dim index, i As UInt32
+        mx = bx - ax : my = by - ay
+
+        x1 = ax : y1 = ay : y2 = by
+        r1 = my / n : r2 = mx / n
+        vi1 = ay + r1 : vi2 = ax + r2
+        graphic.DrawRectangle(Pens.Black, ax, ay, mx, my)
+        For index = 1 To n
+            x2 = vi2 + (index - 1) * r2
+            For i = 1 To 99999999
+            Next
+            graphic.DrawLine(Pens.Blue, x1, y1, x2, y2)
+            y1 = vi1 + (index - 1) * r1
+        Next
+    End Sub
 
     Public Sub RandomLines(ax As Single, bx As Single, ay As Single, by As Single, n As Integer)
         Dim x1, y1, x2, y2 As Single
@@ -257,7 +260,15 @@
         Try
             SymetricGraphics5(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
         Catch ex As Exception
-            MsgBox(msg + ex.Message, MsgBoxStyle.Information, Title:="4. Graphic")
+            MsgBox(msg + ex.Message, MsgBoxStyle.Information, Title:="5. Graphic")
+        End Try
+    End Sub
+
+    Private Sub Graphic6ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Graphic6ToolStripMenuItem.Click
+        Try
+            SymetricGraphics6(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+        Catch ex As Exception
+            MsgBox(msg + ex.Message, MsgBoxStyle.Information, Title:="6. Graphic")
         End Try
     End Sub
 
@@ -276,4 +287,5 @@
             MsgBox(msg + ex.Message, MsgBoxStyle.Information, Title:="Random - 2. Lines")
         End Try
     End Sub
+
 End Class

@@ -62,6 +62,7 @@ Partial Class Form1
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.Graphic6ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -225,7 +226,7 @@ Partial Class Form1
         '
         'OtherGraphicsToolStripMenuItem
         '
-        Me.OtherGraphicsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LinesToolStripMenuItem, Me.SymetricGraphics2ToolStripMenuItem, Me.Graphic3ToolStripMenuItem, Me.Graphic4ToolStripMenuItem, Me.Graphic5ToolStripMenuItem})
+        Me.OtherGraphicsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LinesToolStripMenuItem, Me.SymetricGraphics2ToolStripMenuItem, Me.Graphic3ToolStripMenuItem, Me.Graphic4ToolStripMenuItem, Me.Graphic5ToolStripMenuItem, Me.Graphic6ToolStripMenuItem})
         Me.OtherGraphicsToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.OtherGraphicsToolStripMenuItem.Name = "OtherGraphicsToolStripMenuItem"
         Me.OtherGraphicsToolStripMenuItem.Size = New System.Drawing.Size(114, 20)
@@ -234,31 +235,31 @@ Partial Class Form1
         'LinesToolStripMenuItem
         '
         Me.LinesToolStripMenuItem.Name = "LinesToolStripMenuItem"
-        Me.LinesToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.LinesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.LinesToolStripMenuItem.Text = "1. Graphic 1"
         '
         'SymetricGraphics2ToolStripMenuItem
         '
         Me.SymetricGraphics2ToolStripMenuItem.Name = "SymetricGraphics2ToolStripMenuItem"
-        Me.SymetricGraphics2ToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.SymetricGraphics2ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SymetricGraphics2ToolStripMenuItem.Text = "2. Graphic 2"
         '
         'Graphic3ToolStripMenuItem
         '
         Me.Graphic3ToolStripMenuItem.Name = "Graphic3ToolStripMenuItem"
-        Me.Graphic3ToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.Graphic3ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.Graphic3ToolStripMenuItem.Text = "3. Graphic 3"
         '
         'Graphic4ToolStripMenuItem
         '
         Me.Graphic4ToolStripMenuItem.Name = "Graphic4ToolStripMenuItem"
-        Me.Graphic4ToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.Graphic4ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.Graphic4ToolStripMenuItem.Text = "4. Graphic 4"
         '
         'Graphic5ToolStripMenuItem
         '
         Me.Graphic5ToolStripMenuItem.Name = "Graphic5ToolStripMenuItem"
-        Me.Graphic5ToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.Graphic5ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.Graphic5ToolStripMenuItem.Text = "5. Graphic 5"
         '
         'RandomLinesToolStripMenuItem
@@ -271,13 +272,13 @@ Partial Class Form1
         'LinesToolStripMenuItem1
         '
         Me.LinesToolStripMenuItem1.Name = "LinesToolStripMenuItem1"
-        Me.LinesToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.LinesToolStripMenuItem1.Size = New System.Drawing.Size(113, 22)
         Me.LinesToolStripMenuItem1.Text = "1. Lines"
         '
         'LinesToolStripMenuItem2
         '
         Me.LinesToolStripMenuItem2.Name = "LinesToolStripMenuItem2"
-        Me.LinesToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
+        Me.LinesToolStripMenuItem2.Size = New System.Drawing.Size(113, 22)
         Me.LinesToolStripMenuItem2.Text = "2. Lines"
         '
         'Button2
@@ -453,6 +454,12 @@ Partial Class Form1
         Me.Label12.TabIndex = 22
         Me.Label12.Text = "Y3"
         '
+        'Graphic6ToolStripMenuItem
+        '
+        Me.Graphic6ToolStripMenuItem.Name = "Graphic6ToolStripMenuItem"
+        Me.Graphic6ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.Graphic6ToolStripMenuItem.Text = "6. Graphic 6"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -539,4 +546,5 @@ Partial Class Form1
     Friend WithEvents RandomLinesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LinesToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents LinesToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents Graphic6ToolStripMenuItem As ToolStripMenuItem
 End Class
