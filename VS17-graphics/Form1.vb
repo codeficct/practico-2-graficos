@@ -8,7 +8,12 @@
     End Sub
 
     Public Sub Frame()
-        graphic.DrawRectangle(Pens.Black, 0, 0, PictureBox1.Width - 1, PictureBox1.Height - 1)
+        graphic.DrawRectangle(Pens.Gray, 0, 0, PictureBox1.Width - 1, PictureBox1.Height - 1)
+        Dim x1, y1, x2, y2 As Single
+        x1 = PictureBox1.Width / 2 : y1 = 0 : x2 = PictureBox1.Width / 2 : y2 = PictureBox1.Height
+        graphic.DrawLine(Pens.Gray, x1, y1, x2, y2)
+        x1 = 0 : y1 = PictureBox1.Height / 2 : x2 = PictureBox1.Width : y2 = PictureBox1.Height / 2
+        graphic.DrawLine(Pens.Gray, x1, y1, x2, y2)
     End Sub
 
     Public Sub CreateLine(x1 As Single, y1 As Single, x2 As Single, y2 As Single)
