@@ -43,6 +43,11 @@ Partial Class Form1
         Me.LinesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SymetricGraphics2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Graphic3ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Graphic4ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Graphic5ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RandomLinesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LinesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LinesToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
@@ -57,8 +62,6 @@ Partial Class Form1
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.Graphic4ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Graphic5ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -161,7 +164,7 @@ Partial Class Form1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.Transparent
         Me.MenuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GraphicsToolStripMenuItem, Me.GraphicsPointsToolStripMenuItem, Me.OtherGraphicsToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GraphicsToolStripMenuItem, Me.GraphicsPointsToolStripMenuItem, Me.OtherGraphicsToolStripMenuItem, Me.RandomLinesToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(6, 2, 0, 2)
@@ -231,20 +234,51 @@ Partial Class Form1
         'LinesToolStripMenuItem
         '
         Me.LinesToolStripMenuItem.Name = "LinesToolStripMenuItem"
-        Me.LinesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LinesToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.LinesToolStripMenuItem.Text = "1. Graphic 1"
         '
         'SymetricGraphics2ToolStripMenuItem
         '
         Me.SymetricGraphics2ToolStripMenuItem.Name = "SymetricGraphics2ToolStripMenuItem"
-        Me.SymetricGraphics2ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SymetricGraphics2ToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.SymetricGraphics2ToolStripMenuItem.Text = "2. Graphic 2"
         '
         'Graphic3ToolStripMenuItem
         '
         Me.Graphic3ToolStripMenuItem.Name = "Graphic3ToolStripMenuItem"
-        Me.Graphic3ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.Graphic3ToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.Graphic3ToolStripMenuItem.Text = "3. Graphic 3"
+        '
+        'Graphic4ToolStripMenuItem
+        '
+        Me.Graphic4ToolStripMenuItem.Name = "Graphic4ToolStripMenuItem"
+        Me.Graphic4ToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.Graphic4ToolStripMenuItem.Text = "4. Graphic 4"
+        '
+        'Graphic5ToolStripMenuItem
+        '
+        Me.Graphic5ToolStripMenuItem.Name = "Graphic5ToolStripMenuItem"
+        Me.Graphic5ToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.Graphic5ToolStripMenuItem.Text = "5. Graphic 5"
+        '
+        'RandomLinesToolStripMenuItem
+        '
+        Me.RandomLinesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LinesToolStripMenuItem1, Me.LinesToolStripMenuItem2})
+        Me.RandomLinesToolStripMenuItem.Name = "RandomLinesToolStripMenuItem"
+        Me.RandomLinesToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
+        Me.RandomLinesToolStripMenuItem.Text = "Random"
+        '
+        'LinesToolStripMenuItem1
+        '
+        Me.LinesToolStripMenuItem1.Name = "LinesToolStripMenuItem1"
+        Me.LinesToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.LinesToolStripMenuItem1.Text = "1. Lines"
+        '
+        'LinesToolStripMenuItem2
+        '
+        Me.LinesToolStripMenuItem2.Name = "LinesToolStripMenuItem2"
+        Me.LinesToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
+        Me.LinesToolStripMenuItem2.Text = "2. Lines"
         '
         'Button2
         '
@@ -349,6 +383,7 @@ Partial Class Form1
         '
         'Label7
         '
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.DimGray
@@ -360,6 +395,7 @@ Partial Class Form1
         '
         'Label8
         '
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.DimGray
@@ -371,6 +407,7 @@ Partial Class Form1
         '
         'Label9
         '
+        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.DimGray
@@ -382,6 +419,7 @@ Partial Class Form1
         '
         'Label10
         '
+        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.DimGray
@@ -393,6 +431,7 @@ Partial Class Form1
         '
         'Label11
         '
+        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.DimGray
@@ -404,6 +443,7 @@ Partial Class Form1
         '
         'Label12
         '
+        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.DimGray
@@ -412,18 +452,6 @@ Partial Class Form1
         Me.Label12.Size = New System.Drawing.Size(20, 15)
         Me.Label12.TabIndex = 22
         Me.Label12.Text = "Y3"
-        '
-        'Graphic4ToolStripMenuItem
-        '
-        Me.Graphic4ToolStripMenuItem.Name = "Graphic4ToolStripMenuItem"
-        Me.Graphic4ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.Graphic4ToolStripMenuItem.Text = "4. Graphic 4"
-        '
-        'Graphic5ToolStripMenuItem
-        '
-        Me.Graphic5ToolStripMenuItem.Name = "Graphic5ToolStripMenuItem"
-        Me.Graphic5ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.Graphic5ToolStripMenuItem.Text = "5. Graphic 5"
         '
         'Form1
         '
@@ -508,4 +536,7 @@ Partial Class Form1
     Friend WithEvents Label12 As Label
     Friend WithEvents Graphic4ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Graphic5ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RandomLinesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LinesToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents LinesToolStripMenuItem2 As ToolStripMenuItem
 End Class

@@ -44,23 +44,23 @@
 
     Public Sub SymetricGraphics1(n As Integer)
         Dim x1, y1, x2, y2, r, vi As Single
-        x1 = 0 : y1 = PictureBox1.Height : y2 = 0
-        r = PictureBox1.Width / n : vi = r
+        x1 = 0 : y1 = PictureBox1.Height : y2 = 0 : x2 = 0
+        r = PictureBox1.Width / (n - 1) : vi = r
         Dim index As UInt16
         For index = 1 To n
-            x2 = vi + (index - 1) * r
             graphic.DrawLine(Pens.Purple, x1, y1, x2, y2)
+            x2 = vi + (index - 1) * r
         Next
     End Sub
 
     Public Sub SymetricGraphics2(n As Integer)
         Dim x1, y1, x2, y2, r, vi As Single
-        x1 = 0 : y1 = PictureBox1.Height / 2 : y2 = 0
-        r = PictureBox1.Width / n : vi = r
+        x1 = 0 : y1 = PictureBox1.Height / 2 : y2 = 0 : x2 = 0
+        r = PictureBox1.Width / (n - 1) : vi = r
         Dim index As UInt16
         For index = 1 To n
+            graphic.DrawLine(Pens.Red, x1, y1, x2, y2)
             x2 = vi + (index - 1) * r
-            graphic.DrawLine(Pens.Purple, x1, y1, x2, y2)
         Next
     End Sub
 
@@ -69,43 +69,48 @@
         Dim index As UInt16
         mx = PictureBox1.Width / 2
         my = PictureBox1.Height / 2
-        vi = 0 : r = mx / n
-        y1 = 0 : x2 = mx / 2 : y2 = my
+        x1 = mx / 2 : y1 = my
+        y2 = 0 : x2 = 0
+        r = mx / (n - 1) : vi = r
+        graphic.DrawRectangle(Pens.Black, x2, y2, mx, my)
         For index = 1 To n
+            graphic.DrawLine(Pens.Blue, x1, y1, x2, y2)
+            x2 = vi + (index - 1) * r
+        Next
+    End Sub
+
+    Public Sub SymetricGraphics4(ax As Single, bx As Single, ay As Single, by As Single, n As Integer)
+        Dim x1, y1, x2, y2, r, vi, mx, my As Single
+        Dim index As UInt16
+        mx = bx - ax
+        my = by - ay
+
+        vi = ax : r = mx / n
+        y1 = ay : y2 = by
+        x2 = (ax + bx) / 2
+        graphic.DrawRectangle(Pens.Black, ax, ay, mx, my)
+        For index = 1 To n + 1
             x1 = vi + (index - 1) * r
             graphic.DrawLine(Pens.Blue, x1, y1, x2, y2)
         Next
     End Sub
 
-    Public Sub SymetricGraphics4(a1 As Single, b1 As Single, width As Single, height As Single, n As Integer)
-        Dim x1, y1, x2, y2, r, vi, mx, my As Single
+    Public Sub SymetricGraphics5(ax As Single, bx As Single, ay As Single, by As Single, n As Integer)
+        Dim x1, y1, x2, y2, r1, r2, vi1, mx, my, vi2 As Single
         Dim index As UInt16
-        vi = a1
-        x1 = a1 : y1 = a1
-        x2 = (width + a1) / 2 : y2 = height
-        graphic.DrawRectangle(Pens.Black, a1, b1, width - a1, height - b1)
-        'graphic.DrawLine(Pens.Red, x1, y1, x2, y2)
-        'x1 = a1 + (width - a1)
-        'graphic.DrawLine(Pens.Red, x1, y1, x2, y2)
+        mx = bx - ax
+        my = by - ay
+
+        x1 = ax : y2 = by
+        r1 = -my / n : r2 = mx / n
+        vi1 = by + r1 : vi2 = ax + r2
+        graphic.DrawRectangle(Pens.Black, ax, ay, mx, my)
         For index = 1 To n
-            x1 = vi + (index - 1) * r
-            graphic.DrawLine(Pens.Orange, x1, y1, x2, y2)
+            y1 = vi1 + (index - 1) * r1
+            x2 = vi2 + (index - 1) * r2
+            graphic.DrawLine(Pens.Blue, x1, y1, x2, y2)
         Next
     End Sub
-
-    'Public Sub SymetricGraphics5(ax As Single, bx As Single, width As Single, height As Single, n As Integer)
-    '    Dim x1, y1, x2, y2, vi1, r1, vi2, r2 As Single
-    '    Dim i As UInt16
-    '    x1 = ax : y2 = height
-    '    vi1 = width : r1 = (height - width) / n
-    '    r2 = (bx + ax) / n : vi2 = r2
-    '    graphic.DrawRectangle(Pens.Black, ax, width, bx + ax, height - width)
-    '    For i = 1 To n
-    '        y1 = vi1 + (i - 1) * r1
-    '        x2 = vi2 + (i - 1) * r2
-    '        graphic.DrawLine(Pens.Blue, x1, y1, x2, y2)
-    '    Next
-    'End Sub
 
     'Public Sub SymetricGraphics6(ax As Single, bx As Single, ay As Single, by As Single, n As Integer)
     '    Dim x1, y1, x2, y2, vi1, r1, vi2, r2 As Single
@@ -121,6 +126,36 @@
     '        graphic.DrawLine(Pens.Blue, x1, y1, x2, y2)
     '    Next
     'End Sub
+
+    Public Sub RandomLines(ax As Single, bx As Single, ay As Single, by As Single, n As Integer)
+        Dim x1, y1, x2, y2 As Single
+        Dim index As UInt16
+
+        graphic.DrawRectangle(Pens.Black, ax, ay, bx - ax, by - ay)
+
+        For index = 1 To n
+            x1 = ax + Rnd() * (bx - ax)
+            y1 = ay + Rnd() * (by - ay)
+            x2 = ax + Rnd() * (bx - ax)
+            y2 = ay + Rnd() * (by - ay)
+            graphic.DrawLine(Pens.Orange, x1, y1, x2, y2)
+        Next
+    End Sub
+
+    Public Sub RandomLines2(ax As Single, bx As Single, ay As Single, by As Single, n As Integer)
+        Dim x1, y1, x2, y2, my As Single
+        Dim index As UInt16
+        x1 = (ax + bx) / 2
+        y1 = (ay + by) / 2
+        graphic.DrawRectangle(Pens.Black, ax, ay, bx - ax, by - ay)
+        my = (ay + by) / 2
+        graphic.DrawLine(Pens.Black, ax, my, bx, my)
+        For index = 1 To n
+            x2 = ax + Rnd() * (bx - ax)
+            y2 = ay + Rnd() * (my - ay)
+            graphic.DrawLine(Pens.Orange, x1, y1, x2, y2)
+        Next
+    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Frame()
@@ -219,10 +254,26 @@
     End Sub
 
     Private Sub Graphic5ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Graphic5ToolStripMenuItem.Click
-        'Try
-        '    SymetricGraphics5(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
-        'Catch ex As Exception
-        '    MsgBox(msg + ex.Message, MsgBoxStyle.Information, Title:="4. Graphic")
-        'End Try
+        Try
+            SymetricGraphics5(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+        Catch ex As Exception
+            MsgBox(msg + ex.Message, MsgBoxStyle.Information, Title:="4. Graphic")
+        End Try
+    End Sub
+
+    Private Sub LinesToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles LinesToolStripMenuItem1.Click
+        Try
+            RandomLines(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+        Catch ex As Exception
+            MsgBox(msg + ex.Message, MsgBoxStyle.Information, Title:="Random - 1. Lines")
+        End Try
+    End Sub
+
+    Private Sub LinesToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles LinesToolStripMenuItem2.Click
+        Try
+            RandomLines2(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+        Catch ex As Exception
+            MsgBox(msg + ex.Message, MsgBoxStyle.Information, Title:="Random - 2. Lines")
+        End Try
     End Sub
 End Class
