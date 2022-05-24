@@ -94,7 +94,7 @@
             graphic.DrawLine(Pens.Blue, x1, y1, x2, y2)
         Next
     End Sub
-
+    
     Public Sub SymetricGraphics5(ax As Single, bx As Single, ay As Single, by As Single, n As Integer)
         Dim x1, y1, x2, y2, r1, r2, vi1, mx, my, vi2 As Single
         Dim index As UInt16
@@ -157,6 +157,78 @@
             x2 = ax + Rnd() * (bx - ax)
             y2 = ay + Rnd() * (my - ay)
             graphic.DrawLine(Pens.Orange, x1, y1, x2, y2)
+        Next
+    End Sub
+
+    Public Sub RandomLines3(ax As Single, bx As Single, ay As Single, by As Single, n As Integer)
+        Dim x1, y1, x2, y2, y4, my As Single
+        Dim index, j As UInt32
+        x1 = (ax + bx) / 2
+        y1 = (ay + by) / 2
+        graphic.DrawRectangle(Pens.Black, ax, ay, bx - ax, by - ay)
+        my = (ay + by) / 2
+        graphic.DrawLine(Pens.Black, ax, my, bx, my)
+        For index = 1 To n
+            x2 = ax + Rnd() * (bx - ax)
+            y2 = ay + Rnd() * (my - ay)
+            For j = 1 To 50000000
+            Next
+            graphic.DrawLine(Pens.Blue, x1, y1, x2, y2)
+            x2 = ax + Rnd() * (bx - ax)
+            y4 = my + Rnd() * (by - my)
+            graphic.DrawLine(Pens.Orange, x1, y1, x2, y4)
+        Next
+    End Sub
+
+    Public Sub RandomLines3_1(ax As Single, bx As Single, ay As Single, by As Single, n As Integer)
+        Dim x1, y1, x2, y2, my As Single
+        Dim index, j As UInt32
+        my = (ay + by) / 2
+        y1 = my
+        graphic.DrawRectangle(Pens.Black, ax, ay, bx - ax, by - ay)
+        graphic.DrawLine(Pens.Black, ax, my, bx, my)
+        For index = 1 To n
+            x1 = ax + Rnd() * (bx - ax)
+            x2 = x1
+            y2 = ay + Rnd() * (my - ay)
+            graphic.DrawLine(Pens.Black, x1, y1, x2, y2)
+            For j = 1 To 99000000
+            Next
+        Next
+    End Sub
+
+    Public Sub RandomLines3_2(ax As Single, bx As Single, ay As Single, by As Single, n As Integer)
+        Dim x1, y1, x2, y2, my As Single
+        Dim index, j As UInt32
+        my = (ay + by) / 2
+        y1 = my
+        graphic.DrawRectangle(Pens.Black, ax, ay, bx - ax, by - ay)
+        graphic.DrawLine(Pens.Black, ax, my, bx, my)
+        For index = 1 To n
+            x1 = ax + Rnd() * (bx - ax)
+            x2 = x1
+            y2 = my + Rnd() * (by - my)
+            graphic.DrawLine(Pens.Blue, x1, y1, x2, y2)
+            For j = 1 To 99000000
+            Next
+
+        Next
+    End Sub
+
+    Public Sub ContunousRandom(ax As Single, bx As Single, ay As Single, by As Single, n As Integer)
+        Dim x1, y1, x2, y2, my As Single
+        Dim index, j As UInt32
+        my = (ay + by) / 2
+        graphic.DrawRectangle(Pens.Black, ax, ay, bx - ax, by - ay)
+        graphic.DrawLine(Pens.Black, ax, my, bx, my)
+        x1 = ax + Rnd() * (bx - ax) : y1 = ay + Rnd() * (my - ay)
+        For index = 1 To n
+            x2 = ax + Rnd() * (bx - ax) : y2 = ay + Rnd() * (my - ay)
+            graphic.DrawLine(Pens.Blue, x1, y1, x2, y2)
+            x1 = x2 : y1 = y2
+            For j = 1 To 99000000
+            Next
+
         Next
     End Sub
 
@@ -288,4 +360,28 @@
         End Try
     End Sub
 
+    Private Sub LinesToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles LinesToolStripMenuItem3.Click
+        Try
+            RandomLines3(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+        Catch ex As Exception
+            MsgBox(msg + ex.Message, MsgBoxStyle.Information, Title:="Random - 2. Lines")
+        End Try
+    End Sub
+
+    Private Sub LinesparaleloToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LinesparaleloToolStripMenuItem.Click
+        Try
+            RandomLines3_1(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+            RandomLines3_2(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+        Catch ex As Exception
+            MsgBox(msg + ex.Message, MsgBoxStyle.Information, Title:="Random - 2. Lines")
+        End Try
+    End Sub
+
+    Private Sub LinesContinuosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LinesContinuosToolStripMenuItem.Click
+        Try
+            ContunousRandom(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+        Catch ex As Exception
+            MsgBox(msg + ex.Message, MsgBoxStyle.Information, Title:="Random - 2. Lines")
+        End Try
+    End Sub
 End Class

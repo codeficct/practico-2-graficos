@@ -45,6 +45,7 @@ Partial Class Form1
         Me.Graphic3ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Graphic4ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Graphic5ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Graphic6ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RandomLinesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LinesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.LinesToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
@@ -62,7 +63,9 @@ Partial Class Form1
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.Graphic6ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LinesToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LinesparaleloToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LinesContinuosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -72,7 +75,7 @@ Partial Class Form1
         Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.PictureBox1.Location = New System.Drawing.Point(85, 164)
+        Me.PictureBox1.Location = New System.Drawing.Point(162, 164)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(350, 230)
         Me.PictureBox1.TabIndex = 0
@@ -86,7 +89,7 @@ Partial Class Form1
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Button1.Location = New System.Drawing.Point(482, 164)
+        Me.Button1.Location = New System.Drawing.Point(559, 164)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(116, 30)
         Me.Button1.TabIndex = 7
@@ -99,7 +102,7 @@ Partial Class Form1
         Me.TextBox1.BackColor = System.Drawing.Color.LightGray
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.Color.Black
-        Me.TextBox1.Location = New System.Drawing.Point(76, 90)
+        Me.TextBox1.Location = New System.Drawing.Point(153, 90)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(70, 25)
         Me.TextBox1.TabIndex = 2
@@ -110,7 +113,7 @@ Partial Class Form1
         Me.TextBox2.BackColor = System.Drawing.Color.LightGray
         Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.ForeColor = System.Drawing.Color.Black
-        Me.TextBox2.Location = New System.Drawing.Point(152, 90)
+        Me.TextBox2.Location = New System.Drawing.Point(229, 90)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(70, 25)
         Me.TextBox2.TabIndex = 3
@@ -121,7 +124,7 @@ Partial Class Form1
         Me.TextBox3.BackColor = System.Drawing.Color.LightGray
         Me.TextBox3.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.ForeColor = System.Drawing.Color.Black
-        Me.TextBox3.Location = New System.Drawing.Point(228, 90)
+        Me.TextBox3.Location = New System.Drawing.Point(305, 90)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(70, 25)
         Me.TextBox3.TabIndex = 4
@@ -132,7 +135,7 @@ Partial Class Form1
         Me.TextBox4.BackColor = System.Drawing.Color.LightGray
         Me.TextBox4.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox4.ForeColor = System.Drawing.Color.Black
-        Me.TextBox4.Location = New System.Drawing.Point(304, 90)
+        Me.TextBox4.Location = New System.Drawing.Point(381, 90)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(70, 25)
         Me.TextBox4.TabIndex = 5
@@ -143,7 +146,7 @@ Partial Class Form1
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.Label1.Location = New System.Drawing.Point(382, 135)
+        Me.Label1.Location = New System.Drawing.Point(459, 135)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(72, 19)
         Me.Label1.TabIndex = 6
@@ -155,7 +158,7 @@ Partial Class Form1
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Red
-        Me.Label2.Location = New System.Drawing.Point(33, 404)
+        Me.Label2.Location = New System.Drawing.Point(110, 404)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(76, 19)
         Me.Label2.TabIndex = 7
@@ -169,7 +172,7 @@ Partial Class Form1
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(6, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(621, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(775, 24)
         Me.MenuStrip1.TabIndex = 8
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -235,36 +238,42 @@ Partial Class Form1
         'LinesToolStripMenuItem
         '
         Me.LinesToolStripMenuItem.Name = "LinesToolStripMenuItem"
-        Me.LinesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LinesToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.LinesToolStripMenuItem.Text = "1. Graphic 1"
         '
         'SymetricGraphics2ToolStripMenuItem
         '
         Me.SymetricGraphics2ToolStripMenuItem.Name = "SymetricGraphics2ToolStripMenuItem"
-        Me.SymetricGraphics2ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SymetricGraphics2ToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.SymetricGraphics2ToolStripMenuItem.Text = "2. Graphic 2"
         '
         'Graphic3ToolStripMenuItem
         '
         Me.Graphic3ToolStripMenuItem.Name = "Graphic3ToolStripMenuItem"
-        Me.Graphic3ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.Graphic3ToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.Graphic3ToolStripMenuItem.Text = "3. Graphic 3"
         '
         'Graphic4ToolStripMenuItem
         '
         Me.Graphic4ToolStripMenuItem.Name = "Graphic4ToolStripMenuItem"
-        Me.Graphic4ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.Graphic4ToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.Graphic4ToolStripMenuItem.Text = "4. Graphic 4"
         '
         'Graphic5ToolStripMenuItem
         '
         Me.Graphic5ToolStripMenuItem.Name = "Graphic5ToolStripMenuItem"
-        Me.Graphic5ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.Graphic5ToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.Graphic5ToolStripMenuItem.Text = "5. Graphic 5"
+        '
+        'Graphic6ToolStripMenuItem
+        '
+        Me.Graphic6ToolStripMenuItem.Name = "Graphic6ToolStripMenuItem"
+        Me.Graphic6ToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.Graphic6ToolStripMenuItem.Text = "6. Graphic 6"
         '
         'RandomLinesToolStripMenuItem
         '
-        Me.RandomLinesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LinesToolStripMenuItem1, Me.LinesToolStripMenuItem2})
+        Me.RandomLinesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LinesToolStripMenuItem1, Me.LinesToolStripMenuItem2, Me.LinesToolStripMenuItem3, Me.LinesparaleloToolStripMenuItem, Me.LinesContinuosToolStripMenuItem})
         Me.RandomLinesToolStripMenuItem.Name = "RandomLinesToolStripMenuItem"
         Me.RandomLinesToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
         Me.RandomLinesToolStripMenuItem.Text = "Random"
@@ -272,13 +281,13 @@ Partial Class Form1
         'LinesToolStripMenuItem1
         '
         Me.LinesToolStripMenuItem1.Name = "LinesToolStripMenuItem1"
-        Me.LinesToolStripMenuItem1.Size = New System.Drawing.Size(113, 22)
+        Me.LinesToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.LinesToolStripMenuItem1.Text = "1. Lines"
         '
         'LinesToolStripMenuItem2
         '
         Me.LinesToolStripMenuItem2.Name = "LinesToolStripMenuItem2"
-        Me.LinesToolStripMenuItem2.Size = New System.Drawing.Size(113, 22)
+        Me.LinesToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
         Me.LinesToolStripMenuItem2.Text = "2. Lines"
         '
         'Button2
@@ -290,7 +299,7 @@ Partial Class Form1
         Me.Button2.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(483, 373)
+        Me.Button2.Location = New System.Drawing.Point(560, 373)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(115, 30)
         Me.Button2.TabIndex = 9
@@ -303,7 +312,7 @@ Partial Class Form1
         Me.TextBox5.BackColor = System.Drawing.Color.LightGray
         Me.TextBox5.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox5.ForeColor = System.Drawing.Color.Black
-        Me.TextBox5.Location = New System.Drawing.Point(380, 90)
+        Me.TextBox5.Location = New System.Drawing.Point(457, 90)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(70, 25)
         Me.TextBox5.TabIndex = 6
@@ -314,7 +323,7 @@ Partial Class Form1
         Me.TextBox6.BackColor = System.Drawing.Color.LightGray
         Me.TextBox6.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox6.ForeColor = System.Drawing.Color.Black
-        Me.TextBox6.Location = New System.Drawing.Point(456, 90)
+        Me.TextBox6.Location = New System.Drawing.Point(533, 90)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(70, 25)
         Me.TextBox6.TabIndex = 7
@@ -327,7 +336,7 @@ Partial Class Form1
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button3.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(482, 214)
+        Me.Button3.Location = New System.Drawing.Point(559, 214)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(115, 30)
         Me.Button3.TabIndex = 8
@@ -340,7 +349,7 @@ Partial Class Form1
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.Label3.Location = New System.Drawing.Point(76, 135)
+        Me.Label3.Location = New System.Drawing.Point(153, 135)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(43, 19)
         Me.Label3.TabIndex = 13
@@ -352,7 +361,7 @@ Partial Class Form1
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(33, 152)
+        Me.Label4.Location = New System.Drawing.Point(110, 152)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(43, 19)
         Me.Label4.TabIndex = 14
@@ -364,7 +373,7 @@ Partial Class Form1
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.Label5.Location = New System.Drawing.Point(111, 135)
+        Me.Label5.Location = New System.Drawing.Point(188, 135)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(291, 19)
         Me.Label5.TabIndex = 15
@@ -376,7 +385,7 @@ Partial Class Form1
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(62, 172)
+        Me.Label6.Location = New System.Drawing.Point(139, 172)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(12, 228)
         Me.Label6.TabIndex = 16
@@ -388,7 +397,7 @@ Partial Class Form1
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.DimGray
-        Me.Label7.Location = New System.Drawing.Point(92, 72)
+        Me.Label7.Location = New System.Drawing.Point(169, 72)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(38, 15)
         Me.Label7.TabIndex = 17
@@ -400,7 +409,7 @@ Partial Class Form1
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.DimGray
-        Me.Label8.Location = New System.Drawing.Point(177, 72)
+        Me.Label8.Location = New System.Drawing.Point(254, 72)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(20, 15)
         Me.Label8.TabIndex = 18
@@ -412,7 +421,7 @@ Partial Class Form1
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.DimGray
-        Me.Label9.Location = New System.Drawing.Point(253, 72)
+        Me.Label9.Location = New System.Drawing.Point(330, 72)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(20, 15)
         Me.Label9.TabIndex = 19
@@ -424,7 +433,7 @@ Partial Class Form1
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.DimGray
-        Me.Label10.Location = New System.Drawing.Point(329, 72)
+        Me.Label10.Location = New System.Drawing.Point(406, 72)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(20, 15)
         Me.Label10.TabIndex = 20
@@ -436,7 +445,7 @@ Partial Class Form1
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.DimGray
-        Me.Label11.Location = New System.Drawing.Point(407, 72)
+        Me.Label11.Location = New System.Drawing.Point(484, 72)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(20, 15)
         Me.Label11.TabIndex = 21
@@ -448,17 +457,29 @@ Partial Class Form1
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.DimGray
-        Me.Label12.Location = New System.Drawing.Point(482, 72)
+        Me.Label12.Location = New System.Drawing.Point(559, 72)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(20, 15)
         Me.Label12.TabIndex = 22
         Me.Label12.Text = "Y3"
         '
-        'Graphic6ToolStripMenuItem
+        'LinesToolStripMenuItem3
         '
-        Me.Graphic6ToolStripMenuItem.Name = "Graphic6ToolStripMenuItem"
-        Me.Graphic6ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.Graphic6ToolStripMenuItem.Text = "6. Graphic 6"
+        Me.LinesToolStripMenuItem3.Name = "LinesToolStripMenuItem3"
+        Me.LinesToolStripMenuItem3.Size = New System.Drawing.Size(180, 22)
+        Me.LinesToolStripMenuItem3.Text = "3. Lines"
+        '
+        'LinesparaleloToolStripMenuItem
+        '
+        Me.LinesparaleloToolStripMenuItem.Name = "LinesparaleloToolStripMenuItem"
+        Me.LinesparaleloToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LinesparaleloToolStripMenuItem.Text = "4. Lines (paralelo)"
+        '
+        'LinesContinuosToolStripMenuItem
+        '
+        Me.LinesContinuosToolStripMenuItem.Name = "LinesContinuosToolStripMenuItem"
+        Me.LinesContinuosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LinesContinuosToolStripMenuItem.Text = "5. Lines continuos"
         '
         'Form1
         '
@@ -467,7 +488,7 @@ Partial Class Form1
         Me.AutoSize = True
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(621, 488)
+        Me.ClientSize = New System.Drawing.Size(775, 488)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
@@ -547,4 +568,7 @@ Partial Class Form1
     Friend WithEvents LinesToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents LinesToolStripMenuItem2 As ToolStripMenuItem
     Friend WithEvents Graphic6ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LinesToolStripMenuItem3 As ToolStripMenuItem
+    Friend WithEvents LinesparaleloToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LinesContinuosToolStripMenuItem As ToolStripMenuItem
 End Class
