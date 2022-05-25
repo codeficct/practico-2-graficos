@@ -42,6 +42,19 @@ Partial Class Form1
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
@@ -59,30 +72,24 @@ Partial Class Form1
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelTitleBar.SuspendLayout()
         Me.Panel7.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RadioButton1
@@ -95,7 +102,7 @@ Partial Class Form1
         Me.RadioButton1.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(77, 22)
-        Me.RadioButton1.TabIndex = 4
+        Me.RadioButton1.TabIndex = 109
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "English"
         Me.RadioButton1.UseVisualStyleBackColor = True
@@ -109,7 +116,7 @@ Partial Class Form1
         Me.RadioButton2.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(81, 22)
-        Me.RadioButton2.TabIndex = 5
+        Me.RadioButton2.TabIndex = 108
         Me.RadioButton2.Text = "Español"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
@@ -123,7 +130,7 @@ Partial Class Form1
         'VerInformaciónToolStripMenuItem
         '
         Me.VerInformaciónToolStripMenuItem.Name = "VerInformaciónToolStripMenuItem"
-        Me.VerInformaciónToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.VerInformaciónToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.VerInformaciónToolStripMenuItem.Text = "See information"
         '
         'SymmetricGraphicsToolStripMenuItem
@@ -226,6 +233,9 @@ Partial Class Form1
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Label16)
+        Me.Panel1.Controls.Add(Me.Label15)
+        Me.Panel1.Controls.Add(Me.Label14)
         Me.Panel1.Controls.Add(Me.Label13)
         Me.Panel1.Controls.Add(Me.TextBox5)
         Me.Panel1.Controls.Add(Me.Label12)
@@ -258,6 +268,148 @@ Partial Class Form1
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(281, 550)
         Me.Panel1.TabIndex = 7
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.White
+        Me.Label16.Location = New System.Drawing.Point(23, 188)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(56, 19)
+        Me.Label16.TabIndex = 30
+        Me.Label16.Text = "Height"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.Color.White
+        Me.Label15.Location = New System.Drawing.Point(23, 118)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(51, 19)
+        Me.Label15.TabIndex = 29
+        Me.Label15.Text = "Width"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.White
+        Me.Label14.Location = New System.Drawing.Point(23, 284)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(18, 19)
+        Me.Label14.TabIndex = 28
+        Me.Label14.Text = "n"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.White
+        Me.Label13.Location = New System.Drawing.Point(144, 218)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(26, 19)
+        Me.Label13.TabIndex = 27
+        Me.Label13.Text = "by"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.TextBox5.ForeColor = System.Drawing.Color.White
+        Me.TextBox5.Location = New System.Drawing.Point(55, 282)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(3, 3, 3, 2)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(196, 26)
+        Me.TextBox5.TabIndex = 104
+        Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.White
+        Me.Label12.Location = New System.Drawing.Point(23, 218)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(26, 19)
+        Me.Label12.TabIndex = 25
+        Me.Label12.Text = "ay"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.TextBox4.ForeColor = System.Drawing.Color.White
+        Me.TextBox4.Location = New System.Drawing.Point(176, 214)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(3, 3, 3, 2)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(75, 26)
+        Me.TextBox4.TabIndex = 103
+        Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.White
+        Me.Label11.Location = New System.Drawing.Point(144, 148)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(26, 19)
+        Me.Label11.TabIndex = 23
+        Me.Label11.Text = "bx"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.TextBox3.ForeColor = System.Drawing.Color.White
+        Me.TextBox3.Location = New System.Drawing.Point(55, 214)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(3, 3, 3, 2)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(75, 26)
+        Me.TextBox3.TabIndex = 102
+        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(23, 148)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(26, 19)
+        Me.Label10.TabIndex = 21
+        Me.Label10.Text = "ax"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.TextBox2.ForeColor = System.Drawing.Color.White
+        Me.TextBox2.Location = New System.Drawing.Point(176, 144)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 3, 3, 2)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(75, 26)
+        Me.TextBox2.TabIndex = 101
+        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(21, 28)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(36, 36)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 19
+        Me.PictureBox2.TabStop = False
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.LightGray
+        Me.Label9.Location = New System.Drawing.Point(63, 50)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(181, 14)
+        Me.Label9.TabIndex = 18
+        Me.Label9.Text = "Univ. Luis Gabriel Janco Alvarez"
         '
         'Panel8
         '
@@ -306,7 +458,7 @@ Partial Class Form1
         Me.Button3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(281, 34)
-        Me.Button3.TabIndex = 14
+        Me.Button3.TabIndex = 107
         Me.Button3.Text = "Reset"
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -320,7 +472,7 @@ Partial Class Form1
         Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(281, 34)
-        Me.Button2.TabIndex = 12
+        Me.Button2.TabIndex = 106
         Me.Button2.Text = "Clean graphics"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -330,7 +482,7 @@ Partial Class Form1
         Me.Label3.Font = New System.Drawing.Font("Roboto", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label3.Location = New System.Drawing.Point(60, 24)
+        Me.Label3.Location = New System.Drawing.Point(61, 24)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(167, 25)
         Me.Label3.TabIndex = 11
@@ -365,7 +517,7 @@ Partial Class Form1
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(281, 34)
-        Me.Button1.TabIndex = 9
+        Me.Button1.TabIndex = 105
         Me.Button1.Text = "Create graphic"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -374,7 +526,7 @@ Partial Class Form1
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(18, 252)
+        Me.Label2.Location = New System.Drawing.Point(23, 256)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(141, 19)
         Me.Label2.TabIndex = 8
@@ -384,11 +536,11 @@ Partial Class Form1
         '
         Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.TextBox1.ForeColor = System.Drawing.Color.White
-        Me.TextBox1.Location = New System.Drawing.Point(209, 98)
+        Me.TextBox1.Location = New System.Drawing.Point(55, 144)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 3, 3, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(55, 26)
-        Me.TextBox1.TabIndex = 7
+        Me.TextBox1.Size = New System.Drawing.Size(75, 26)
+        Me.TextBox1.TabIndex = 100
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'panelTitleBar
@@ -452,6 +604,10 @@ Partial Class Form1
         'Panel7
         '
         Me.Panel7.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Panel7.Controls.Add(Me.Label20)
+        Me.Panel7.Controls.Add(Me.Label19)
+        Me.Panel7.Controls.Add(Me.Label18)
+        Me.Panel7.Controls.Add(Me.Label17)
         Me.Panel7.Controls.Add(Me.Label7)
         Me.Panel7.Controls.Add(Me.Label8)
         Me.Panel7.Controls.Add(Me.Panel10)
@@ -465,28 +621,105 @@ Partial Class Form1
         Me.Panel7.Size = New System.Drawing.Size(749, 488)
         Me.Panel7.TabIndex = 9
         '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.Label20.Location = New System.Drawing.Point(75, 407)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(21, 15)
+        Me.Label20.TabIndex = 29
+        Me.Label20.Text = "by"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.Label19.Location = New System.Drawing.Point(75, 85)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(21, 15)
+        Me.Label19.TabIndex = 28
+        Me.Label19.Text = "ay"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label18.Location = New System.Drawing.Point(653, 47)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(21, 15)
+        Me.Label18.TabIndex = 27
+        Me.Label18.Text = "bx"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label17.Location = New System.Drawing.Point(115, 47)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(21, 15)
+        Me.Label17.TabIndex = 26
+        Me.Label17.Text = "ax"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(157, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(22, 99)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(74, 15)
+        Me.Label7.TabIndex = 25
+        Me.Label7.Text = "Height = 0.0"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(157, Byte), Integer))
+        Me.Label8.Location = New System.Drawing.Point(115, 62)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(69, 15)
+        Me.Label8.TabIndex = 24
+        Me.Label8.Text = "Width = 0.0"
+        '
         'Panel10
         '
-        Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(157, Byte), Integer))
-        Me.Panel10.Location = New System.Drawing.Point(102, 83)
+        Me.Panel10.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.Panel10.Location = New System.Drawing.Point(102, 99)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(1, 338)
+        Me.Panel10.Size = New System.Drawing.Size(1, 340)
         Me.Panel10.TabIndex = 22
         '
         'Panel9
         '
-        Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(157, Byte), Integer))
-        Me.Panel9.Location = New System.Drawing.Point(118, 66)
+        Me.Panel9.BackColor = System.Drawing.Color.LightCoral
+        Me.Panel9.Location = New System.Drawing.Point(118, 82)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(559, 1)
+        Me.Panel9.Size = New System.Drawing.Size(560, 1)
         Me.Panel9.TabIndex = 21
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(157, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(20, 422)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(76, 15)
+        Me.Label6.TabIndex = 20
+        Me.Label6.Text = "Height = n/n"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(157, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(603, 46)
+        Me.Label5.Location = New System.Drawing.Point(603, 62)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(71, 15)
         Me.Label5.TabIndex = 19
@@ -505,153 +738,11 @@ Partial Class Form1
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(118, 83)
+        Me.PictureBox1.Location = New System.Drawing.Point(118, 99)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(559, 338)
+        Me.PictureBox1.Size = New System.Drawing.Size(560, 340)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(157, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(115, 46)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(69, 15)
-        Me.Label8.TabIndex = 24
-        Me.Label8.Text = "Width = 0.0"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(157, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(20, 406)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(76, 15)
-        Me.Label6.TabIndex = 20
-        Me.Label6.Text = "Height = n/n"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(157, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(22, 83)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(74, 15)
-        Me.Label7.TabIndex = 25
-        Me.Label7.Text = "Height = 0.0"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Roboto", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.LightGray
-        Me.Label9.Location = New System.Drawing.Point(62, 50)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(181, 14)
-        Me.Label9.TabIndex = 18
-        Me.Label9.Text = "Univ. Luis Gabriel Janco Alvarez"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(22, 28)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(36, 36)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 19
-        Me.PictureBox2.TabStop = False
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(18, 100)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(141, 19)
-        Me.Label10.TabIndex = 21
-        Me.Label10.Text = "Write n parts/lines"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(47, Byte), Integer))
-        Me.TextBox2.ForeColor = System.Drawing.Color.White
-        Me.TextBox2.Location = New System.Drawing.Point(209, 140)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 3, 3, 2)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(55, 26)
-        Me.TextBox2.TabIndex = 20
-        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(18, 136)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(141, 19)
-        Me.Label11.TabIndex = 23
-        Me.Label11.Text = "Write n parts/lines"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(47, Byte), Integer))
-        Me.TextBox3.ForeColor = System.Drawing.Color.White
-        Me.TextBox3.Location = New System.Drawing.Point(209, 176)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(3, 3, 3, 2)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(55, 26)
-        Me.TextBox3.TabIndex = 22
-        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(18, 169)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(141, 19)
-        Me.Label12.TabIndex = 25
-        Me.Label12.Text = "Write n parts/lines"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(47, Byte), Integer))
-        Me.TextBox4.ForeColor = System.Drawing.Color.White
-        Me.TextBox4.Location = New System.Drawing.Point(209, 209)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(3, 3, 3, 2)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(55, 26)
-        Me.TextBox4.TabIndex = 24
-        Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(18, 205)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(141, 19)
-        Me.Label13.TabIndex = 27
-        Me.Label13.Text = "Write n parts/lines"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(47, Byte), Integer))
-        Me.TextBox5.ForeColor = System.Drawing.Color.White
-        Me.TextBox5.Location = New System.Drawing.Point(209, 245)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(3, 3, 3, 2)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(55, 26)
-        Me.TextBox5.TabIndex = 26
-        Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Form1
         '
@@ -674,11 +765,11 @@ Partial Class Form1
         Me.MenuStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelTitleBar.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -737,4 +828,11 @@ Partial Class Form1
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label17 As Label
 End Class
