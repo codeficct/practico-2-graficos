@@ -3,7 +3,7 @@ Imports System.Runtime.InteropServices
 
 Public Class Form1
     Dim graphic As Graphics
-    Dim msg As String = "Importante: Datos incorrectos (número) o faltantes. "
+    Dim msgError As String = "Importante: Datos incorrectos (número) o faltantes. "
     'i18n languages ES - EN
     Dim menu1Es As String = "Información del estudiante" : Dim menu1En As String = "Student information"
     Dim menu1Content1Es = "Ver información" : Dim menu1Content1En As String = "See information"
@@ -126,6 +126,8 @@ Public Class Form1
         Label2.Text = labelTextBoxEs
         Label3.Text = labelTitleBarEs
         Label4.Text = "Aquí se pintara el gráfico:"
+        Label15.Text = "Ancho"
+        Label16.Text = "Alto"
         Button1.Text = btnCreateGraphicEs
         Button2.Text = btnCleanGraphicsEs
         Button3.Text = btnResetEs
@@ -150,6 +152,8 @@ Public Class Form1
         Label2.Text = labelTextBoxEn
         Label3.Text = labelTitleBarEn
         Label4.Text = "The graph will be drawn here:"
+        Label15.Text = "Width"
+        Label16.Text = "Height"
         Button1.Text = btnCreateGraphicEn
         Button2.Text = btnCleanGraphicsEn
         Button3.Text = btnResetEn
@@ -161,8 +165,48 @@ Public Class Form1
         Label6.Text = "Height =" + Str(PictureBox1.Height)
     End Sub
 
-    Public Sub SymmetricGraphic1(n As UInt32)
+    Public Sub createRectangleWithHalf(ax As Single, bx As Single, ay As Single, by As Single, vertical As Double)
+        Dim half As Single
+        graphic.DrawRectangle(Pens.Purple, ax, ay, bx - ax, by - ay)
+        If vertical Then
+            half = (ax + bx) / 2
+            graphic.DrawLine(Pens.Purple, half, ay, half, by)
+        Else
+            half = (ay + by) / 2
+            graphic.DrawLine(Pens.Purple, ax, half, bx, half)
+        End If
+    End Sub
 
+    Public Sub SymmetricGraphic1(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32)
+        Dim x1, x2, y1, y2, my, mx, halfmy, r1, r2, vi1, vi2 As Single
+        Dim index, j As UInt32
+        mx = bx - ax : halfmy = (ay + by) / 2
+        createRectangleWithHalf(ax, bx, ay, by, False)
+        r1 = mx / n : vi1 = ax : y1 = halfmy
+        r2 = (halfmy - ay) / n : vi2 = ay : x2 = bx
+        For index = 1 To n
+            x1 = vi1 + (index - 1) * r1
+            y2 = vi2 + (index - 1) * r2
+            graphic.DrawLine(Pens.Black, x1, y1, x2, y2)
+            For j = 1 To 66000000
+            Next
+        Next
+    End Sub
+
+    Public Sub SymetricGraphic1_2(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32)
+        Dim x1, x2, y1, y2, my, mx, halfmy, r1, r2, vi1, vi2 As Single
+        Dim index, j As UInt32
+        mx = bx - ax : my = by - ay 'max width and max height
+        halfmy = (ay + by) / 2
+        r1 = mx / n : vi1 = ax : y1 = by
+        r2 = (halfmy - ay) / n : vi2 = halfmy : x2 = bx
+        For index = 1 To n
+            x1 = vi1 + (index - 1) * r1
+            y2 = vi2 + (index - 1) * r2
+            graphic.DrawLine(Pens.Black, x1, y1, x2, y2)
+            For j = 1 To 66000000
+            Next
+        Next
     End Sub
 
     '<--- EVENTS HANDLER --->
@@ -173,5 +217,14 @@ Public Class Form1
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Refresh()
         Frame()
+    End Sub
+
+    Private Sub GraphicToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GraphicToolStripMenuItem.Click
+        Try
+            SymmetricGraphic1(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+            SymetricGraphic1_2(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="1. Gráfico")
+        End Try
     End Sub
 End Class

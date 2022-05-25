@@ -94,7 +94,7 @@
             graphic.DrawLine(Pens.Blue, x1, y1, x2, y2)
         Next
     End Sub
-    
+
     Public Sub SymetricGraphics5(ax As Single, bx As Single, ay As Single, by As Single, n As Integer)
         Dim x1, y1, x2, y2, r1, r2, vi1, mx, my, vi2 As Single
         Dim index As UInt16
