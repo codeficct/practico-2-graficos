@@ -199,9 +199,9 @@ Public Class Form1
     End Sub
     '<--- 2 --->
     Public Sub SymmetricGraphic2(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
-        Dim x1, x2, y1, y2, my, mx, halfmx, r, vi As Single
+        Dim x1, x2, y1, y2, my, halfmx, r, vi As Single
         Dim index, j As UInt32
-        mx = bx - ax : my = by - ay : halfmx = (ax + bx) / 2
+        my = by - ay : halfmx = (ax + bx) / 2
         createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
         r = my / n : vi = ay
         y1 = (ay + by) / 2
@@ -220,9 +220,9 @@ Public Class Form1
     End Sub
     '<--- 3 --->
     Public Sub SymmetricGraphic3(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
-        Dim x1, x2, y1, y2, my, mx, halfmx, r, vi As Single
+        Dim x1, x2, y1, y2, my, halfmx, r, vi As Single
         Dim index, j As UInt32
-        mx = bx - ax : my = by - ay : halfmx = (ax + bx) / 2
+        my = by - ay : halfmx = (ax + bx) / 2
         createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
         r = my / n : vi = ay
         x2 = halfmx : y2 = (ay + by) / 2
@@ -240,9 +240,9 @@ Public Class Form1
     End Sub
     '<--- 4 --->
     Public Sub SymmetricGraphic4(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
-        Dim x1, x2, y1, y2, my, mx, halfmx, r, vi As Single
+        Dim x1, x2, y1, y2, my, halfmx, r, vi As Single
         Dim index, j As UInt32
-        mx = bx - ax : my = by - ay : halfmx = (ax + bx) / 2
+        my = by - ay : halfmx = (ax + bx) / 2
         createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
         r = my / n : vi = ay : x2 = halfmx
         If half Then
@@ -284,9 +284,9 @@ Public Class Form1
     End Sub
     '<--- 6 --->
     Public Sub RandomLines6(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
-        Dim x1, x2, y1, y2, my, mx, halfmx, halfmy As Single
+        Dim x1, x2, y1, y2, my, halfmx, halfmy As Single
         Dim index, j As UInt32
-        mx = bx - ax : my = by - ay : halfmx = (ax + bx) / 2 : halfmy = (ay + by) / 2
+        my = by - ay : halfmx = (ax + bx) / 2 : halfmy = (ay + by) / 2
         createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
         x1 = halfmx : y1 = halfmy
         For index = 1 To n
@@ -304,9 +304,9 @@ Public Class Form1
 
     '<--- 7 --->
     Public Sub RandomLines7(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
-        Dim x1, x2, y1, y2, my, mx, halfmx As Single
+        Dim x1, x2, y1, y2, my, halfmx As Single
         Dim index, j As UInt32
-        mx = bx - ax : my = by - ay : halfmx = (ax + bx) / 2
+        my = by - ay : halfmx = (ax + bx) / 2
         createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
         y1 = ay + (my / 2)
         If half Then
@@ -329,11 +329,10 @@ Public Class Form1
 
     '<--- 8 --->
     Public Sub RandomLines8(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
-        Dim x1, x2, y1, y2, my, mx, halfmx, halfmy, r1, r2, vi1, vi2 As Single
+        Dim x1, x2, y1, y2, my, halfmx As Single
         Dim index, j As UInt32
-        mx = bx - ax : my = by - ay : halfmx = (ax + bx) / 2 : halfmy = (ay + by) / 2
         createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
-        x1 = halfmx
+        my = by - ay : halfmx = (ax + bx) / 2 : x1 = halfmx
         For index = 1 To n
             y1 = ay + Rnd() * my
             If half Then
@@ -350,12 +349,11 @@ Public Class Form1
 
     '<--- 9 --->
     Public Sub RandomLines9(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
-        Dim x1, x2, y1, y2, y3, my, mx, halfmx, halfmy As Single
+        Dim x1, x2, y1, y2, halfmx As Single
         Dim aux As Double = True
         Dim index, j As UInt32
-        mx = bx - ax : my = by - ay : halfmx = (ax + bx) / 2 : halfmy = (ay + by) / 2
         createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
-        y1 = ay : y2 = by
+        halfmx = (ax + bx) / 2 : y1 = ay : y2 = by
         If half Then
             x1 = ax + Rnd() * (halfmx - ax)
         Else
@@ -382,9 +380,9 @@ Public Class Form1
 
     '<--- 10 --->
     Public Sub RandomLines10(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
-        Dim x1, x2, y1, y2, y3, my, mx, halfmx, halfmy As Single
+        Dim x1, x2, y1, y2, my, halfmx As Single
         Dim index, j As UInt32
-        mx = bx - ax : my = by - ay : halfmx = (ax + bx) / 2 : halfmy = (ay + by) / 2
+        my = by - ay : halfmx = (ax + bx) / 2
         createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
         If half Then
             x1 = ax + Rnd() * (halfmx - ax) : y1 = ay + Rnd() * my
