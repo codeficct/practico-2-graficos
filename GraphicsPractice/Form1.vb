@@ -164,7 +164,7 @@ Public Class Form1
         Label5.Text = "Width =" + Str(PictureBox1.Width)
         Label6.Text = "Height =" + Str(PictureBox1.Height)
     End Sub
-
+    '<--- Create rectangle with a line in halft --->
     Public Sub createRectangleWithHalf(ax As Single, bx As Single, ay As Single, by As Single, vertical As Double)
         Dim half As Single
         graphic.DrawRectangle(Pens.Purple, ax, ay, bx - ax, by - ay)
@@ -176,14 +176,19 @@ Public Class Form1
             graphic.DrawLine(Pens.Purple, ax, half, bx, half)
         End If
     End Sub
-
-    Public Sub SymmetricGraphic1(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32)
-        Dim x1, x2, y1, y2, my, mx, halfmy, r1, r2, vi1, vi2 As Single
+    '<--- 1 --->
+    Public Sub SymmetricGraphic1(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Boolean)
+        Dim x1, x2, y1, y2, mx, halfmy, r1, r2, vi1, vi2 As Single
         Dim index, j As UInt32
         mx = bx - ax : halfmy = (ay + by) / 2
-        createRectangleWithHalf(ax, bx, ay, by, False)
-        r1 = mx / n : vi1 = ax : y1 = halfmy
-        r2 = (halfmy - ay) / n : vi2 = ay : x2 = bx
+        createRectangleWithHalf(ax, bx, ay, by, False) 'Horizontal
+        r1 = mx / n : vi1 = ax
+        r2 = (halfmy - ay) / n : x2 = bx
+        If half Then
+            y1 = halfmy : vi2 = ay
+        Else
+            y1 = by : vi2 = halfmy
+        End If
         For index = 1 To n
             x1 = vi1 + (index - 1) * r1
             y2 = vi2 + (index - 1) * r2
@@ -192,19 +197,209 @@ Public Class Form1
             Next
         Next
     End Sub
-
-    Public Sub SymetricGraphic1_2(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32)
-        Dim x1, x2, y1, y2, my, mx, halfmy, r1, r2, vi1, vi2 As Single
+    '<--- 2 --->
+    Public Sub SymmetricGraphic2(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
+        Dim x1, x2, y1, y2, my, mx, halfmx, r, vi As Single
         Dim index, j As UInt32
-        mx = bx - ax : my = by - ay 'max width and max height
-        halfmy = (ay + by) / 2
-        r1 = mx / n : vi1 = ax : y1 = by
-        r2 = (halfmy - ay) / n : vi2 = halfmy : x2 = bx
-        For index = 1 To n
-            x1 = vi1 + (index - 1) * r1
-            y2 = vi2 + (index - 1) * r2
-            graphic.DrawLine(Pens.Black, x1, y1, x2, y2)
+        mx = bx - ax : my = by - ay : halfmx = (ax + bx) / 2
+        createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
+        r = my / n : vi = ay
+        y1 = (ay + by) / 2
+        x2 = halfmx
+        If half Then
+            x1 = ax
+        Else
+            x1 = bx
+        End If
+        For index = 1 To n + 1
+            y2 = vi + (index - 1) * r
+            graphic.DrawLine(Pens.Blue, x1, y1, x2, y2)
             For j = 1 To 66000000
+            Next
+        Next
+    End Sub
+    '<--- 3 --->
+    Public Sub SymmetricGraphic3(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
+        Dim x1, x2, y1, y2, my, mx, halfmx, r, vi As Single
+        Dim index, j As UInt32
+        mx = bx - ax : my = by - ay : halfmx = (ax + bx) / 2
+        createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
+        r = my / n : vi = ay
+        x2 = halfmx : y2 = (ay + by) / 2
+        If half Then
+            x1 = ax
+        Else
+            x1 = bx
+        End If
+        For index = 1 To n + 1
+            y1 = vi + (index - 1) * r
+            graphic.DrawLine(Pens.Red, x1, y1, x2, y2)
+            For j = 1 To 66000000
+            Next
+        Next
+    End Sub
+    '<--- 4 --->
+    Public Sub SymmetricGraphic4(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
+        Dim x1, x2, y1, y2, my, mx, halfmx, r, vi As Single
+        Dim index, j As UInt32
+        mx = bx - ax : my = by - ay : halfmx = (ax + bx) / 2
+        createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
+        r = my / n : vi = ay : x2 = halfmx
+        If half Then
+            x1 = ax : y1 = by
+        Else
+            x1 = bx : y1 = ay
+        End If
+        For index = 1 To n
+            y2 = vi + (index - 1) * r
+            graphic.DrawLine(Pens.Green, x1, y1, x2, y2)
+            For j = 1 To 66000000
+            Next
+        Next
+    End Sub
+    '<--- 5 --->
+    Public Sub SymmetricGraphic5(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
+        Dim x1, x2, y1, y2, my, mx, halfmx, r1, r2, vi1, vi2 As Single
+        Dim index, j As UInt32
+        mx = bx - ax : my = by - ay : halfmx = (ax + bx) / 2
+        createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
+        r1 = my / n : vi1 = ay : x1 = halfmx
+        r2 = (mx / 2) / n : y2 = by
+        If half Then
+            vi2 = halfmx + r2
+        Else
+            vi2 = halfmx - r2
+        End If
+        For index = 1 To n
+            y1 = vi1 + (index - 1) * r1
+            If half Then
+                x2 = vi2 + (index - 1) * r2
+            Else
+                x2 = vi2 - (index - 1) * r2
+            End If
+            graphic.DrawLine(Pens.Brown, x1, y1, x2, y2)
+            For j = 1 To 66000000
+            Next
+        Next
+    End Sub
+    '<--- 6 --->
+    Public Sub RandomLines6(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
+        Dim x1, x2, y1, y2, my, mx, halfmx, halfmy As Single
+        Dim index, j As UInt32
+        mx = bx - ax : my = by - ay : halfmx = (ax + bx) / 2 : halfmy = (ay + by) / 2
+        createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
+        x1 = halfmx : y1 = halfmy
+        For index = 1 To n
+            y2 = ay + Rnd() * my
+            If half Then
+                x2 = halfmx + Rnd() * (bx - halfmx)
+            Else
+                x2 = ax + Rnd() * (halfmx - ax)
+            End If
+            graphic.DrawLine(Pens.BlueViolet, x1, y1, x2, y2)
+            For j = 1 To 66000000
+            Next
+        Next
+    End Sub
+
+    '<--- 7 --->
+    Public Sub RandomLines7(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
+        Dim x1, x2, y1, y2, my, mx, halfmx As Single
+        Dim index, j As UInt32
+        mx = bx - ax : my = by - ay : halfmx = (ax + bx) / 2
+        createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
+        y1 = ay + (my / 2)
+        If half Then
+            x1 = ax + (halfmx / 2)
+        Else
+            x1 = halfmx + (halfmx / 2)
+        End If
+        For index = 1 To n
+            y2 = ay + Rnd() * my
+            If half Then
+                x2 = ax + Rnd() * (halfmx - ax)
+            Else
+                x2 = halfmx + Rnd() * (bx - halfmx)
+            End If
+            graphic.DrawLine(Pens.DeepSkyBlue, x1, y1, x2, y2)
+            For j = 1 To 66000000
+            Next
+        Next
+    End Sub
+
+    '<--- 8 --->
+    Public Sub RandomLines8(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
+        Dim x1, x2, y1, y2, my, mx, halfmx, halfmy, r1, r2, vi1, vi2 As Single
+        Dim index, j As UInt32
+        mx = bx - ax : my = by - ay : halfmx = (ax + bx) / 2 : halfmy = (ay + by) / 2
+        createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
+        x1 = halfmx
+        For index = 1 To n
+            y1 = ay + Rnd() * my
+            If half Then
+                x2 = halfmx + Rnd() * (bx - halfmx)
+            Else
+                x2 = ax + Rnd() * (halfmx - ax)
+            End If
+            y2 = y1
+            graphic.DrawLine(Pens.Blue, x1, y1, x2, y2)
+            For j = 1 To 66000000
+            Next
+        Next
+    End Sub
+
+    '<--- 9 --->
+    Public Sub RandomLines9(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
+        Dim x1, x2, y1, y2, y3, my, mx, halfmx, halfmy As Single
+        Dim aux As Double = True
+        Dim index, j As UInt32
+        mx = bx - ax : my = by - ay : halfmx = (ax + bx) / 2 : halfmy = (ay + by) / 2
+        createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
+        y1 = ay : y2 = by
+        If half Then
+            x1 = ax + Rnd() * (halfmx - ax)
+        Else
+            x1 = halfmx + Rnd() * (bx - halfmx)
+        End If
+        For index = 1 To n
+            If half Then
+                x2 = ax + Rnd() * (halfmx - ax)
+            Else
+                x2 = halfmx + Rnd() * (bx - halfmx)
+            End If
+            If aux Then
+                graphic.DrawLine(Pens.Black, x1, y1, x2, y2)
+                aux = False
+            Else
+                graphic.DrawLine(Pens.Black, x1, y2, x2, y1)
+                aux = True
+            End If
+            x1 = x2
+            For j = 1 To 99999000
+            Next
+        Next
+    End Sub
+
+    '<--- 10 --->
+    Public Sub RandomLines10(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
+        Dim x1, x2, y1, y2, y3, my, mx, halfmx, halfmy As Single
+        Dim index, j As UInt32
+        mx = bx - ax : my = by - ay : halfmx = (ax + bx) / 2 : halfmy = (ay + by) / 2
+        createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
+        If half Then
+            x1 = ax + Rnd() * (halfmx - ax) : y1 = ay + Rnd() * my
+        Else
+            x1 = halfmx + Rnd() * (bx - halfmx) : y1 = ay + Rnd() * my
+        End If
+        For index = 1 To n
+            If half Then
+                x2 = ax + Rnd() * (halfmx - ax) : y2 = ay + Rnd() * my
+            Else
+                x2 = halfmx + Rnd() * (bx - halfmx) : y2 = ay + Rnd() * my
+            End If
+            graphic.DrawLine(Pens.MediumPurple, x1, y1, x2, y2)
+            x1 = x2 : y1 = y2
+            For j = 1 To 99999000
             Next
         Next
     End Sub
@@ -221,10 +416,91 @@ Public Class Form1
 
     Private Sub GraphicToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GraphicToolStripMenuItem.Click
         Try
-            SymmetricGraphic1(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
-            SymetricGraphic1_2(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+            SymmetricGraphic1(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, True)
+            SymmetricGraphic1(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, False)
         Catch ex As Exception
             MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="1. Gráfico")
+        End Try
+    End Sub
+
+    Private Sub GraphicToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles GraphicToolStripMenuItem1.Click
+        Try
+            SymmetricGraphic2(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, True)
+            SymmetricGraphic2(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, False)
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="2. Gráfico")
+        End Try
+    End Sub
+
+    Private Sub GraphicToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles GraphicToolStripMenuItem2.Click
+        Try
+            SymmetricGraphic3(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, True)
+            SymmetricGraphic3(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, False)
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="3. Gráfico")
+        End Try
+    End Sub
+
+    Private Sub GraphicToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles GraphicToolStripMenuItem3.Click
+        Try
+            SymmetricGraphic4(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, True)
+            SymmetricGraphic4(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, False)
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="4. Gráfico")
+        End Try
+    End Sub
+
+    Private Sub GraphicToolStripMenuItem4_Click(sender As Object, e As EventArgs) Handles GraphicToolStripMenuItem4.Click
+        Try
+            SymmetricGraphic5(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, True)
+            SymmetricGraphic5(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, False)
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="5. Gráfico")
+        End Try
+    End Sub
+
+    Private Sub GraphicToolStripMenuItem5_Click(sender As Object, e As EventArgs) Handles GraphicToolStripMenuItem5.Click
+        Try
+            RandomLines6(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, True)
+            RandomLines6(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, False)
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="6. Gráfico")
+        End Try
+    End Sub
+
+    Private Sub GraphicToolStripMenuItem6_Click(sender As Object, e As EventArgs) Handles GraphicToolStripMenuItem6.Click
+        Try
+            RandomLines7(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, True)
+            RandomLines7(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, False)
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="7. Gráfico")
+        End Try
+    End Sub
+
+    Private Sub GraphicToolStripMenuItem7_Click(sender As Object, e As EventArgs) Handles GraphicToolStripMenuItem7.Click
+        Try
+            RandomLines8(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, True)
+            RandomLines8(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, False)
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="8. Gráfico")
+        End Try
+    End Sub
+
+    Private Sub GraphicToolStripMenuItem8_Click(sender As Object, e As EventArgs) Handles GraphicToolStripMenuItem8.Click
+        Try
+            RandomLines9(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, True)
+            RandomLines9(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, False)
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="9. Gráfico")
+        End Try
+    End Sub
+
+    Private Sub GraphicToolStripMenuItem9_Click(sender As Object, e As EventArgs) Handles GraphicToolStripMenuItem9.Click
+        Try
+            RandomLines10(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, True)
+            RandomLines10(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, False)
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="9. Gráfico")
         End Try
     End Sub
 End Class
