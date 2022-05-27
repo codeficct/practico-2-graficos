@@ -4,7 +4,7 @@ Imports System.Runtime.InteropServices
 Public Class Form1
     Dim graphic As Graphics
     Dim msgError As String = "Importante: Datos incorrectos (número) o faltantes. "
-    'i18n languages ES - EN
+    ' * i18n languages ES - EN
     Dim menu1Es As String = "Información del estudiante" : Dim menu1En As String = "Student information"
     Dim menu1Content1Es = "Ver información" : Dim menu1Content1En As String = "See information"
     Dim menu2Es As String = "Gráficos simétricos" : Dim menu2En As String = "Symetric graphics"
@@ -17,8 +17,7 @@ Public Class Form1
     Dim btnResetEs As String = "Reiciar" : Dim btnResetEn As String = "Reset"
     Dim changeEs As String = "Cambiar idioma" : Dim changeEn As String = "Change language"
 
-
-    'Drag Form
+    ' * Drag Form
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
     Private Shared Sub ReleaseCapture()
     End Sub
@@ -28,16 +27,14 @@ Public Class Form1
     Private borderRadius As Integer = 8
     Private borderSize As Integer = 0
     Private borderColor As Color = Color.Transparent
-    'Constructor
     Public Sub New()
-        ' This call is required by the designer.
+        ' * This call is required by the designer.
         InitializeComponent()
         ' Add any initialization after the InitializeComponent() call.
         Me.FormBorderStyle = FormBorderStyle.None
         Me.Padding = New Padding(borderSize)
-        'Me.panelTitleBar.BackColor = borderColor
-        'Me.BackColor = borderColor
     End Sub
+    ' * Add rounded in windows form
     Private Function GetRoundedPath(rect As Rectangle, radius As Single) As GraphicsPath
         Dim path As GraphicsPath = New GraphicsPath()
         Dim curveSize As Single = radius * 2.0F
@@ -74,20 +71,18 @@ Public Class Form1
     Private Sub Form1_Paint(sender As Object, e As PaintEventArgs) Handles MyBase.Paint
         FormRegionAndBorder(Me, borderRadius, e.Graphics, borderColor, borderSize)
     End Sub
-
+    ' * Active mouse donw or drag event in title bar
     Private Sub panelTitleBar_MouseDown(sender As Object, e As MouseEventArgs) Handles panelTitleBar.MouseDown
         ReleaseCapture()
         SendMessage(Me.Handle, &H112, &HF012, 0)
     End Sub
-
+    ' * Title bar actions (minimize, maximize, close)
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Me.Close()
     End Sub
-
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Me.WindowState = WindowState.Minimized
     End Sub
-
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         If Me.WindowState = WindowState.Normal Then
             Me.WindowState = WindowState.Maximized
@@ -106,7 +101,7 @@ Public Class Form1
         Dim info As String = "Name: Luis Gabriel Janco Alvarez" & vbCrLf & "Group:'INF110 - SD" & vbCrLf & "Registry N.: 220104875" & vbCrLf & "Career: Ingenieria en Sistemas" & vbCrLf & "Teacher: Alberto Mollo M."
         MsgBox(info, MsgBoxStyle.Information, Title:="Student Information")
     End Sub
-    'Spanish
+    ' * Spanish
     Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
         InformaciónDelEstudianteToolStripMenuItem.Text = menu1Es
         VerInformaciónToolStripMenuItem.Text = menu1Content1Es
@@ -132,7 +127,7 @@ Public Class Form1
         Button2.Text = btnCleanGraphicsEs
         Button3.Text = btnResetEs
     End Sub
-    'English
+    ' * English
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
         InformaciónDelEstudianteToolStripMenuItem.Text = menu1En
         VerInformaciónToolStripMenuItem.Text = menu1Content1En
@@ -158,30 +153,29 @@ Public Class Form1
         Button2.Text = btnCleanGraphicsEn
         Button3.Text = btnResetEn
     End Sub
-
     Public Sub Frame()
         graphic.DrawRectangle(Pens.Black, 0, 0, PictureBox1.Width - 1, PictureBox1.Height - 1)
         Label5.Text = "Width =" + Str(PictureBox1.Width)
         Label6.Text = "Height =" + Str(PictureBox1.Height)
     End Sub
-    '<--- Create rectangle with a line in halft --->
+    ' * Create rectangle with a line in halft
     Public Sub createRectangleWithHalf(ax As Single, bx As Single, ay As Single, by As Single, vertical As Double)
         Dim half As Single
         graphic.DrawRectangle(Pens.Purple, ax, ay, bx - ax, by - ay)
         If vertical Then
             half = (ax + bx) / 2
-            graphic.DrawLine(Pens.Purple, half, ay, half, by)
+            graphic.DrawLine(Pens.Purple, half, ay, half, by) ' * Vertical
         Else
             half = (ay + by) / 2
-            graphic.DrawLine(Pens.Purple, ax, half, bx, half)
+            graphic.DrawLine(Pens.Purple, ax, half, bx, half) ' * Horizontal
         End If
     End Sub
-    '<--- 1 --->
+    ' * 1. Exercice symmetric graphics
     Public Sub SymmetricGraphic1(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Boolean)
         Dim x1, x2, y1, y2, mx, halfmy, r1, r2, vi1, vi2 As Single
         Dim index, j As UInt32
         mx = bx - ax : halfmy = (ay + by) / 2
-        createRectangleWithHalf(ax, bx, ay, by, False) 'Horizontal
+        createRectangleWithHalf(ax, bx, ay, by, False) ' Horizontal
         r1 = mx / n : vi1 = ax
         r2 = (halfmy - ay) / n : x2 = bx
         If half Then
@@ -197,7 +191,7 @@ Public Class Form1
             Next
         Next
     End Sub
-    '<--- 2 --->
+    ' *  2. Exercice symmetric graphics
     Public Sub SymmetricGraphic2(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
         Dim x1, x2, y1, y2, my, halfmx, r, vi As Single
         Dim index, j As UInt32
@@ -218,7 +212,7 @@ Public Class Form1
             Next
         Next
     End Sub
-    '<--- 3 --->
+    ' *  3. Exercice symmetric graphics
     Public Sub SymmetricGraphic3(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
         Dim x1, x2, y1, y2, my, halfmx, r, vi As Single
         Dim index, j As UInt32
@@ -238,7 +232,7 @@ Public Class Form1
             Next
         Next
     End Sub
-    '<--- 4 --->
+    ' *  4. Exercice symmetric graphics
     Public Sub SymmetricGraphic4(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
         Dim x1, x2, y1, y2, my, halfmx, r, vi As Single
         Dim index, j As UInt32
@@ -257,7 +251,7 @@ Public Class Form1
             Next
         Next
     End Sub
-    '<--- 5 --->
+    ' *  5. Exercice symmetric graphics
     Public Sub SymmetricGraphic5(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
         Dim x1, x2, y1, y2, my, mx, halfmx, r1, r2, vi1, vi2 As Single
         Dim index, j As UInt32
@@ -282,7 +276,7 @@ Public Class Form1
             Next
         Next
     End Sub
-    '<--- 6 --->
+    ' * 6. Exercise random graphics
     Public Sub RandomLines6(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
         Dim x1, x2, y1, y2, my, halfmx, halfmy As Single
         Dim index, j As UInt32
