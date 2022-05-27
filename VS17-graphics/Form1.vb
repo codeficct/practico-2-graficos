@@ -29,7 +29,7 @@
     End Sub
 
     Public Sub CreateArc(x As Single, y As Single, width As Single, height As Single, startAng As Single, finalAng As Single)
-        graphic.DrawArc(Pens.DarkGreen, x, y, width, height, startAng, finalAng)
+        graphic.DrawArc(Pens.Purple, x, y, width, height, startAng, finalAng)
     End Sub
 
     Public Sub CreatePolygon(x1 As Single, y1 As Single, x2 As Single, y2 As Single, x3 As Single, y3 As Single)
@@ -38,6 +38,7 @@
         point1.X = x1 : point1.Y = y1
         point2.X = x2 : point2.Y = y2
         point3.X = x3 : point3.Y = y3
+
         graphPoint = {point1, point2, point3}
         graphic.DrawPolygon(Pens.Orange, graphPoint)
     End Sub
@@ -228,7 +229,29 @@
             x1 = x2 : y1 = y2
             For j = 1 To 99000000
             Next
+        Next
+    End Sub
 
+    Public Sub ContinousRandom2(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32)
+        Dim x1, x2, y1, y2, my As Single
+        Dim aux As Double = True
+        Dim index, j As UInt32
+        my = (ay + by) / 2
+        graphic.DrawRectangle(Pens.Black, ax, ay, bx - ax, by - ay)
+        graphic.DrawLine(Pens.Black, ax, my, bx, my)
+        y1 = ay : y2 = (ay + by) / 2
+        x1 = ax + Rnd() * (bx - ax)
+        For index = 1 To n
+            x2 = ax + Rnd() * (bx - ax)
+            If aux Then
+                graphic.DrawLine(Pens.Black, x1, y1, x2, y2)
+            Else
+                graphic.DrawLine(Pens.Black, x1, y2, x2, y1)
+            End If
+            aux = Not aux
+            x1 = x2
+            For j = 1 To 99999000
+            Next
         Next
     End Sub
 
@@ -380,6 +403,14 @@
     Private Sub LinesContinuosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LinesContinuosToolStripMenuItem.Click
         Try
             ContunousRandom(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+        Catch ex As Exception
+            MsgBox(msg + ex.Message, MsgBoxStyle.Information, Title:="Random - 2. Lines")
+        End Try
+    End Sub
+
+    Private Sub LinesContinuos2ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LinesContinuos2ToolStripMenuItem.Click
+        Try
+            ContinousRandom2(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
         Catch ex As Exception
             MsgBox(msg + ex.Message, MsgBoxStyle.Information, Title:="Random - 2. Lines")
         End Try
