@@ -49,6 +49,9 @@ Partial Class Form1
         Me.RandomLinesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LinesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.LinesToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LinesToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LinesparaleloToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LinesContinuosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
@@ -63,9 +66,7 @@ Partial Class Form1
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.LinesToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LinesparaleloToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LinesContinuosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LinesContinuos2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -273,7 +274,7 @@ Partial Class Form1
         '
         'RandomLinesToolStripMenuItem
         '
-        Me.RandomLinesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LinesToolStripMenuItem1, Me.LinesToolStripMenuItem2, Me.LinesToolStripMenuItem3, Me.LinesparaleloToolStripMenuItem, Me.LinesContinuosToolStripMenuItem})
+        Me.RandomLinesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LinesToolStripMenuItem1, Me.LinesToolStripMenuItem2, Me.LinesToolStripMenuItem3, Me.LinesparaleloToolStripMenuItem, Me.LinesContinuosToolStripMenuItem, Me.LinesContinuos2ToolStripMenuItem})
         Me.RandomLinesToolStripMenuItem.Name = "RandomLinesToolStripMenuItem"
         Me.RandomLinesToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
         Me.RandomLinesToolStripMenuItem.Text = "Random"
@@ -289,6 +290,24 @@ Partial Class Form1
         Me.LinesToolStripMenuItem2.Name = "LinesToolStripMenuItem2"
         Me.LinesToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
         Me.LinesToolStripMenuItem2.Text = "2. Lines"
+        '
+        'LinesToolStripMenuItem3
+        '
+        Me.LinesToolStripMenuItem3.Name = "LinesToolStripMenuItem3"
+        Me.LinesToolStripMenuItem3.Size = New System.Drawing.Size(180, 22)
+        Me.LinesToolStripMenuItem3.Text = "3. Lines"
+        '
+        'LinesparaleloToolStripMenuItem
+        '
+        Me.LinesparaleloToolStripMenuItem.Name = "LinesparaleloToolStripMenuItem"
+        Me.LinesparaleloToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LinesparaleloToolStripMenuItem.Text = "4. Lines (paralelo)"
+        '
+        'LinesContinuosToolStripMenuItem
+        '
+        Me.LinesContinuosToolStripMenuItem.Name = "LinesContinuosToolStripMenuItem"
+        Me.LinesContinuosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LinesContinuosToolStripMenuItem.Text = "5. Lines continuos"
         '
         'Button2
         '
@@ -463,23 +482,11 @@ Partial Class Form1
         Me.Label12.TabIndex = 22
         Me.Label12.Text = "Y3"
         '
-        'LinesToolStripMenuItem3
+        'LinesContinuos2ToolStripMenuItem
         '
-        Me.LinesToolStripMenuItem3.Name = "LinesToolStripMenuItem3"
-        Me.LinesToolStripMenuItem3.Size = New System.Drawing.Size(180, 22)
-        Me.LinesToolStripMenuItem3.Text = "3. Lines"
-        '
-        'LinesparaleloToolStripMenuItem
-        '
-        Me.LinesparaleloToolStripMenuItem.Name = "LinesparaleloToolStripMenuItem"
-        Me.LinesparaleloToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.LinesparaleloToolStripMenuItem.Text = "4. Lines (paralelo)"
-        '
-        'LinesContinuosToolStripMenuItem
-        '
-        Me.LinesContinuosToolStripMenuItem.Name = "LinesContinuosToolStripMenuItem"
-        Me.LinesContinuosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.LinesContinuosToolStripMenuItem.Text = "5. Lines continuos"
+        Me.LinesContinuos2ToolStripMenuItem.Name = "LinesContinuos2ToolStripMenuItem"
+        Me.LinesContinuos2ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LinesContinuos2ToolStripMenuItem.Text = "6. Lines continuos 2"
         '
         'Form1
         '
@@ -571,4 +578,5 @@ Partial Class Form1
     Friend WithEvents LinesToolStripMenuItem3 As ToolStripMenuItem
     Friend WithEvents LinesparaleloToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LinesContinuosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LinesContinuos2ToolStripMenuItem As ToolStripMenuItem
 End Class
