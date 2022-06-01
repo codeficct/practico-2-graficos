@@ -255,6 +255,159 @@
         Next
     End Sub
 
+    Public Sub Ejercicio1(ax As Single, bx As Single, ay As Single, by As Single, n As Integer, mitad As Boolean)
+        ' * mitad en y
+        Dim mitady As Single = (ay + by) / 2
+        ' * variables
+        Dim x1, y1, x2, y2, r1, r2, vi1, vi2 As Single
+        ' * mitad x
+        Dim mitadx As Single = (ax + bx) / 2
+        Dim i As Integer
+        ' * ancho
+        r1 = (bx - ax) / n : vi1 = ax
+        ' * alto
+        r2 = (mitady - ay) / n : x2 = bx
+        ' * rectangulo
+        graphic.DrawRectangle(Pens.Blue, ax, ay, bx - ax, by - ay)
+        graphic.DrawLine(Pens.Blue, ax, mitady, bx, mitady)
+
+        If mitad Then
+            y1 = mitady
+            vi2 = ay
+        Else
+            y1 = by
+            vi2 = mitady
+        End If
+
+        For i = 1 To n
+            x1 = vi1 + (i - 1) * r1
+            y2 = vi2 + (i - 1) * r2
+            graphic.DrawLine(Pens.Green, x1, y1, x2, y2)
+        Next
+    End Sub
+
+    Public Sub Ejercicio2(ax As Single, bx As Single, ay As Single, by As Single, n As Integer, mitad As Boolean)
+        Dim x1, x2, y1, y2, mitadx, r, vi As Single
+        Dim i, j As Integer
+        mitadx = (ax + bx) / 2
+        graphic.DrawRectangle(Pens.Blue, ax, ay, bx - ax, by - ay)
+        graphic.DrawLine(Pens.Blue, mitadx, ay, mitadx, by)
+        y1 = (ay + by) / 2
+        x2 = (ax + bx) / 2
+        vi = ay : r = (by - ay) / n
+
+        If mitad Then
+            x1 = ax
+        Else
+            x1 = bx
+        End If
+
+        For i = 1 To n + 1
+            y2 = vi + (i - 1) * r
+            graphic.DrawLine(Pens.Red, x1, y1, x2, y2)
+        Next
+    End Sub
+
+    Public Sub SymmetricRectangle(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32)
+        Dim x, y, w, h, vi1, r1, vi2, r2 As Single
+        Dim index, j As UInt32
+        graphic.DrawRectangle(Pens.Blue, ax, ay, bx - ax, by - ay)
+        x = ax : y = ay
+        r1 = (bx - ax) / n : vi1 = r1
+        r2 = (by - ay) / n : vi2 = r2
+        For index = 1 To n
+            w = vi1 + (index - 1) * r1
+            h = vi2 + (index - 1) * r2
+            graphic.DrawRectangle(Pens.Purple, x, y, w, h)
+            For j = 1 To 99999000
+            Next
+        Next
+    End Sub
+
+    Public Sub SymmetricEllipse(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32)
+        Dim x, y, w, h, vi1, r1, vi2, r2 As Single
+        Dim index, j As UInt32
+        graphic.DrawRectangle(Pens.Blue, ax, ay, bx - ax, by - ay)
+        x = ax : y = ay
+        r1 = (bx - ax) / n : vi1 = r1
+        r2 = (by - ay) / n : vi2 = r2
+        For index = 1 To n
+            w = vi1 + (index - 1) * r1
+            h = vi2 + (index - 1) * r2
+            graphic.DrawEllipse(Pens.Purple, x, y, w, h)
+            For j = 1 To 99999000
+            Next
+        Next
+    End Sub
+    ' * NO ENTIENDO NADA :/
+    Public Sub SymmetricRectangleDiagonal(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32)
+        Dim x, y, w, h, vi1, r1, vi2, r2 As Single
+        Dim index, j As UInt32
+        graphic.DrawRectangle(Pens.Blue, ax, ay, bx - ax, by - ay)
+        r1 = (bx - ax) / n : vi1 = ax
+        r2 = (by - ay) / n : vi2 = ay
+        w = r1 : h = r2
+        For index = 1 To n
+            x = vi1 + (index - 1) * r1
+            y = vi2 + (index - 1) * r2
+            graphic.DrawRectangle(Pens.Purple, x, y, w, h)
+            For j = 1 To 99777777
+            Next
+        Next
+    End Sub
+
+    Public Sub SymmetricEllipseDiagonal(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32)
+        Dim x, y, w, h, vi1, r1, vi2, r2 As Single
+        Dim index, j As UInt32
+        graphic.DrawRectangle(Pens.Blue, ax, ay, bx - ax, by - ay)
+        r1 = (bx - ax) / n : vi1 = ax
+        r2 = (by - ay) / n : vi2 = ay
+        w = r1 : h = r2
+        For index = 1 To n
+            x = vi1 + (index - 1) * r1
+            y = vi2 + (index - 1) * r2
+            graphic.DrawEllipse(Pens.Purple, x, y, w, h)
+            For j = 1 To 99777777
+            Next
+        Next
+    End Sub
+
+    Public Sub SymmetricRectanglePyram(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32)
+        Dim x, y, w, h, vi1, r1, vi2, r2, vi3, r3 As Single
+        Dim index, j As UInt32
+        graphic.DrawRectangle(Pens.Blue, ax, ay, bx - ax, by - ay)
+        r1 = (bx - ax) / (n * 2) : vi1 = (ax + bx) / 2 - r1
+        r2 = (by - ay) / n : vi2 = ay
+        r3 = (bx - ax) / n : vi3 = r3
+        h = r2
+        For index = 1 To n
+            x = vi1 - (index - 1) * r1
+            y = vi2 + (index - 1) * r2
+            w = vi3 + (index - 1) * r3
+            graphic.DrawRectangle(Pens.Purple, x, y, w, h)
+            For j = 1 To 99777777
+            Next
+        Next
+    End Sub
+
+    Public Sub SymmetricEllipsePyram(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32)
+        Dim x, y, w, h, vi1, r1, vi2, r2, vi3, r3 As Single
+        Dim index, j As UInt32
+        graphic.DrawRectangle(Pens.Blue, ax, ay, bx - ax, by - ay)
+        r1 = (bx - ax) / (n * 2) : vi1 = (ax + bx) / 2 - r1
+        r2 = (by - ay) / n : vi2 = ay
+        r3 = (bx - ax) / n : vi3 = r3
+        h = r2
+        For index = 1 To n
+            x = vi1 - (index - 1) * r1
+            y = vi2 + (index - 1) * r2
+            w = vi3 + (index - 1) * r3
+            graphic.DrawEllipse(Pens.Purple, x, y, w, h)
+            For j = 1 To 99777777
+            Next
+        Next
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Frame()
         Label1.Text = "X =" + Str(PictureBox1.Width())
@@ -414,5 +567,39 @@
         Catch ex As Exception
             MsgBox(msg + ex.Message, MsgBoxStyle.Information, Title:="Random - 2. Lines")
         End Try
+    End Sub
+
+    Private Sub LineasSimetricasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LineasSimetricasToolStripMenuItem.Click
+        Ejercicio1(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, True)
+        Ejercicio1(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, False)
+    End Sub
+
+    Private Sub LineasSimetricasToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles LineasSimetricasToolStripMenuItem1.Click
+        Ejercicio2(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, True)
+        Ejercicio2(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, False)
+    End Sub
+
+    Private Sub RectangleToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles RectangleToolStripMenuItem1.Click
+        SymmetricRectangle(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+    End Sub
+
+    Private Sub EllipseToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles EllipseToolStripMenuItem1.Click
+        SymmetricEllipse(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+    End Sub
+
+    Private Sub RectangleToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles RectangleToolStripMenuItem2.Click
+        SymmetricRectangleDiagonal(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+    End Sub
+
+    Private Sub EllipseDiagonalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EllipseDiagonalToolStripMenuItem.Click
+        SymmetricEllipseDiagonal(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+    End Sub
+
+    Private Sub RectanglePyramToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RectanglePyramToolStripMenuItem.Click
+        SymmetricRectanglePyram(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+    End Sub
+
+    Private Sub EllipsePyramToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EllipsePyramToolStripMenuItem.Click
+        SymmetricEllipsePyram(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
     End Sub
 End Class
