@@ -52,6 +52,14 @@ Partial Class Form1
         Me.LinesToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.LinesparaleloToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LinesContinuosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LinesContinuos2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PracticoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LineasSimetricasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LineasSimetricasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SymmetricRectangleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RectangleToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EllipseToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RectangleToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
@@ -66,7 +74,9 @@ Partial Class Form1
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.LinesContinuos2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EllipseDiagonalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RectanglePyramToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EllipsePyramToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -169,7 +179,7 @@ Partial Class Form1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.Transparent
         Me.MenuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GraphicsToolStripMenuItem, Me.GraphicsPointsToolStripMenuItem, Me.OtherGraphicsToolStripMenuItem, Me.RandomLinesToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GraphicsToolStripMenuItem, Me.GraphicsPointsToolStripMenuItem, Me.OtherGraphicsToolStripMenuItem, Me.RandomLinesToolStripMenuItem, Me.PracticoToolStripMenuItem, Me.SymmetricRectangleToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(6, 2, 0, 2)
@@ -282,32 +292,82 @@ Partial Class Form1
         'LinesToolStripMenuItem1
         '
         Me.LinesToolStripMenuItem1.Name = "LinesToolStripMenuItem1"
-        Me.LinesToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.LinesToolStripMenuItem1.Size = New System.Drawing.Size(178, 22)
         Me.LinesToolStripMenuItem1.Text = "1. Lines"
         '
         'LinesToolStripMenuItem2
         '
         Me.LinesToolStripMenuItem2.Name = "LinesToolStripMenuItem2"
-        Me.LinesToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
+        Me.LinesToolStripMenuItem2.Size = New System.Drawing.Size(178, 22)
         Me.LinesToolStripMenuItem2.Text = "2. Lines"
         '
         'LinesToolStripMenuItem3
         '
         Me.LinesToolStripMenuItem3.Name = "LinesToolStripMenuItem3"
-        Me.LinesToolStripMenuItem3.Size = New System.Drawing.Size(180, 22)
+        Me.LinesToolStripMenuItem3.Size = New System.Drawing.Size(178, 22)
         Me.LinesToolStripMenuItem3.Text = "3. Lines"
         '
         'LinesparaleloToolStripMenuItem
         '
         Me.LinesparaleloToolStripMenuItem.Name = "LinesparaleloToolStripMenuItem"
-        Me.LinesparaleloToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LinesparaleloToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
         Me.LinesparaleloToolStripMenuItem.Text = "4. Lines (paralelo)"
         '
         'LinesContinuosToolStripMenuItem
         '
         Me.LinesContinuosToolStripMenuItem.Name = "LinesContinuosToolStripMenuItem"
-        Me.LinesContinuosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LinesContinuosToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
         Me.LinesContinuosToolStripMenuItem.Text = "5. Lines continuos"
+        '
+        'LinesContinuos2ToolStripMenuItem
+        '
+        Me.LinesContinuos2ToolStripMenuItem.Name = "LinesContinuos2ToolStripMenuItem"
+        Me.LinesContinuos2ToolStripMenuItem.Size = New System.Drawing.Size(178, 22)
+        Me.LinesContinuos2ToolStripMenuItem.Text = "6. Lines continuos 2"
+        '
+        'PracticoToolStripMenuItem
+        '
+        Me.PracticoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LineasSimetricasToolStripMenuItem, Me.LineasSimetricasToolStripMenuItem1})
+        Me.PracticoToolStripMenuItem.Name = "PracticoToolStripMenuItem"
+        Me.PracticoToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.PracticoToolStripMenuItem.Text = "Practico"
+        '
+        'LineasSimetricasToolStripMenuItem
+        '
+        Me.LineasSimetricasToolStripMenuItem.Name = "LineasSimetricasToolStripMenuItem"
+        Me.LineasSimetricasToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.LineasSimetricasToolStripMenuItem.Text = "1. Lineas simetricas"
+        '
+        'LineasSimetricasToolStripMenuItem1
+        '
+        Me.LineasSimetricasToolStripMenuItem1.Name = "LineasSimetricasToolStripMenuItem1"
+        Me.LineasSimetricasToolStripMenuItem1.Size = New System.Drawing.Size(175, 22)
+        Me.LineasSimetricasToolStripMenuItem1.Text = "2. Lineas simetricas"
+        '
+        'SymmetricRectangleToolStripMenuItem
+        '
+        Me.SymmetricRectangleToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RectangleToolStripMenuItem1, Me.EllipseToolStripMenuItem1, Me.RectangleToolStripMenuItem2, Me.EllipseDiagonalToolStripMenuItem, Me.RectanglePyramToolStripMenuItem, Me.EllipsePyramToolStripMenuItem})
+        Me.SymmetricRectangleToolStripMenuItem.Name = "SymmetricRectangleToolStripMenuItem"
+        Me.SymmetricRectangleToolStripMenuItem.Size = New System.Drawing.Size(134, 20)
+        Me.SymmetricRectangleToolStripMenuItem.Text = "Symmetric Graphics 2"
+        '
+        'RectangleToolStripMenuItem1
+        '
+        Me.RectangleToolStripMenuItem1.Name = "RectangleToolStripMenuItem1"
+        Me.RectangleToolStripMenuItem1.Size = New System.Drawing.Size(187, 22)
+        Me.RectangleToolStripMenuItem1.Text = "1. Rectangle"
+        '
+        'EllipseToolStripMenuItem1
+        '
+        Me.EllipseToolStripMenuItem1.Name = "EllipseToolStripMenuItem1"
+        Me.EllipseToolStripMenuItem1.Size = New System.Drawing.Size(187, 22)
+        Me.EllipseToolStripMenuItem1.Text = "2. Ellipse"
+        '
+        'RectangleToolStripMenuItem2
+        '
+        Me.RectangleToolStripMenuItem2.Name = "RectangleToolStripMenuItem2"
+        Me.RectangleToolStripMenuItem2.Size = New System.Drawing.Size(187, 22)
+        Me.RectangleToolStripMenuItem2.Text = "3. Rectangle diagonal"
         '
         'Button2
         '
@@ -482,11 +542,23 @@ Partial Class Form1
         Me.Label12.TabIndex = 22
         Me.Label12.Text = "Y3"
         '
-        'LinesContinuos2ToolStripMenuItem
+        'EllipseDiagonalToolStripMenuItem
         '
-        Me.LinesContinuos2ToolStripMenuItem.Name = "LinesContinuos2ToolStripMenuItem"
-        Me.LinesContinuos2ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.LinesContinuos2ToolStripMenuItem.Text = "6. Lines continuos 2"
+        Me.EllipseDiagonalToolStripMenuItem.Name = "EllipseDiagonalToolStripMenuItem"
+        Me.EllipseDiagonalToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.EllipseDiagonalToolStripMenuItem.Text = "4. Ellipse diagonal"
+        '
+        'RectanglePyramToolStripMenuItem
+        '
+        Me.RectanglePyramToolStripMenuItem.Name = "RectanglePyramToolStripMenuItem"
+        Me.RectanglePyramToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.RectanglePyramToolStripMenuItem.Text = "5. Rectangle Pyram"
+        '
+        'EllipsePyramToolStripMenuItem
+        '
+        Me.EllipsePyramToolStripMenuItem.Name = "EllipsePyramToolStripMenuItem"
+        Me.EllipsePyramToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.EllipsePyramToolStripMenuItem.Text = "6. Ellipse Pyram"
         '
         'Form1
         '
@@ -579,4 +651,14 @@ Partial Class Form1
     Friend WithEvents LinesparaleloToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LinesContinuosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LinesContinuos2ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PracticoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LineasSimetricasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LineasSimetricasToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents SymmetricRectangleToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RectangleToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents EllipseToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents RectangleToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents EllipseDiagonalToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RectanglePyramToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EllipsePyramToolStripMenuItem As ToolStripMenuItem
 End Class
