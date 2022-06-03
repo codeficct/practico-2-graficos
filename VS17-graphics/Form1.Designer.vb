@@ -60,6 +60,9 @@ Partial Class Form1
         Me.RectangleToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.EllipseToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.RectangleToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EllipseDiagonalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RectanglePyramToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EllipsePyramToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
@@ -74,9 +77,7 @@ Partial Class Form1
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.EllipseDiagonalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RectanglePyramToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EllipsePyramToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RectangleToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -346,7 +347,7 @@ Partial Class Form1
         '
         'SymmetricRectangleToolStripMenuItem
         '
-        Me.SymmetricRectangleToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RectangleToolStripMenuItem1, Me.EllipseToolStripMenuItem1, Me.RectangleToolStripMenuItem2, Me.EllipseDiagonalToolStripMenuItem, Me.RectanglePyramToolStripMenuItem, Me.EllipsePyramToolStripMenuItem})
+        Me.SymmetricRectangleToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RectangleToolStripMenuItem1, Me.EllipseToolStripMenuItem1, Me.RectangleToolStripMenuItem2, Me.EllipseDiagonalToolStripMenuItem, Me.RectanglePyramToolStripMenuItem, Me.EllipsePyramToolStripMenuItem, Me.RectangleToolStripMenuItem3})
         Me.SymmetricRectangleToolStripMenuItem.Name = "SymmetricRectangleToolStripMenuItem"
         Me.SymmetricRectangleToolStripMenuItem.Size = New System.Drawing.Size(134, 20)
         Me.SymmetricRectangleToolStripMenuItem.Text = "Symmetric Graphics 2"
@@ -368,6 +369,24 @@ Partial Class Form1
         Me.RectangleToolStripMenuItem2.Name = "RectangleToolStripMenuItem2"
         Me.RectangleToolStripMenuItem2.Size = New System.Drawing.Size(187, 22)
         Me.RectangleToolStripMenuItem2.Text = "3. Rectangle diagonal"
+        '
+        'EllipseDiagonalToolStripMenuItem
+        '
+        Me.EllipseDiagonalToolStripMenuItem.Name = "EllipseDiagonalToolStripMenuItem"
+        Me.EllipseDiagonalToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.EllipseDiagonalToolStripMenuItem.Text = "4. Ellipse diagonal"
+        '
+        'RectanglePyramToolStripMenuItem
+        '
+        Me.RectanglePyramToolStripMenuItem.Name = "RectanglePyramToolStripMenuItem"
+        Me.RectanglePyramToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.RectanglePyramToolStripMenuItem.Text = "5. Rectangle Pyram"
+        '
+        'EllipsePyramToolStripMenuItem
+        '
+        Me.EllipsePyramToolStripMenuItem.Name = "EllipsePyramToolStripMenuItem"
+        Me.EllipsePyramToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
+        Me.EllipsePyramToolStripMenuItem.Text = "6. Ellipse Pyram"
         '
         'Button2
         '
@@ -542,23 +561,11 @@ Partial Class Form1
         Me.Label12.TabIndex = 22
         Me.Label12.Text = "Y3"
         '
-        'EllipseDiagonalToolStripMenuItem
+        'RectangleToolStripMenuItem3
         '
-        Me.EllipseDiagonalToolStripMenuItem.Name = "EllipseDiagonalToolStripMenuItem"
-        Me.EllipseDiagonalToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
-        Me.EllipseDiagonalToolStripMenuItem.Text = "4. Ellipse diagonal"
-        '
-        'RectanglePyramToolStripMenuItem
-        '
-        Me.RectanglePyramToolStripMenuItem.Name = "RectanglePyramToolStripMenuItem"
-        Me.RectanglePyramToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
-        Me.RectanglePyramToolStripMenuItem.Text = "5. Rectangle Pyram"
-        '
-        'EllipsePyramToolStripMenuItem
-        '
-        Me.EllipsePyramToolStripMenuItem.Name = "EllipsePyramToolStripMenuItem"
-        Me.EllipsePyramToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
-        Me.EllipsePyramToolStripMenuItem.Text = "6. Ellipse Pyram"
+        Me.RectangleToolStripMenuItem3.Name = "RectangleToolStripMenuItem3"
+        Me.RectangleToolStripMenuItem3.Size = New System.Drawing.Size(187, 22)
+        Me.RectangleToolStripMenuItem3.Text = "7. Rectangle"
         '
         'Form1
         '
@@ -661,4 +668,5 @@ Partial Class Form1
     Friend WithEvents EllipseDiagonalToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RectanglePyramToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EllipsePyramToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RectangleToolStripMenuItem3 As ToolStripMenuItem
 End Class
