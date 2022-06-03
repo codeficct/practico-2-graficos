@@ -396,6 +396,61 @@ Public Class Form1
         Next
     End Sub
 
+    Public Sub RectSim4(ax As Integer, bx As Integer, ay As Integer, by As Integer, n As Integer)
+        Dim x, y, r1, r2, r3, r4, vi1, vi2, vi3, vi4, A, L As Single
+        Dim i, j As UInt32
+        graphic.DrawRectangle(Pens.Black, ax, bx, bx - ax, by - ay)
+        vi1 = ax : r1 = (bx - ax) / (2 * n)
+        vi2 = ay : r2 = (by - ay) / (2 * n)
+        vi3 = bx - ax : r3 = -r1 * 2
+        vi4 = by - ay : r4 = -r2 * 2
+        For i = 1 To n
+            x = vi1 + (i - 1) * r1
+            y = vi2 + (i - 1) * r2
+            A = vi3 + (i - 1) * r3
+            L = vi4 + (i - 1) * r4
+            graphic.DrawRectangle(Pens.Black, x, y, A, L)
+            For j = 1 To 9900000
+            Next
+        Next
+    End Sub
+    ' * 1. Symmetric Rectangle sencond part
+    Public Sub SymmetricRectangle(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32)
+        Dim x, y, w, h, r1, r2, r3, vi1, vi2, vi3 As Single
+        Dim index, j As UInt32
+        graphic.DrawRectangle(Pens.Black, ax, ay, bx - ax, by - ay)
+        vi1 = ax : r1 = (bx - ax) / ((2 * n) - 1)
+        y = ay
+        vi2 = bx - ax : r2 = -r1 * 2
+        vi3 = by - ay : r3 = -(by - ay) / n
+        For index = 1 To n
+            x = vi1 + (index - 1) * r1
+            w = vi2 + (index - 1) * r2
+            h = vi3 + (index - 1) * r3
+            graphic.DrawRectangle(Pens.Purple, x, y, w, h)
+            For j = 1 To 99999000
+            Next
+        Next
+    End Sub
+
+    Public Sub SymmetricRectanglePyram(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32)
+        Dim x, y, w, h, vi1, r1, vi2, r2, vi3, r3 As Single
+        Dim index, j As UInt32
+        graphic.DrawRectangle(Pens.Blue, ax, ay, bx - ax, by - ay)
+        r1 = (bx - ax) / (n * 2) : vi1 = (ax + bx) / 2 - r1
+        r2 = (by - ay) / n : vi2 = ay
+        r3 = (bx - ax) / n : vi3 = r3
+        h = r2
+        For index = 1 To n
+            x = vi1 - (index - 1) * r1
+            y = vi2 + (index - 1) * r2
+            w = vi3 + (index - 1) * r3
+            graphic.DrawRectangle(Pens.Purple, x, y, w, h)
+            For j = 1 To 99777777
+            Next
+        Next
+    End Sub
+
     '<--- EVENTS HANDLER --->
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Frame()
@@ -492,7 +547,20 @@ Public Class Form1
             RandomLines10(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, True)
             RandomLines10(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, False)
         Catch ex As Exception
-            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="9. Gráfico")
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="10. Gráfico")
         End Try
+    End Sub
+
+    Private Sub ToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem2.Click
+        Try
+            SymmetricRectangle(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+            'RectSim4(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="1. Rectangulo")
+        End Try
+    End Sub
+
+    Private Sub TestToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles TestToolStripMenuItem1.Click
+        SymmetricRectanglePyram(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
     End Sub
 End Class
