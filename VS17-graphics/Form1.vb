@@ -408,6 +408,76 @@
         Next
     End Sub
 
+    Public Sub RectSim4(ax As Integer, bx As Integer, ay As Integer, by As Integer, n As Integer)
+        Dim x, y, r1, r2, r3, r4, vi1, vi2, vi3, vi4, A, L As Single
+        Dim i, j As UInt32
+        vi1 = ax : r1 = (bx - ax) / (2 * n)
+        vi2 = ay : r2 = (by - ay) / (2 * n)
+        vi3 = bx - ax : r3 = -r1 * 2
+        vi4 = by - ay : r4 = -r2 * 2
+        graphic.DrawRectangle(Pens.Black, ax, bx, bx - ax, by - ay)
+        For i = 1 To n
+            x = vi1 + (i - 1) * r1
+            y = vi2 + (i - 1) * r2
+            A = vi3 + (i - 1) * r3
+            L = vi4 + (i - 1) * r4
+            graphic.DrawRectangle(Pens.Black, x, y, A, L)
+            For j = 1 To 9900000
+
+            Next
+        Next
+    End Sub
+
+    Public Sub RectAleatorios1(ax As Integer, bx As Integer, ay As Integer, by As Integer, n As Integer)
+        Dim x, y, A, L As Single
+        Dim i, j As UInt32
+        graphic.DrawRectangle(Pens.Black, ax, bx, bx - ax, by - ay)
+        For i = 1 To n
+            x = ax + Rnd() * (bx - ax)
+            y = ay + Rnd() * (by - ay)
+            A = Rnd() * (bx - x)
+            L = Rnd() * (by - y)
+            graphic.DrawRectangle(Pens.Black, x, y, A, L)
+            For j = 1 To 9900000
+
+            Next
+        Next
+    End Sub
+
+    Public Sub RectAleatorios2(ax As Integer, bx As Integer, ay As Integer, by As Integer, n As Integer)
+        Dim x, y, A, L, my As Single
+        Dim i, j As UInteger
+        my = (ay + by) / 2
+        graphic.DrawRectangle(Pens.Black, ax, bx, bx - ax, by - ay)
+        For i = 1 To n
+            x = ax + Rnd() * (bx - ax)
+            y = ay + Rnd() * (by - ay)
+            A = Rnd() * (bx - x)
+            L = my - y
+            graphic.DrawRectangle(Pens.Black, x, y, A, L)
+            For j = 1 To 9900000
+
+            Next
+        Next
+    End Sub
+
+    Public Sub RectAleatorios3(ax As Integer, bx As Integer, ay As Integer, by As Integer, n As Integer)
+        Dim x, y, A, L, my As Single
+        Dim i, j As UInteger
+        my = (ay + by) / 2
+        x = ax : y = ay
+        graphic.DrawRectangle(Pens.Black, ax, bx, bx - ax, by - ay)
+        graphic.DrawLine(Pens.Black, ax, my, bx, my)
+        For i = 1 To n
+            A = Rnd() * (bx - x)
+            L = Rnd() * (my - y)
+            graphic.DrawRectangle(Pens.Black, x, y, A, L)
+            For j = 1 To 9900000
+
+            Next
+        Next
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Frame()
         Label1.Text = "X =" + Str(PictureBox1.Width())
@@ -601,5 +671,9 @@
 
     Private Sub EllipsePyramToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EllipsePyramToolStripMenuItem.Click
         SymmetricEllipsePyram(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+    End Sub
+
+    Private Sub RectangleToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles RectangleToolStripMenuItem3.Click
+        RectSim4(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
     End Sub
 End Class
