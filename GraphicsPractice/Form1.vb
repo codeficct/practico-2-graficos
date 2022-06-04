@@ -396,61 +396,6 @@ Public Class Form1
         Next
     End Sub
 
-    Public Sub RectSim4(ax As Integer, bx As Integer, ay As Integer, by As Integer, n As Integer)
-        Dim x, y, r1, r2, r3, r4, vi1, vi2, vi3, vi4, A, L As Single
-        Dim i, j As UInt32
-        graphic.DrawRectangle(Pens.Black, ax, bx, bx - ax, by - ay)
-        vi1 = ax : r1 = (bx - ax) / (2 * n)
-        vi2 = ay : r2 = (by - ay) / (2 * n)
-        vi3 = bx - ax : r3 = -r1 * 2
-        vi4 = by - ay : r4 = -r2 * 2
-        For i = 1 To n
-            x = vi1 + (i - 1) * r1
-            y = vi2 + (i - 1) * r2
-            A = vi3 + (i - 1) * r3
-            L = vi4 + (i - 1) * r4
-            graphic.DrawRectangle(Pens.Black, x, y, A, L)
-            For j = 1 To 9900000
-            Next
-        Next
-    End Sub
-    ' * 1. Symmetric Rectangle sencond part
-    Public Sub SymmetricRectangle(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32)
-        Dim x, y, w, h, r1, r2, r3, vi1, vi2, vi3 As Single
-        Dim index, j As UInt32
-        graphic.DrawRectangle(Pens.Black, ax, ay, bx - ax, by - ay)
-        vi1 = ax : r1 = (bx - ax) / ((2 * n) - 1)
-        y = ay
-        vi2 = bx - ax : r2 = -r1 * 2
-        vi3 = by - ay : r3 = -(by - ay) / n
-        For index = 1 To n
-            x = vi1 + (index - 1) * r1
-            w = vi2 + (index - 1) * r2
-            h = vi3 + (index - 1) * r3
-            graphic.DrawRectangle(Pens.Purple, x, y, w, h)
-            For j = 1 To 99999000
-            Next
-        Next
-    End Sub
-
-    Public Sub SymmetricRectanglePyram(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32)
-        Dim x, y, w, h, vi1, r1, vi2, r2, vi3, r3 As Single
-        Dim index, j As UInt32
-        graphic.DrawRectangle(Pens.Blue, ax, ay, bx - ax, by - ay)
-        r1 = (bx - ax) / (n * 2) : vi1 = (ax + bx) / 2 - r1
-        r2 = (by - ay) / n : vi2 = ay
-        r3 = (bx - ax) / n : vi3 = r3
-        h = r2
-        For index = 1 To n
-            x = vi1 - (index - 1) * r1
-            y = vi2 + (index - 1) * r2
-            w = vi3 + (index - 1) * r3
-            graphic.DrawRectangle(Pens.Purple, x, y, w, h)
-            For j = 1 To 99777777
-            Next
-        Next
-    End Sub
-
     '<--- EVENTS HANDLER --->
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Frame()
@@ -551,16 +496,304 @@ Public Class Form1
         End Try
     End Sub
 
+
+    ' * <--- SECOND PART OF PRACTICE --->
+    Public Sub GraphicRandomColor(x As Single, y As Single, w As Single, h As Single, gName As String)
+        Dim rng As New Random()
+        Using pen = New Pen(Color.FromArgb(rng.Next(256), rng.Next(156), rng.Next(200)))
+            If gName = "rectangle" Then
+                graphic.DrawRectangle(pen, x, y, w, h)
+            Else
+                graphic.DrawEllipse(pen, x, y, w, h)
+            End If
+        End Using
+    End Sub
+
+    ' * 1. Symmetric Rectangle
+    Public Sub SymmetricRectangle1(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, graphicName As String)
+        Dim x, y, w, h, r1, r2, r3, vi1, vi2, vi3 As Single
+        Dim index, j As UInt32
+        graphic.DrawRectangle(Pens.Black, ax, ay, bx - ax, by - ay)
+        vi1 = ax : r1 = (bx - ax) / ((2 * n) - 1)
+        vi2 = bx - ax : r2 = -r1 * 2
+        y = ay
+        vi3 = by - ay : r3 = -(by - ay) / n
+        For index = 1 To n
+            x = vi1 + (index - 1) * r1
+            w = vi2 + (index - 1) * r2
+            h = vi3 + (index - 1) * r3
+            GraphicRandomColor(x, y, w, h, graphicName)
+            For j = 1 To 99999000
+            Next
+        Next
+    End Sub
+
+    ' * 2. Symmetric Rectangle
+    Public Sub SymmetricRectangle2(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, graphicName As String)
+        Dim x, y, w, h, r1, vi1 As Single
+        Dim index, j As UInt32
+        graphic.DrawRectangle(Pens.Black, ax, ay, bx - ax, by - ay)
+        r1 = (by - ay) / n : vi1 = ay
+        x = ((bx + ax) / 2) - (r1 / 2)
+        w = r1
+        h = r1
+        For index = 1 To n
+            y = vi1 + (index - 1) * r1
+            GraphicRandomColor(x, y, w, h, graphicName)
+            For j = 1 To 99999000
+            Next
+        Next
+    End Sub
+
+    ' * 3. Symmetric Rectangle
+    Public Sub SymmetricRectangle3(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, graphicName As String)
+        Dim x, y, w, h, vi1, vi2, vi3, r1, r2, r3 As Single
+        Dim index, j As UInt32
+        graphic.DrawRectangle(Pens.Black, ax, ay, bx - ax, by - ay)
+        r1 = (bx - ax) / n : vi1 = ax
+        w = r1
+        r2 = (by - ay) / n : vi2 = by - r2
+        r3 = r2 : vi3 = r3
+        For index = 1 To n
+            x = vi1 + (index - 1) * r1
+            y = vi2 - (index - 1) * r2
+            h = vi3 + (index - 1) * r3
+            GraphicRandomColor(x, y, w, h, graphicName)
+            For j = 1 To 99999000
+            Next
+        Next
+    End Sub
+
+    ' * 4. Symmetric Rectangle
+    Public Sub SymmetricRectangle4(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, graphicName As String)
+        Dim x, y, w, h, r1, r2, vi1, vi2 As Single
+        Dim index, j As UInt32
+        graphic.DrawRectangle(Pens.Black, ax, ay, bx - ax, by - ay)
+        r1 = (bx - ax) / (n + 1) : vi1 = ax : w = r1 * 2
+        r2 = (by - ay) / (n + 1) : vi2 = by - (r2 * 2) : h = r2 * 2
+        For index = 1 To n
+            x = vi1 + (index - 1) * r1
+            y = vi2 - (index - 1) * r2
+            GraphicRandomColor(x, y, w, h, graphicName)
+            For j = 1 To 99999000
+            Next
+        Next
+    End Sub
+
+    ' * 5. Symmetric Rectangle Random
+    Public Sub SymmetricRectangleRandom5(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Boolean, graphicName As String)
+        Dim x, y, w, h, halfmy As Single
+        Dim index, j As UInt32
+        createRectangleWithHalf(ax, bx, ay, by, False)
+        halfmy = (by + ay) / 2
+        For index = 1 To n
+            If half Then
+                y = halfmy + Rnd() * (by - halfmy)
+                h = Rnd() * (by - y)
+            Else
+                y = ay + Rnd() * (halfmy - ay)
+                h = Rnd() * (halfmy - y)
+            End If
+            x = ax + Rnd() * (bx - ax)
+            w = Rnd() * (bx - x)
+            GraphicRandomColor(x, y, w, h, graphicName)
+            For j = 1 To 99999000
+            Next
+        Next
+    End Sub
+
+    ' * 6. Symmetric Rectangle Random
+    Public Sub SymmetricRectangleRandom6(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Boolean, graphicName As String)
+        Dim x, y, w, h, halfmy, limit As Single
+        Dim index, j As UInt32
+        createRectangleWithHalf(ax, bx, ay, by, False)
+        halfmy = (ay + by) / 2
+        If half Then
+            y = ay : limit = halfmy - y
+        Else
+            y = halfmy : limit = by - y
+        End If
+        For index = 1 To n
+            h = Rnd() * limit
+            x = ax + Rnd() * (bx - ax)
+            w = bx - x
+            GraphicRandomColor(x, y, w, h, graphicName)
+            For j = 1 To 99999000
+            Next
+        Next
+    End Sub
+
+    ' * 7. Symmetric Rectangle Random
+    Public Sub SymmetricRectangleRandom7(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Boolean, graphicName As String)
+        Dim x, y, w, h, halfmy As Single
+        Dim index, j As UInt32
+        createRectangleWithHalf(ax, bx, ay, by, False)
+        halfmy = (by + ay) / 2
+        For index = 1 To n
+            If half Then
+                y = ay + Rnd() * (halfmy - ay)
+                h = Rnd() * (halfmy - y)
+            Else
+                y = halfmy + Rnd() * (by - halfmy)
+                h = Rnd() * (by - y)
+            End If
+            x = ax + Rnd() * (bx - ax)
+            w = bx - x
+            GraphicRandomColor(x, y, w, h, graphicName)
+            For j = 1 To 99999000
+            Next
+        Next
+    End Sub
+
+    ' * 8. Symmetric Rectangle Random
+    Public Sub SymmetricRectangleRandom8(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, graphicName As String)
+        Dim x, y, w, h, halfmy, halfmx As Single
+        Dim index, j As UInt32
+        graphic.DrawRectangle(Pens.Black, ax, ay, bx - ax, by - ay)
+        halfmy = (by + ay) / 2 : halfmx = (bx + ax) / 2
+        For index = 1 To n
+            x = ax + Rnd() * (halfmx - ax)
+            y = ay + Rnd() * (halfmy - ay)
+            w = (halfmx - x) * 2
+            h = (halfmy - y) * 2
+            GraphicRandomColor(x, y, w, h, graphicName)
+            For j = 1 To 99999000
+            Next
+        Next
+    End Sub
+
     Private Sub ToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem2.Click
         Try
-            SymmetricRectangle(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
-            'RectSim4(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+            SymmetricRectangle1(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, "rectangle")
         Catch ex As Exception
-            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="1. Rectangulo")
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="1. Rectangulo Simetrico")
         End Try
     End Sub
 
-    Private Sub TestToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles TestToolStripMenuItem1.Click
-        SymmetricRectanglePyram(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+    Private Sub RectangleToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles RectangleToolStripMenuItem1.Click
+        Try
+            SymmetricRectangle2(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, "rectangle")
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="2. Rectangulo Simetrico")
+        End Try
+    End Sub
+
+    Private Sub RectangleToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles RectangleToolStripMenuItem2.Click
+        Try
+            SymmetricRectangle3(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, "rectangle")
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="3. Rectangulo Simetrico")
+        End Try
+    End Sub
+
+    Private Sub RectangleToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles RectangleToolStripMenuItem3.Click
+        Try
+            SymmetricRectangle4(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, "rectangle")
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="4. Rectangulo Simetrico")
+        End Try
+    End Sub
+
+    Private Sub RectangleRandomToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RectangleRandomToolStripMenuItem.Click
+        Try
+            SymmetricRectangleRandom5(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, True, "rectangle")
+            SymmetricRectangleRandom5(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, False, "rectangle")
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="5. Rectangulo Simetrico Aleatorio")
+        End Try
+    End Sub
+
+    Private Sub RectangleRandomToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles RectangleRandomToolStripMenuItem1.Click
+        Try
+            SymmetricRectangleRandom6(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, True, "rectangle")
+            SymmetricRectangleRandom6(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, False, "rectangle")
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="6. Rectangulo Simetrico Aleatorio")
+        End Try
+    End Sub
+
+    Private Sub RectangleRandomToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles RectangleRandomToolStripMenuItem2.Click
+        Try
+            SymmetricRectangleRandom7(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, True, "rectangle")
+            SymmetricRectangleRandom7(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, False, "rectangle")
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="7. Rectangulo Simetrico Aleatorio")
+        End Try
+    End Sub
+
+    Private Sub RectangleRandomToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles RectangleRandomToolStripMenuItem3.Click
+        Try
+            SymmetricRectangleRandom8(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, "rectangle")
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="8. Rectangulo Simetrico Aleatorio")
+        End Try
+    End Sub
+    ' * Ellipse Handlers
+    Private Sub ToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem3.Click
+        Try
+            SymmetricRectangle1(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, "ellipse")
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="1. Elipse Simetrico")
+        End Try
+    End Sub
+
+    Private Sub ToolStripMenuItem4_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem4.Click
+        Try
+            SymmetricRectangle2(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, "ellipse")
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="2. Elipse Simetrico")
+        End Try
+    End Sub
+
+    Private Sub ToolStripMenuItem5_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem5.Click
+        Try
+            SymmetricRectangle3(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, "ellipse")
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="3. Elipse Simetrico")
+        End Try
+    End Sub
+
+    Private Sub ToolStripMenuItem6_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem6.Click
+        Try
+            SymmetricRectangle4(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, "ellipse")
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="4. Elipse Simetrico")
+        End Try
+    End Sub
+
+    Private Sub ToolStripMenuItem7_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem7.Click
+        Try
+            SymmetricRectangleRandom5(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, True, "ellipse")
+            SymmetricRectangleRandom5(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, False, "ellipse")
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="5. Elipse Simetrico Aleatorio")
+        End Try
+    End Sub
+
+    Private Sub ToolStripMenuItem8_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem8.Click
+        Try
+            SymmetricRectangleRandom6(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, True, "ellipse")
+            SymmetricRectangleRandom6(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, False, "ellipse")
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="6. Elipse Simetrico Aleatorio")
+        End Try
+    End Sub
+
+    Private Sub ToolStripMenuItem9_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem9.Click
+        Try
+            SymmetricRectangleRandom7(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, True, "ellipse")
+            SymmetricRectangleRandom7(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, False, "ellipse")
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="7. Elipse Simetrico Aleatorio")
+        End Try
+    End Sub
+
+    Private Sub ToolStripMenuItem10_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem10.Click
+        Try
+            SymmetricRectangleRandom8(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, "ellipse")
+            SymmetricRectangleRandom8(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, "ellipse")
+        Catch ex As Exception
+            MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="8. Elipse Simetrico Aleatorio")
+        End Try
     End Sub
 End Class
