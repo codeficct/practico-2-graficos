@@ -40,6 +40,15 @@ Partial Class Form1
         Me.GraphicToolStripMenuItem8 = New System.Windows.Forms.ToolStripMenuItem()
         Me.GraphicToolStripMenuItem9 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.RectangleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RectangleToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RectangleToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RectangleToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RectangleRandomToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RectangleRandomToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RectangleRandomToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RectangleRandomToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -75,7 +84,6 @@ Partial Class Form1
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel10 = New System.Windows.Forms.Panel()
@@ -84,11 +92,17 @@ Partial Class Form1
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.RectangleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.TestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TestToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem6 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem7 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem8 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem9 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem10 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -130,13 +144,13 @@ Partial Class Form1
         '
         Me.InformaciónDelEstudianteToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VerInformaciónToolStripMenuItem})
         Me.InformaciónDelEstudianteToolStripMenuItem.Name = "InformaciónDelEstudianteToolStripMenuItem"
-        Me.InformaciónDelEstudianteToolStripMenuItem.Size = New System.Drawing.Size(126, 20)
+        Me.InformaciónDelEstudianteToolStripMenuItem.Size = New System.Drawing.Size(126, 26)
         Me.InformaciónDelEstudianteToolStripMenuItem.Text = "Student information"
         '
         'VerInformaciónToolStripMenuItem
         '
         Me.VerInformaciónToolStripMenuItem.Name = "VerInformaciónToolStripMenuItem"
-        Me.VerInformaciónToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.VerInformaciónToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.VerInformaciónToolStripMenuItem.Text = "See information"
         '
         'SymmetricGraphicsToolStripMenuItem
@@ -144,37 +158,37 @@ Partial Class Form1
         Me.SymmetricGraphicsToolStripMenuItem.BackColor = System.Drawing.Color.LightSteelBlue
         Me.SymmetricGraphicsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GraphicToolStripMenuItem, Me.GraphicToolStripMenuItem1, Me.GraphicToolStripMenuItem2, Me.GraphicToolStripMenuItem3, Me.GraphicToolStripMenuItem4})
         Me.SymmetricGraphicsToolStripMenuItem.Name = "SymmetricGraphicsToolStripMenuItem"
-        Me.SymmetricGraphicsToolStripMenuItem.Size = New System.Drawing.Size(125, 26)
-        Me.SymmetricGraphicsToolStripMenuItem.Text = "Symmetric Graphics"
+        Me.SymmetricGraphicsToolStripMenuItem.Size = New System.Drawing.Size(106, 26)
+        Me.SymmetricGraphicsToolStripMenuItem.Text = "Symmetric Lines"
         '
         'GraphicToolStripMenuItem
         '
         Me.GraphicToolStripMenuItem.Name = "GraphicToolStripMenuItem"
-        Me.GraphicToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.GraphicToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
         Me.GraphicToolStripMenuItem.Text = "1. Graphic"
         '
         'GraphicToolStripMenuItem1
         '
         Me.GraphicToolStripMenuItem1.Name = "GraphicToolStripMenuItem1"
-        Me.GraphicToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.GraphicToolStripMenuItem1.Size = New System.Drawing.Size(127, 22)
         Me.GraphicToolStripMenuItem1.Text = "2. Graphic"
         '
         'GraphicToolStripMenuItem2
         '
         Me.GraphicToolStripMenuItem2.Name = "GraphicToolStripMenuItem2"
-        Me.GraphicToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
+        Me.GraphicToolStripMenuItem2.Size = New System.Drawing.Size(127, 22)
         Me.GraphicToolStripMenuItem2.Text = "3. Graphic"
         '
         'GraphicToolStripMenuItem3
         '
         Me.GraphicToolStripMenuItem3.Name = "GraphicToolStripMenuItem3"
-        Me.GraphicToolStripMenuItem3.Size = New System.Drawing.Size(180, 22)
+        Me.GraphicToolStripMenuItem3.Size = New System.Drawing.Size(127, 22)
         Me.GraphicToolStripMenuItem3.Text = "4. Graphic"
         '
         'GraphicToolStripMenuItem4
         '
         Me.GraphicToolStripMenuItem4.Name = "GraphicToolStripMenuItem4"
-        Me.GraphicToolStripMenuItem4.Size = New System.Drawing.Size(180, 22)
+        Me.GraphicToolStripMenuItem4.Size = New System.Drawing.Size(127, 22)
         Me.GraphicToolStripMenuItem4.Text = "5. Graphic"
         '
         'RandomGraphicsToolStripMenuItem
@@ -182,50 +196,106 @@ Partial Class Form1
         Me.RandomGraphicsToolStripMenuItem.BackColor = System.Drawing.Color.LightSteelBlue
         Me.RandomGraphicsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GraphicToolStripMenuItem5, Me.GraphicToolStripMenuItem6, Me.GraphicToolStripMenuItem7, Me.GraphicToolStripMenuItem8, Me.GraphicToolStripMenuItem9})
         Me.RandomGraphicsToolStripMenuItem.Name = "RandomGraphicsToolStripMenuItem"
-        Me.RandomGraphicsToolStripMenuItem.Size = New System.Drawing.Size(113, 26)
-        Me.RandomGraphicsToolStripMenuItem.Text = "Random Graphics"
+        Me.RandomGraphicsToolStripMenuItem.Size = New System.Drawing.Size(94, 26)
+        Me.RandomGraphicsToolStripMenuItem.Text = "Random Lines"
         '
         'GraphicToolStripMenuItem5
         '
         Me.GraphicToolStripMenuItem5.Name = "GraphicToolStripMenuItem5"
-        Me.GraphicToolStripMenuItem5.Size = New System.Drawing.Size(180, 22)
+        Me.GraphicToolStripMenuItem5.Size = New System.Drawing.Size(133, 22)
         Me.GraphicToolStripMenuItem5.Text = "6. Graphic"
         '
         'GraphicToolStripMenuItem6
         '
         Me.GraphicToolStripMenuItem6.Name = "GraphicToolStripMenuItem6"
-        Me.GraphicToolStripMenuItem6.Size = New System.Drawing.Size(180, 22)
+        Me.GraphicToolStripMenuItem6.Size = New System.Drawing.Size(133, 22)
         Me.GraphicToolStripMenuItem6.Text = "7. Graphic"
         '
         'GraphicToolStripMenuItem7
         '
         Me.GraphicToolStripMenuItem7.Name = "GraphicToolStripMenuItem7"
-        Me.GraphicToolStripMenuItem7.Size = New System.Drawing.Size(180, 22)
+        Me.GraphicToolStripMenuItem7.Size = New System.Drawing.Size(133, 22)
         Me.GraphicToolStripMenuItem7.Text = "8. Graphic"
         '
         'GraphicToolStripMenuItem8
         '
         Me.GraphicToolStripMenuItem8.Name = "GraphicToolStripMenuItem8"
-        Me.GraphicToolStripMenuItem8.Size = New System.Drawing.Size(180, 22)
+        Me.GraphicToolStripMenuItem8.Size = New System.Drawing.Size(133, 22)
         Me.GraphicToolStripMenuItem8.Text = "9. Graphic"
         '
         'GraphicToolStripMenuItem9
         '
         Me.GraphicToolStripMenuItem9.Name = "GraphicToolStripMenuItem9"
-        Me.GraphicToolStripMenuItem9.Size = New System.Drawing.Size(180, 22)
+        Me.GraphicToolStripMenuItem9.Size = New System.Drawing.Size(133, 22)
         Me.GraphicToolStripMenuItem9.Text = "10. Graphic"
         '
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.Beige
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InformaciónDelEstudianteToolStripMenuItem, Me.SymmetricGraphicsToolStripMenuItem, Me.RandomGraphicsToolStripMenuItem, Me.RectangleToolStripMenuItem, Me.TestToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InformaciónDelEstudianteToolStripMenuItem, Me.SymmetricGraphicsToolStripMenuItem, Me.RandomGraphicsToolStripMenuItem, Me.RectangleToolStripMenuItem, Me.ToolStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
         Me.MenuStrip1.Size = New System.Drawing.Size(749, 30)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'RectangleToolStripMenuItem
+        '
+        Me.RectangleToolStripMenuItem.BackColor = System.Drawing.Color.Thistle
+        Me.RectangleToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2, Me.RectangleToolStripMenuItem1, Me.RectangleToolStripMenuItem2, Me.RectangleToolStripMenuItem3, Me.RectangleRandomToolStripMenuItem, Me.RectangleRandomToolStripMenuItem1, Me.RectangleRandomToolStripMenuItem2, Me.RectangleRandomToolStripMenuItem3})
+        Me.RectangleToolStripMenuItem.Name = "RectangleToolStripMenuItem"
+        Me.RectangleToolStripMenuItem.Size = New System.Drawing.Size(131, 26)
+        Me.RectangleToolStripMenuItem.Text = "Symmetric Rectangle"
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(183, 22)
+        Me.ToolStripMenuItem2.Text = "1. Rectangle"
+        '
+        'RectangleToolStripMenuItem1
+        '
+        Me.RectangleToolStripMenuItem1.Name = "RectangleToolStripMenuItem1"
+        Me.RectangleToolStripMenuItem1.Size = New System.Drawing.Size(183, 22)
+        Me.RectangleToolStripMenuItem1.Text = "2. Rectangle"
+        '
+        'RectangleToolStripMenuItem2
+        '
+        Me.RectangleToolStripMenuItem2.Name = "RectangleToolStripMenuItem2"
+        Me.RectangleToolStripMenuItem2.Size = New System.Drawing.Size(183, 22)
+        Me.RectangleToolStripMenuItem2.Text = "3. Rectangle"
+        '
+        'RectangleToolStripMenuItem3
+        '
+        Me.RectangleToolStripMenuItem3.Name = "RectangleToolStripMenuItem3"
+        Me.RectangleToolStripMenuItem3.Size = New System.Drawing.Size(183, 22)
+        Me.RectangleToolStripMenuItem3.Text = "4. Rectangle"
+        '
+        'RectangleRandomToolStripMenuItem
+        '
+        Me.RectangleRandomToolStripMenuItem.Name = "RectangleRandomToolStripMenuItem"
+        Me.RectangleRandomToolStripMenuItem.Size = New System.Drawing.Size(183, 22)
+        Me.RectangleRandomToolStripMenuItem.Text = "5. Rectangle random"
+        '
+        'RectangleRandomToolStripMenuItem1
+        '
+        Me.RectangleRandomToolStripMenuItem1.Name = "RectangleRandomToolStripMenuItem1"
+        Me.RectangleRandomToolStripMenuItem1.Size = New System.Drawing.Size(183, 22)
+        Me.RectangleRandomToolStripMenuItem1.Text = "6. Rectangle random"
+        '
+        'RectangleRandomToolStripMenuItem2
+        '
+        Me.RectangleRandomToolStripMenuItem2.Name = "RectangleRandomToolStripMenuItem2"
+        Me.RectangleRandomToolStripMenuItem2.Size = New System.Drawing.Size(183, 22)
+        Me.RectangleRandomToolStripMenuItem2.Text = "7. Rectangle random"
+        '
+        'RectangleRandomToolStripMenuItem3
+        '
+        Me.RectangleRandomToolStripMenuItem3.Name = "RectangleRandomToolStripMenuItem3"
+        Me.RectangleRandomToolStripMenuItem3.Size = New System.Drawing.Size(183, 22)
+        Me.RectangleRandomToolStripMenuItem3.Text = "8. Rectangle random"
         '
         'Label1
         '
@@ -634,7 +704,7 @@ Partial Class Form1
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label20.Location = New System.Drawing.Point(75, 407)
+        Me.Label20.Location = New System.Drawing.Point(75, 402)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(21, 15)
         Me.Label20.TabIndex = 29
@@ -645,7 +715,7 @@ Partial Class Form1
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label19.Location = New System.Drawing.Point(75, 85)
+        Me.Label19.Location = New System.Drawing.Point(75, 80)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(21, 15)
         Me.Label19.TabIndex = 28
@@ -656,29 +726,18 @@ Partial Class Form1
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label18.Location = New System.Drawing.Point(653, 47)
+        Me.Label18.Location = New System.Drawing.Point(653, 42)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(21, 15)
         Me.Label18.TabIndex = 27
         Me.Label18.Text = "bx"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.ForeColor = System.Drawing.Color.LightCoral
-        Me.Label17.Location = New System.Drawing.Point(96, 16)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(21, 15)
-        Me.Label17.TabIndex = 26
-        Me.Label17.Text = "ax"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(157, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(22, 99)
+        Me.Label7.Location = New System.Drawing.Point(22, 94)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(74, 15)
         Me.Label7.TabIndex = 25
@@ -689,7 +748,7 @@ Partial Class Form1
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(157, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(115, 62)
+        Me.Label8.Location = New System.Drawing.Point(115, 57)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(69, 15)
         Me.Label8.TabIndex = 24
@@ -698,7 +757,7 @@ Partial Class Form1
         'Panel10
         '
         Me.Panel10.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.Panel10.Location = New System.Drawing.Point(102, 99)
+        Me.Panel10.Location = New System.Drawing.Point(102, 94)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(1, 340)
         Me.Panel10.TabIndex = 22
@@ -706,7 +765,7 @@ Partial Class Form1
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.LightCoral
-        Me.Panel9.Location = New System.Drawing.Point(118, 82)
+        Me.Panel9.Location = New System.Drawing.Point(118, 77)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(560, 1)
         Me.Panel9.TabIndex = 21
@@ -716,7 +775,7 @@ Partial Class Form1
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(157, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(20, 422)
+        Me.Label6.Location = New System.Drawing.Point(20, 417)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(76, 15)
         Me.Label6.TabIndex = 20
@@ -727,7 +786,7 @@ Partial Class Form1
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(157, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(603, 62)
+        Me.Label5.Location = New System.Drawing.Point(603, 57)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(71, 15)
         Me.Label5.TabIndex = 19
@@ -746,25 +805,22 @@ Partial Class Form1
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(118, 99)
+        Me.PictureBox1.Location = New System.Drawing.Point(118, 94)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(560, 340)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'RectangleToolStripMenuItem
+        'Label17
         '
-        Me.RectangleToolStripMenuItem.BackColor = System.Drawing.Color.Thistle
-        Me.RectangleToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2})
-        Me.RectangleToolStripMenuItem.Name = "RectangleToolStripMenuItem"
-        Me.RectangleToolStripMenuItem.Size = New System.Drawing.Size(131, 26)
-        Me.RectangleToolStripMenuItem.Text = "Symmetric Rectangle"
-        '
-        'ToolStripMenuItem2
-        '
-        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
-        Me.ToolStripMenuItem2.Text = "1. Rectangle"
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label17.Location = New System.Drawing.Point(96, 16)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(21, 15)
+        Me.Label17.TabIndex = 26
+        Me.Label17.Text = "ax"
         '
         'Panel11
         '
@@ -776,18 +832,61 @@ Partial Class Form1
         Me.Panel11.Size = New System.Drawing.Size(749, 30)
         Me.Panel11.TabIndex = 10
         '
-        'TestToolStripMenuItem
+        'ToolStripMenuItem1
         '
-        Me.TestToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TestToolStripMenuItem1})
-        Me.TestToolStripMenuItem.Name = "TestToolStripMenuItem"
-        Me.TestToolStripMenuItem.Size = New System.Drawing.Size(38, 26)
-        Me.TestToolStripMenuItem.Text = "test"
+        Me.ToolStripMenuItem1.BackColor = System.Drawing.Color.Thistle
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem3, Me.ToolStripMenuItem4, Me.ToolStripMenuItem5, Me.ToolStripMenuItem6, Me.ToolStripMenuItem7, Me.ToolStripMenuItem8, Me.ToolStripMenuItem9, Me.ToolStripMenuItem10})
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(112, 26)
+        Me.ToolStripMenuItem1.Text = "Symmetric Ellipse"
         '
-        'TestToolStripMenuItem1
+        'ToolStripMenuItem3
         '
-        Me.TestToolStripMenuItem1.Name = "TestToolStripMenuItem1"
-        Me.TestToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
-        Me.TestToolStripMenuItem1.Text = "1. test"
+        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(180, 22)
+        Me.ToolStripMenuItem3.Text = "1. Ellipse"
+        '
+        'ToolStripMenuItem4
+        '
+        Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
+        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(180, 22)
+        Me.ToolStripMenuItem4.Text = "2. Ellipse"
+        '
+        'ToolStripMenuItem5
+        '
+        Me.ToolStripMenuItem5.Name = "ToolStripMenuItem5"
+        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(180, 22)
+        Me.ToolStripMenuItem5.Text = "3. Ellipse"
+        '
+        'ToolStripMenuItem6
+        '
+        Me.ToolStripMenuItem6.Name = "ToolStripMenuItem6"
+        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(180, 22)
+        Me.ToolStripMenuItem6.Text = "4. Ellipse"
+        '
+        'ToolStripMenuItem7
+        '
+        Me.ToolStripMenuItem7.Name = "ToolStripMenuItem7"
+        Me.ToolStripMenuItem7.Size = New System.Drawing.Size(180, 22)
+        Me.ToolStripMenuItem7.Text = "5. Ellipse random"
+        '
+        'ToolStripMenuItem8
+        '
+        Me.ToolStripMenuItem8.Name = "ToolStripMenuItem8"
+        Me.ToolStripMenuItem8.Size = New System.Drawing.Size(180, 22)
+        Me.ToolStripMenuItem8.Text = "6. Ellipse random"
+        '
+        'ToolStripMenuItem9
+        '
+        Me.ToolStripMenuItem9.Name = "ToolStripMenuItem9"
+        Me.ToolStripMenuItem9.Size = New System.Drawing.Size(180, 22)
+        Me.ToolStripMenuItem9.Text = "7. Ellipse random"
+        '
+        'ToolStripMenuItem10
+        '
+        Me.ToolStripMenuItem10.Name = "ToolStripMenuItem10"
+        Me.ToolStripMenuItem10.Size = New System.Drawing.Size(180, 22)
+        Me.ToolStripMenuItem10.Text = "8. Ellipse random"
         '
         'Form1
         '
@@ -884,6 +983,20 @@ Partial Class Form1
     Friend WithEvents RectangleToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
     Friend WithEvents Panel11 As Panel
-    Friend WithEvents TestToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents TestToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents RectangleToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents RectangleToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents RectangleToolStripMenuItem3 As ToolStripMenuItem
+    Friend WithEvents RectangleRandomToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RectangleRandomToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents RectangleRandomToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents RectangleRandomToolStripMenuItem3 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem3 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem4 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem5 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem6 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem7 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem8 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem9 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem10 As ToolStripMenuItem
 End Class
