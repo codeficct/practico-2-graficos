@@ -49,6 +49,15 @@ Partial Class Form1
         Me.RectangleRandomToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.RectangleRandomToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.RectangleRandomToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem6 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem7 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem8 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem9 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem10 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -94,15 +103,6 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem6 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem7 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem8 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem9 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem10 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -164,31 +164,31 @@ Partial Class Form1
         'GraphicToolStripMenuItem
         '
         Me.GraphicToolStripMenuItem.Name = "GraphicToolStripMenuItem"
-        Me.GraphicToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
+        Me.GraphicToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.GraphicToolStripMenuItem.Text = "1. Graphic"
         '
         'GraphicToolStripMenuItem1
         '
         Me.GraphicToolStripMenuItem1.Name = "GraphicToolStripMenuItem1"
-        Me.GraphicToolStripMenuItem1.Size = New System.Drawing.Size(127, 22)
+        Me.GraphicToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.GraphicToolStripMenuItem1.Text = "2. Graphic"
         '
         'GraphicToolStripMenuItem2
         '
         Me.GraphicToolStripMenuItem2.Name = "GraphicToolStripMenuItem2"
-        Me.GraphicToolStripMenuItem2.Size = New System.Drawing.Size(127, 22)
+        Me.GraphicToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
         Me.GraphicToolStripMenuItem2.Text = "3. Graphic"
         '
         'GraphicToolStripMenuItem3
         '
         Me.GraphicToolStripMenuItem3.Name = "GraphicToolStripMenuItem3"
-        Me.GraphicToolStripMenuItem3.Size = New System.Drawing.Size(127, 22)
+        Me.GraphicToolStripMenuItem3.Size = New System.Drawing.Size(180, 22)
         Me.GraphicToolStripMenuItem3.Text = "4. Graphic"
         '
         'GraphicToolStripMenuItem4
         '
         Me.GraphicToolStripMenuItem4.Name = "GraphicToolStripMenuItem4"
-        Me.GraphicToolStripMenuItem4.Size = New System.Drawing.Size(127, 22)
+        Me.GraphicToolStripMenuItem4.Size = New System.Drawing.Size(180, 22)
         Me.GraphicToolStripMenuItem4.Text = "5. Graphic"
         '
         'RandomGraphicsToolStripMenuItem
@@ -196,37 +196,37 @@ Partial Class Form1
         Me.RandomGraphicsToolStripMenuItem.BackColor = System.Drawing.Color.LightSteelBlue
         Me.RandomGraphicsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GraphicToolStripMenuItem5, Me.GraphicToolStripMenuItem6, Me.GraphicToolStripMenuItem7, Me.GraphicToolStripMenuItem8, Me.GraphicToolStripMenuItem9})
         Me.RandomGraphicsToolStripMenuItem.Name = "RandomGraphicsToolStripMenuItem"
-        Me.RandomGraphicsToolStripMenuItem.Size = New System.Drawing.Size(94, 26)
-        Me.RandomGraphicsToolStripMenuItem.Text = "Random Lines"
+        Me.RandomGraphicsToolStripMenuItem.Size = New System.Drawing.Size(137, 26)
+        Me.RandomGraphicsToolStripMenuItem.Text = "Symetric random lines"
         '
         'GraphicToolStripMenuItem5
         '
         Me.GraphicToolStripMenuItem5.Name = "GraphicToolStripMenuItem5"
-        Me.GraphicToolStripMenuItem5.Size = New System.Drawing.Size(133, 22)
+        Me.GraphicToolStripMenuItem5.Size = New System.Drawing.Size(180, 22)
         Me.GraphicToolStripMenuItem5.Text = "6. Graphic"
         '
         'GraphicToolStripMenuItem6
         '
         Me.GraphicToolStripMenuItem6.Name = "GraphicToolStripMenuItem6"
-        Me.GraphicToolStripMenuItem6.Size = New System.Drawing.Size(133, 22)
+        Me.GraphicToolStripMenuItem6.Size = New System.Drawing.Size(180, 22)
         Me.GraphicToolStripMenuItem6.Text = "7. Graphic"
         '
         'GraphicToolStripMenuItem7
         '
         Me.GraphicToolStripMenuItem7.Name = "GraphicToolStripMenuItem7"
-        Me.GraphicToolStripMenuItem7.Size = New System.Drawing.Size(133, 22)
+        Me.GraphicToolStripMenuItem7.Size = New System.Drawing.Size(180, 22)
         Me.GraphicToolStripMenuItem7.Text = "8. Graphic"
         '
         'GraphicToolStripMenuItem8
         '
         Me.GraphicToolStripMenuItem8.Name = "GraphicToolStripMenuItem8"
-        Me.GraphicToolStripMenuItem8.Size = New System.Drawing.Size(133, 22)
+        Me.GraphicToolStripMenuItem8.Size = New System.Drawing.Size(180, 22)
         Me.GraphicToolStripMenuItem8.Text = "9. Graphic"
         '
         'GraphicToolStripMenuItem9
         '
         Me.GraphicToolStripMenuItem9.Name = "GraphicToolStripMenuItem9"
-        Me.GraphicToolStripMenuItem9.Size = New System.Drawing.Size(133, 22)
+        Me.GraphicToolStripMenuItem9.Size = New System.Drawing.Size(180, 22)
         Me.GraphicToolStripMenuItem9.Text = "10. Graphic"
         '
         'MenuStrip1
@@ -296,6 +296,62 @@ Partial Class Form1
         Me.RectangleRandomToolStripMenuItem3.Name = "RectangleRandomToolStripMenuItem3"
         Me.RectangleRandomToolStripMenuItem3.Size = New System.Drawing.Size(183, 22)
         Me.RectangleRandomToolStripMenuItem3.Text = "8. Rectangle random"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.BackColor = System.Drawing.Color.Thistle
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem3, Me.ToolStripMenuItem4, Me.ToolStripMenuItem5, Me.ToolStripMenuItem6, Me.ToolStripMenuItem7, Me.ToolStripMenuItem8, Me.ToolStripMenuItem9, Me.ToolStripMenuItem10})
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(112, 26)
+        Me.ToolStripMenuItem1.Text = "Symmetric Ellipse"
+        '
+        'ToolStripMenuItem3
+        '
+        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(164, 22)
+        Me.ToolStripMenuItem3.Text = "1. Ellipse"
+        '
+        'ToolStripMenuItem4
+        '
+        Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
+        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(164, 22)
+        Me.ToolStripMenuItem4.Text = "2. Ellipse"
+        '
+        'ToolStripMenuItem5
+        '
+        Me.ToolStripMenuItem5.Name = "ToolStripMenuItem5"
+        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(164, 22)
+        Me.ToolStripMenuItem5.Text = "3. Ellipse"
+        '
+        'ToolStripMenuItem6
+        '
+        Me.ToolStripMenuItem6.Name = "ToolStripMenuItem6"
+        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(164, 22)
+        Me.ToolStripMenuItem6.Text = "4. Ellipse"
+        '
+        'ToolStripMenuItem7
+        '
+        Me.ToolStripMenuItem7.Name = "ToolStripMenuItem7"
+        Me.ToolStripMenuItem7.Size = New System.Drawing.Size(164, 22)
+        Me.ToolStripMenuItem7.Text = "5. Ellipse random"
+        '
+        'ToolStripMenuItem8
+        '
+        Me.ToolStripMenuItem8.Name = "ToolStripMenuItem8"
+        Me.ToolStripMenuItem8.Size = New System.Drawing.Size(164, 22)
+        Me.ToolStripMenuItem8.Text = "6. Ellipse random"
+        '
+        'ToolStripMenuItem9
+        '
+        Me.ToolStripMenuItem9.Name = "ToolStripMenuItem9"
+        Me.ToolStripMenuItem9.Size = New System.Drawing.Size(164, 22)
+        Me.ToolStripMenuItem9.Text = "7. Ellipse random"
+        '
+        'ToolStripMenuItem10
+        '
+        Me.ToolStripMenuItem10.Name = "ToolStripMenuItem10"
+        Me.ToolStripMenuItem10.Size = New System.Drawing.Size(164, 22)
+        Me.ToolStripMenuItem10.Text = "8. Ellipse random"
         '
         'Label1
         '
@@ -831,62 +887,6 @@ Partial Class Form1
         Me.Panel11.Name = "Panel11"
         Me.Panel11.Size = New System.Drawing.Size(749, 30)
         Me.Panel11.TabIndex = 10
-        '
-        'ToolStripMenuItem1
-        '
-        Me.ToolStripMenuItem1.BackColor = System.Drawing.Color.Thistle
-        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem3, Me.ToolStripMenuItem4, Me.ToolStripMenuItem5, Me.ToolStripMenuItem6, Me.ToolStripMenuItem7, Me.ToolStripMenuItem8, Me.ToolStripMenuItem9, Me.ToolStripMenuItem10})
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(112, 26)
-        Me.ToolStripMenuItem1.Text = "Symmetric Ellipse"
-        '
-        'ToolStripMenuItem3
-        '
-        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(180, 22)
-        Me.ToolStripMenuItem3.Text = "1. Ellipse"
-        '
-        'ToolStripMenuItem4
-        '
-        Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
-        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(180, 22)
-        Me.ToolStripMenuItem4.Text = "2. Ellipse"
-        '
-        'ToolStripMenuItem5
-        '
-        Me.ToolStripMenuItem5.Name = "ToolStripMenuItem5"
-        Me.ToolStripMenuItem5.Size = New System.Drawing.Size(180, 22)
-        Me.ToolStripMenuItem5.Text = "3. Ellipse"
-        '
-        'ToolStripMenuItem6
-        '
-        Me.ToolStripMenuItem6.Name = "ToolStripMenuItem6"
-        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(180, 22)
-        Me.ToolStripMenuItem6.Text = "4. Ellipse"
-        '
-        'ToolStripMenuItem7
-        '
-        Me.ToolStripMenuItem7.Name = "ToolStripMenuItem7"
-        Me.ToolStripMenuItem7.Size = New System.Drawing.Size(180, 22)
-        Me.ToolStripMenuItem7.Text = "5. Ellipse random"
-        '
-        'ToolStripMenuItem8
-        '
-        Me.ToolStripMenuItem8.Name = "ToolStripMenuItem8"
-        Me.ToolStripMenuItem8.Size = New System.Drawing.Size(180, 22)
-        Me.ToolStripMenuItem8.Text = "6. Ellipse random"
-        '
-        'ToolStripMenuItem9
-        '
-        Me.ToolStripMenuItem9.Name = "ToolStripMenuItem9"
-        Me.ToolStripMenuItem9.Size = New System.Drawing.Size(180, 22)
-        Me.ToolStripMenuItem9.Text = "7. Ellipse random"
-        '
-        'ToolStripMenuItem10
-        '
-        Me.ToolStripMenuItem10.Name = "ToolStripMenuItem10"
-        Me.ToolStripMenuItem10.Size = New System.Drawing.Size(180, 22)
-        Me.ToolStripMenuItem10.Text = "8. Ellipse random"
         '
         'Form1
         '
