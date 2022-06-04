@@ -9,7 +9,7 @@ Public Class Form1
     Dim menu1Content1Es = "Ver información" : Dim menu1Content1En As String = "See information"
     Dim menu2Es As String = "Gráficos simétricos" : Dim menu2En As String = "Symetric graphics"
     Dim menu3Es As String = "Gráficos Aleatorios" : Dim menu3En As String = "Random graphics"
-    Dim graphicTextEs As String = "Gráfico" : Dim graphicTextEn As String = "Graphic"
+    Dim graphicTextEs As String = "Linea simétrica" : Dim graphicTextEn As String = "Graphic"
     Dim labelTitleBarEs As String = "Práctico de Gráficos" : Dim labelTitleBarEn As String = "Graphic Practice"
     Dim labelTextBoxEs As String = "Escribir n partes/líneas" : Dim labelTextBoxEn As String = "Write n parts/lines"
     Dim btnCreateGraphicEs As String = "Crear gráfico" : Dim btnCreateGraphicEn As String = "Create graphic"
@@ -109,14 +109,16 @@ Public Class Form1
         GraphicToolStripMenuItem1.Text = "2. " + graphicTextEs
         GraphicToolStripMenuItem2.Text = "3. " + graphicTextEs
         GraphicToolStripMenuItem3.Text = "4. " + graphicTextEs
-        GraphicToolStripMenuItem4.Text = "5. " + graphicTextEs
-        GraphicToolStripMenuItem5.Text = "6. " + graphicTextEs
-        GraphicToolStripMenuItem6.Text = "7. " + graphicTextEs
-        GraphicToolStripMenuItem7.Text = "8. " + graphicTextEs
-        GraphicToolStripMenuItem8.Text = "9. " + graphicTextEs
-        GraphicToolStripMenuItem9.Text = "10. " + graphicTextEs
-        SymmetricGraphicsToolStripMenuItem.Text = menu2Es
-        RandomGraphicsToolStripMenuItem.Text = menu3Es
+        GraphicToolStripMenuItem4.Text = "5. " + graphicTextEs + " bezier"
+        GraphicToolStripMenuItem5.Text = "6. " + graphicTextEs + " random"
+        GraphicToolStripMenuItem6.Text = "7. " + graphicTextEs + " random"
+        GraphicToolStripMenuItem7.Text = "8. " + graphicTextEs + " random"
+        GraphicToolStripMenuItem8.Text = "9. " + graphicTextEs + " random"
+        GraphicToolStripMenuItem9.Text = "10. " + graphicTextEs + " random"
+        SymmetricGraphicsToolStripMenuItem.Text = "Lineas simétricas"
+        RandomGraphicsToolStripMenuItem.Text = "Lineas aleatorias random"
+        RectangleToolStripMenuItem.Text = "Rectangulos simétricos"
+        ToolStripMenuItem1.Text = "Elipses simétricas"
         Label1.Text = changeEs
         Label2.Text = labelTextBoxEs
         Label3.Text = labelTitleBarEs
@@ -141,8 +143,10 @@ Public Class Form1
         GraphicToolStripMenuItem7.Text = "8. " + graphicTextEn
         GraphicToolStripMenuItem8.Text = "9. " + graphicTextEn
         GraphicToolStripMenuItem9.Text = "10. " + graphicTextEn
-        SymmetricGraphicsToolStripMenuItem.Text = menu2En
-        RandomGraphicsToolStripMenuItem.Text = menu3En
+        SymmetricGraphicsToolStripMenuItem.Text = "Symmetric lines"
+        RandomGraphicsToolStripMenuItem.Text = "Symmetric random lines"
+        RectangleToolStripMenuItem.Text = "Symmetric rectangles"
+        ToolStripMenuItem1.Text = "Symmetric ellipses"
         Label1.Text = changeEn
         Label2.Text = labelTextBoxEn
         Label3.Text = labelTitleBarEn
@@ -159,23 +163,44 @@ Public Class Form1
         Label6.Text = "Height =" + Str(PictureBox1.Height)
     End Sub
     ' * Create rectangle with a line in halft
-    Public Sub createRectangleWithHalf(ax As Single, bx As Single, ay As Single, by As Single, vertical As Double)
+    Public Sub CreateRectangleWithHalf(ax As Single, bx As Single, ay As Single, by As Single, align As String)
         Dim half As Single
-        graphic.DrawRectangle(Pens.Purple, ax, ay, bx - ax, by - ay)
-        If vertical Then
-            half = (ax + bx) / 2
-            graphic.DrawLine(Pens.Purple, half, ay, half, by) ' * Vertical
-        Else
-            half = (ay + by) / 2
-            graphic.DrawLine(Pens.Purple, ax, half, bx, half) ' * Horizontal
-        End If
+        Using pen As New Pen(Color.Green)
+            pen.Width = 2
+            graphic.DrawRectangle(pen, ax, ay, bx - ax, by - ay)
+            Select Case align
+                Case "vertical"
+                    half = (ax + bx) / 2
+                    graphic.DrawLine(pen, half, ay, half, by) ' * Vertical
+                Case "horizontal"
+                    half = (ay + by) / 2
+                    graphic.DrawLine(pen, ax, half, bx, half) ' * Horizontal
+                Case Else
+            End Select
+        End Using
+    End Sub
+    Public Sub GraphicRandomColor(x As Single, y As Single, w As Single, h As Single, gName As String)
+        Dim rng As New Random()
+        Using pen = New Pen(Color.FromArgb(rng.Next(256), rng.Next(156), rng.Next(200)))
+            pen.Width = 2
+            Select Case gName
+                Case "line"
+                    graphic.DrawLine(pen, x, y, w, h) '' x1, y1, x2, y2
+                Case "rectangle"
+                    graphic.DrawRectangle(pen, x, y, w, h)
+                Case "ellipse"
+                    graphic.DrawEllipse(pen, x, y, w, h)
+                Case Else
+
+            End Select
+        End Using
     End Sub
     ' * 1. Exercice symmetric graphics
     Public Sub SymmetricGraphic1(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Boolean)
         Dim x1, x2, y1, y2, mx, halfmy, r1, r2, vi1, vi2 As Single
         Dim index, j As UInt32
         mx = bx - ax : halfmy = (ay + by) / 2
-        createRectangleWithHalf(ax, bx, ay, by, False) ' Horizontal
+        CreateRectangleWithHalf(ax, bx, ay, by, "horizontal") ' Horizontal
         r1 = mx / n : vi1 = ax
         r2 = (halfmy - ay) / n : x2 = bx
         If half Then
@@ -186,7 +211,7 @@ Public Class Form1
         For index = 1 To n
             x1 = vi1 + (index - 1) * r1
             y2 = vi2 + (index - 1) * r2
-            graphic.DrawLine(Pens.Black, x1, y1, x2, y2)
+            GraphicRandomColor(x1, y1, x2, y2, "line")
             For j = 1 To 66000000
             Next
         Next
@@ -196,7 +221,7 @@ Public Class Form1
         Dim x1, x2, y1, y2, my, halfmx, r, vi As Single
         Dim index, j As UInt32
         my = by - ay : halfmx = (ax + bx) / 2
-        createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
+        CreateRectangleWithHalf(ax, bx, ay, by, "vertical") 'Vertical
         r = my / n : vi = ay
         y1 = (ay + by) / 2
         x2 = halfmx
@@ -207,7 +232,7 @@ Public Class Form1
         End If
         For index = 1 To n + 1
             y2 = vi + (index - 1) * r
-            graphic.DrawLine(Pens.Blue, x1, y1, x2, y2)
+            GraphicRandomColor(x1, y1, x2, y2, "line")
             For j = 1 To 66000000
             Next
         Next
@@ -217,7 +242,7 @@ Public Class Form1
         Dim x1, x2, y1, y2, my, halfmx, r, vi As Single
         Dim index, j As UInt32
         my = by - ay : halfmx = (ax + bx) / 2
-        createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
+        CreateRectangleWithHalf(ax, bx, ay, by, "vertical") 'Vertical
         r = my / n : vi = ay
         x2 = halfmx : y2 = (ay + by) / 2
         If half Then
@@ -227,7 +252,7 @@ Public Class Form1
         End If
         For index = 1 To n + 1
             y1 = vi + (index - 1) * r
-            graphic.DrawLine(Pens.Red, x1, y1, x2, y2)
+            GraphicRandomColor(x1, y1, x2, y2, "line")
             For j = 1 To 66000000
             Next
         Next
@@ -237,7 +262,7 @@ Public Class Form1
         Dim x1, x2, y1, y2, my, halfmx, r, vi As Single
         Dim index, j As UInt32
         my = by - ay : halfmx = (ax + bx) / 2
-        createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
+        CreateRectangleWithHalf(ax, bx, ay, by, "vertical") 'Vertical
         r = my / n : vi = ay : x2 = halfmx
         If half Then
             x1 = ax : y1 = by
@@ -246,7 +271,7 @@ Public Class Form1
         End If
         For index = 1 To n
             y2 = vi + (index - 1) * r
-            graphic.DrawLine(Pens.Green, x1, y1, x2, y2)
+            GraphicRandomColor(x1, y1, x2, y2, "line")
             For j = 1 To 66000000
             Next
         Next
@@ -256,7 +281,7 @@ Public Class Form1
         Dim x1, x2, y1, y2, my, mx, halfmx, r1, r2, vi1, vi2 As Single
         Dim index, j As UInt32
         mx = bx - ax : my = by - ay : halfmx = (ax + bx) / 2
-        createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
+        CreateRectangleWithHalf(ax, bx, ay, by, "vertical") 'Vertical
         r1 = my / n : vi1 = ay : x1 = halfmx
         r2 = (mx / 2) / n : y2 = by
         If half Then
@@ -266,12 +291,14 @@ Public Class Form1
         End If
         For index = 1 To n
             y1 = vi1 + (index - 1) * r1
+
             If half Then
                 x2 = vi2 + (index - 1) * r2
+                GraphicRandomColor(x1, y1, x2, y2, "line")
             Else
                 x2 = vi2 - (index - 1) * r2
+                GraphicRandomColor(x1, y1, x2, y2, "line")
             End If
-            graphic.DrawLine(Pens.Brown, x1, y1, x2, y2)
             For j = 1 To 66000000
             Next
         Next
@@ -281,7 +308,7 @@ Public Class Form1
         Dim x1, x2, y1, y2, my, halfmx, halfmy As Single
         Dim index, j As UInt32
         my = by - ay : halfmx = (ax + bx) / 2 : halfmy = (ay + by) / 2
-        createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
+        CreateRectangleWithHalf(ax, bx, ay, by, "vertical") 'Vertical
         x1 = halfmx : y1 = halfmy
         For index = 1 To n
             y2 = ay + Rnd() * my
@@ -290,18 +317,18 @@ Public Class Form1
             Else
                 x2 = ax + Rnd() * (halfmx - ax)
             End If
-            graphic.DrawLine(Pens.BlueViolet, x1, y1, x2, y2)
+            GraphicRandomColor(x1, y1, x2, y2, "line")
             For j = 1 To 66000000
             Next
         Next
     End Sub
 
-    '<--- 7 --->
+    ' * 7. Exercise random graphics
     Public Sub RandomLines7(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
         Dim x1, x2, y1, y2, my, halfmx As Single
         Dim index, j As UInt32
         my = by - ay : halfmx = (ax + bx) / 2
-        createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
+        CreateRectangleWithHalf(ax, bx, ay, by, "vertical") 'Vertical
         y1 = ay + (my / 2)
         If half Then
             x1 = ax + (halfmx / 2)
@@ -315,17 +342,17 @@ Public Class Form1
             Else
                 x2 = halfmx + Rnd() * (bx - halfmx)
             End If
-            graphic.DrawLine(Pens.DeepSkyBlue, x1, y1, x2, y2)
+            GraphicRandomColor(x1, y1, x2, y2, "line")
             For j = 1 To 66000000
             Next
         Next
     End Sub
 
-    '<--- 8 --->
+    ' * 8. Exercice random graphics
     Public Sub RandomLines8(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
         Dim x1, x2, y1, y2, my, halfmx As Single
         Dim index, j As UInt32
-        createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
+        CreateRectangleWithHalf(ax, bx, ay, by, "vertical") 'Vertical
         my = by - ay : halfmx = (ax + bx) / 2 : x1 = halfmx
         For index = 1 To n
             y1 = ay + Rnd() * my
@@ -335,19 +362,19 @@ Public Class Form1
                 x2 = ax + Rnd() * (halfmx - ax)
             End If
             y2 = y1
-            graphic.DrawLine(Pens.Blue, x1, y1, x2, y2)
+            GraphicRandomColor(x1, y1, x2, y2, "line")
             For j = 1 To 66000000
             Next
         Next
     End Sub
 
-    '<--- 9 --->
+    ' * 9 Exercice random graphics
     Public Sub RandomLines9(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
         Dim x1, x2, y1, y2, halfmx As Single
         Dim aux As Double = True
         Dim index, j As UInt32
-        createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
-        halfmx = (ax + bx) / 2 : y1 = ay : y2 = by
+        CreateRectangleWithHalf(ax, bx, ay, by, "vertical") 'Vertical
+        halfmx = (bx + ax) / 2 : y1 = ay : y2 = by
         If half Then
             x1 = ax + Rnd() * (halfmx - ax)
         Else
@@ -360,24 +387,23 @@ Public Class Form1
                 x2 = halfmx + Rnd() * (bx - halfmx)
             End If
             If aux Then
-                graphic.DrawLine(Pens.Black, x1, y1, x2, y2)
-                aux = False
+                GraphicRandomColor(x1, y1, x2, y2, "line")
             Else
-                graphic.DrawLine(Pens.Black, x1, y2, x2, y1)
-                aux = True
+                GraphicRandomColor(x1, y2, x2, y1, "line")
             End If
+            aux = Not aux
             x1 = x2
             For j = 1 To 99999000
             Next
         Next
     End Sub
 
-    '<--- 10 --->
+    ' * 10 Exercice random graphics
     Public Sub RandomLines10(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
         Dim x1, x2, y1, y2, my, halfmx As Single
         Dim index, j As UInt32
         my = by - ay : halfmx = (ax + bx) / 2
-        createRectangleWithHalf(ax, bx, ay, by, True) 'Vertical
+        CreateRectangleWithHalf(ax, bx, ay, by, "vertical") 'Vertical
         If half Then
             x1 = ax + Rnd() * (halfmx - ax) : y1 = ay + Rnd() * my
         Else
@@ -389,7 +415,7 @@ Public Class Form1
             Else
                 x2 = halfmx + Rnd() * (bx - halfmx) : y2 = ay + Rnd() * my
             End If
-            graphic.DrawLine(Pens.MediumPurple, x1, y1, x2, y2)
+            GraphicRandomColor(x1, y1, x2, y2, "line")
             x1 = x2 : y1 = y2
             For j = 1 To 99999000
             Next
@@ -498,22 +524,11 @@ Public Class Form1
 
 
     ' * <--- SECOND PART OF PRACTICE --->
-    Public Sub GraphicRandomColor(x As Single, y As Single, w As Single, h As Single, gName As String)
-        Dim rng As New Random()
-        Using pen = New Pen(Color.FromArgb(rng.Next(256), rng.Next(156), rng.Next(200)))
-            If gName = "rectangle" Then
-                graphic.DrawRectangle(pen, x, y, w, h)
-            Else
-                graphic.DrawEllipse(pen, x, y, w, h)
-            End If
-        End Using
-    End Sub
-
     ' * 1. Symmetric Rectangle
     Public Sub SymmetricRectangle1(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, graphicName As String)
         Dim x, y, w, h, r1, r2, r3, vi1, vi2, vi3 As Single
         Dim index, j As UInt32
-        graphic.DrawRectangle(Pens.Black, ax, ay, bx - ax, by - ay)
+        CreateRectangleWithHalf(ax, bx, ay, by, "")
         vi1 = ax : r1 = (bx - ax) / ((2 * n) - 1)
         vi2 = bx - ax : r2 = -r1 * 2
         y = ay
@@ -532,7 +547,7 @@ Public Class Form1
     Public Sub SymmetricRectangle2(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, graphicName As String)
         Dim x, y, w, h, r1, vi1 As Single
         Dim index, j As UInt32
-        graphic.DrawRectangle(Pens.Black, ax, ay, bx - ax, by - ay)
+        CreateRectangleWithHalf(ax, bx, ay, by, "")
         r1 = (by - ay) / n : vi1 = ay
         x = ((bx + ax) / 2) - (r1 / 2)
         w = r1
@@ -549,7 +564,7 @@ Public Class Form1
     Public Sub SymmetricRectangle3(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, graphicName As String)
         Dim x, y, w, h, vi1, vi2, vi3, r1, r2, r3 As Single
         Dim index, j As UInt32
-        graphic.DrawRectangle(Pens.Black, ax, ay, bx - ax, by - ay)
+        CreateRectangleWithHalf(ax, bx, ay, by, "")
         r1 = (bx - ax) / n : vi1 = ax
         w = r1
         r2 = (by - ay) / n : vi2 = by - r2
@@ -568,7 +583,7 @@ Public Class Form1
     Public Sub SymmetricRectangle4(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, graphicName As String)
         Dim x, y, w, h, r1, r2, vi1, vi2 As Single
         Dim index, j As UInt32
-        graphic.DrawRectangle(Pens.Black, ax, ay, bx - ax, by - ay)
+        CreateRectangleWithHalf(ax, bx, ay, by, "")
         r1 = (bx - ax) / (n + 1) : vi1 = ax : w = r1 * 2
         r2 = (by - ay) / (n + 1) : vi2 = by - (r2 * 2) : h = r2 * 2
         For index = 1 To n
@@ -584,7 +599,7 @@ Public Class Form1
     Public Sub SymmetricRectangleRandom5(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Boolean, graphicName As String)
         Dim x, y, w, h, halfmy As Single
         Dim index, j As UInt32
-        createRectangleWithHalf(ax, bx, ay, by, False)
+        CreateRectangleWithHalf(ax, bx, ay, by, "horizontal")
         halfmy = (by + ay) / 2
         For index = 1 To n
             If half Then
@@ -606,7 +621,7 @@ Public Class Form1
     Public Sub SymmetricRectangleRandom6(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Boolean, graphicName As String)
         Dim x, y, w, h, halfmy, limit As Single
         Dim index, j As UInt32
-        createRectangleWithHalf(ax, bx, ay, by, False)
+        CreateRectangleWithHalf(ax, bx, ay, by, "horizontal")
         halfmy = (ay + by) / 2
         If half Then
             y = ay : limit = halfmy - y
@@ -627,7 +642,7 @@ Public Class Form1
     Public Sub SymmetricRectangleRandom7(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Boolean, graphicName As String)
         Dim x, y, w, h, halfmy As Single
         Dim index, j As UInt32
-        createRectangleWithHalf(ax, bx, ay, by, False)
+        CreateRectangleWithHalf(ax, bx, ay, by, "horizontal")
         halfmy = (by + ay) / 2
         For index = 1 To n
             If half Then
@@ -649,7 +664,7 @@ Public Class Form1
     Public Sub SymmetricRectangleRandom8(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, graphicName As String)
         Dim x, y, w, h, halfmy, halfmx As Single
         Dim index, j As UInt32
-        graphic.DrawRectangle(Pens.Black, ax, ay, bx - ax, by - ay)
+        CreateRectangleWithHalf(ax, bx, ay, by, "")
         halfmy = (by + ay) / 2 : halfmx = (bx + ax) / 2
         For index = 1 To n
             x = ax + Rnd() * (halfmx - ax)
@@ -790,7 +805,6 @@ Public Class Form1
 
     Private Sub ToolStripMenuItem10_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem10.Click
         Try
-            SymmetricRectangleRandom8(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, "ellipse")
             SymmetricRectangleRandom8(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, "ellipse")
         Catch ex As Exception
             MsgBox(msgError + ex.Message, MsgBoxStyle.Information, Title:="8. Elipse Simetrico Aleatorio")
