@@ -63,6 +63,7 @@ Partial Class Form1
         Me.EllipseDiagonalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RectanglePyramToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EllipsePyramToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RectangleToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
@@ -77,7 +78,7 @@ Partial Class Form1
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.RectangleToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TestEjercio6ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -328,7 +329,7 @@ Partial Class Form1
         '
         'PracticoToolStripMenuItem
         '
-        Me.PracticoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LineasSimetricasToolStripMenuItem, Me.LineasSimetricasToolStripMenuItem1})
+        Me.PracticoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LineasSimetricasToolStripMenuItem, Me.LineasSimetricasToolStripMenuItem1, Me.TestEjercio6ToolStripMenuItem})
         Me.PracticoToolStripMenuItem.Name = "PracticoToolStripMenuItem"
         Me.PracticoToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
         Me.PracticoToolStripMenuItem.Text = "Practico"
@@ -336,13 +337,13 @@ Partial Class Form1
         'LineasSimetricasToolStripMenuItem
         '
         Me.LineasSimetricasToolStripMenuItem.Name = "LineasSimetricasToolStripMenuItem"
-        Me.LineasSimetricasToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.LineasSimetricasToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.LineasSimetricasToolStripMenuItem.Text = "1. Lineas simetricas"
         '
         'LineasSimetricasToolStripMenuItem1
         '
         Me.LineasSimetricasToolStripMenuItem1.Name = "LineasSimetricasToolStripMenuItem1"
-        Me.LineasSimetricasToolStripMenuItem1.Size = New System.Drawing.Size(175, 22)
+        Me.LineasSimetricasToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.LineasSimetricasToolStripMenuItem1.Text = "2. Lineas simetricas"
         '
         'SymmetricRectangleToolStripMenuItem
@@ -387,6 +388,12 @@ Partial Class Form1
         Me.EllipsePyramToolStripMenuItem.Name = "EllipsePyramToolStripMenuItem"
         Me.EllipsePyramToolStripMenuItem.Size = New System.Drawing.Size(187, 22)
         Me.EllipsePyramToolStripMenuItem.Text = "6. Ellipse Pyram"
+        '
+        'RectangleToolStripMenuItem3
+        '
+        Me.RectangleToolStripMenuItem3.Name = "RectangleToolStripMenuItem3"
+        Me.RectangleToolStripMenuItem3.Size = New System.Drawing.Size(187, 22)
+        Me.RectangleToolStripMenuItem3.Text = "7. Rectangle"
         '
         'Button2
         '
@@ -561,11 +568,11 @@ Partial Class Form1
         Me.Label12.TabIndex = 22
         Me.Label12.Text = "Y3"
         '
-        'RectangleToolStripMenuItem3
+        'TestEjercio6ToolStripMenuItem
         '
-        Me.RectangleToolStripMenuItem3.Name = "RectangleToolStripMenuItem3"
-        Me.RectangleToolStripMenuItem3.Size = New System.Drawing.Size(187, 22)
-        Me.RectangleToolStripMenuItem3.Text = "7. Rectangle"
+        Me.TestEjercio6ToolStripMenuItem.Name = "TestEjercio6ToolStripMenuItem"
+        Me.TestEjercio6ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.TestEjercio6ToolStripMenuItem.Text = "3. test ejercio6"
         '
         'Form1
         '
@@ -669,4 +676,5 @@ Partial Class Form1
     Friend WithEvents RectanglePyramToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EllipsePyramToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RectangleToolStripMenuItem3 As ToolStripMenuItem
+    Friend WithEvents TestEjercio6ToolStripMenuItem As ToolStripMenuItem
 End Class

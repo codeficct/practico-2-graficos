@@ -478,6 +478,24 @@
         Next
     End Sub
 
+    Public Sub ejercicio6(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32)
+        Dim x1, y1, x2, y2, x4, y4, My, mx As Single
+        Dim i As Int32
+        My = (ay + by) / 2 : mx = (ax + bx) / 2
+        x1 = mx : y1 = My
+        graphic.DrawRectangle(Pens.Black, ax, ay, bx - ax, by - ay)
+        graphic.DrawLine(Pens.Black, (bx + ax) / 2, ay, (bx + ax) / 2, by)
+
+        For i = 1 To n
+            x2 = ax + Rnd() * (mx - ax)
+            y2 = ay + Rnd() * (by - ay)
+            x4 = mx + Rnd() * (bx - mx)
+            y4 = ay + Rnd() * (by - ay)
+            graphic.DrawLine(Pens.Blue, x1, y1, x2, y2)
+            graphic.DrawLine(Pens.Blue, x1, y1, x4, y4)
+        Next
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Frame()
         Label1.Text = "X =" + Str(PictureBox1.Width())
@@ -675,5 +693,9 @@
 
     Private Sub RectangleToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles RectangleToolStripMenuItem3.Click
         RectSim4(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
+    End Sub
+
+    Private Sub TestEjercio6ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TestEjercio6ToolStripMenuItem.Click
+        ejercicio6(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text)
     End Sub
 End Class

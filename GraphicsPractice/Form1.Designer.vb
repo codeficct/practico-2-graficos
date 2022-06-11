@@ -60,6 +60,10 @@ Partial Class Form1
         Me.ToolStripMenuItem10 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel12 = New System.Windows.Forms.Panel()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -90,6 +94,8 @@ Partial Class Form1
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -103,8 +109,10 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.Panel12.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelTitleBar.SuspendLayout()
         Me.Panel7.SuspendLayout()
@@ -118,7 +126,7 @@ Partial Class Form1
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Checked = True
         Me.RadioButton1.ForeColor = System.Drawing.Color.White
-        Me.RadioButton1.Location = New System.Drawing.Point(142, 496)
+        Me.RadioButton1.Location = New System.Drawing.Point(142, 463)
         Me.RadioButton1.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(77, 22)
@@ -132,7 +140,7 @@ Partial Class Form1
         Me.RadioButton2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.ForeColor = System.Drawing.Color.White
-        Me.RadioButton2.Location = New System.Drawing.Point(61, 496)
+        Me.RadioButton2.Location = New System.Drawing.Point(61, 463)
         Me.RadioButton2.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(81, 22)
@@ -164,32 +172,32 @@ Partial Class Form1
         'GraphicToolStripMenuItem
         '
         Me.GraphicToolStripMenuItem.Name = "GraphicToolStripMenuItem"
-        Me.GraphicToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.GraphicToolStripMenuItem.Text = "1. Graphic"
+        Me.GraphicToolStripMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.GraphicToolStripMenuItem.Text = "1. Symmetric line"
         '
         'GraphicToolStripMenuItem1
         '
         Me.GraphicToolStripMenuItem1.Name = "GraphicToolStripMenuItem1"
-        Me.GraphicToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
-        Me.GraphicToolStripMenuItem1.Text = "2. Graphic"
+        Me.GraphicToolStripMenuItem1.Size = New System.Drawing.Size(165, 22)
+        Me.GraphicToolStripMenuItem1.Text = "2. Symmetric line"
         '
         'GraphicToolStripMenuItem2
         '
         Me.GraphicToolStripMenuItem2.Name = "GraphicToolStripMenuItem2"
-        Me.GraphicToolStripMenuItem2.Size = New System.Drawing.Size(180, 22)
-        Me.GraphicToolStripMenuItem2.Text = "3. Graphic"
+        Me.GraphicToolStripMenuItem2.Size = New System.Drawing.Size(165, 22)
+        Me.GraphicToolStripMenuItem2.Text = "3. Symmetric line"
         '
         'GraphicToolStripMenuItem3
         '
         Me.GraphicToolStripMenuItem3.Name = "GraphicToolStripMenuItem3"
-        Me.GraphicToolStripMenuItem3.Size = New System.Drawing.Size(180, 22)
-        Me.GraphicToolStripMenuItem3.Text = "4. Graphic"
+        Me.GraphicToolStripMenuItem3.Size = New System.Drawing.Size(165, 22)
+        Me.GraphicToolStripMenuItem3.Text = "4. Symmetric line"
         '
         'GraphicToolStripMenuItem4
         '
         Me.GraphicToolStripMenuItem4.Name = "GraphicToolStripMenuItem4"
-        Me.GraphicToolStripMenuItem4.Size = New System.Drawing.Size(180, 22)
-        Me.GraphicToolStripMenuItem4.Text = "5. Graphic"
+        Me.GraphicToolStripMenuItem4.Size = New System.Drawing.Size(165, 22)
+        Me.GraphicToolStripMenuItem4.Text = "5. Symmetric line"
         '
         'RandomGraphicsToolStripMenuItem
         '
@@ -202,36 +210,36 @@ Partial Class Form1
         'GraphicToolStripMenuItem5
         '
         Me.GraphicToolStripMenuItem5.Name = "GraphicToolStripMenuItem5"
-        Me.GraphicToolStripMenuItem5.Size = New System.Drawing.Size(180, 22)
-        Me.GraphicToolStripMenuItem5.Text = "6. Graphic"
+        Me.GraphicToolStripMenuItem5.Size = New System.Drawing.Size(216, 22)
+        Me.GraphicToolStripMenuItem5.Text = "6. Symmetric line random"
         '
         'GraphicToolStripMenuItem6
         '
         Me.GraphicToolStripMenuItem6.Name = "GraphicToolStripMenuItem6"
-        Me.GraphicToolStripMenuItem6.Size = New System.Drawing.Size(180, 22)
-        Me.GraphicToolStripMenuItem6.Text = "7. Graphic"
+        Me.GraphicToolStripMenuItem6.Size = New System.Drawing.Size(216, 22)
+        Me.GraphicToolStripMenuItem6.Text = "7. Symmetric line random"
         '
         'GraphicToolStripMenuItem7
         '
         Me.GraphicToolStripMenuItem7.Name = "GraphicToolStripMenuItem7"
-        Me.GraphicToolStripMenuItem7.Size = New System.Drawing.Size(180, 22)
-        Me.GraphicToolStripMenuItem7.Text = "8. Graphic"
+        Me.GraphicToolStripMenuItem7.Size = New System.Drawing.Size(216, 22)
+        Me.GraphicToolStripMenuItem7.Text = "8. Symmetric line random"
         '
         'GraphicToolStripMenuItem8
         '
         Me.GraphicToolStripMenuItem8.Name = "GraphicToolStripMenuItem8"
-        Me.GraphicToolStripMenuItem8.Size = New System.Drawing.Size(180, 22)
-        Me.GraphicToolStripMenuItem8.Text = "9. Graphic"
+        Me.GraphicToolStripMenuItem8.Size = New System.Drawing.Size(216, 22)
+        Me.GraphicToolStripMenuItem8.Text = "9. Symmetric line random"
         '
         'GraphicToolStripMenuItem9
         '
         Me.GraphicToolStripMenuItem9.Name = "GraphicToolStripMenuItem9"
-        Me.GraphicToolStripMenuItem9.Size = New System.Drawing.Size(180, 22)
-        Me.GraphicToolStripMenuItem9.Text = "10. Graphic"
+        Me.GraphicToolStripMenuItem9.Size = New System.Drawing.Size(216, 22)
+        Me.GraphicToolStripMenuItem9.Text = "10. Symmetric line random"
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.BackColor = System.Drawing.Color.Beige
+        Me.MenuStrip1.BackColor = System.Drawing.Color.OldLace
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InformaciónDelEstudianteToolStripMenuItem, Me.SymmetricGraphicsToolStripMenuItem, Me.RandomGraphicsToolStripMenuItem, Me.RectangleToolStripMenuItem, Me.ToolStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
@@ -358,7 +366,7 @@ Partial Class Form1
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(75, 475)
+        Me.Label1.Location = New System.Drawing.Point(75, 442)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(128, 18)
@@ -368,6 +376,7 @@ Partial Class Form1
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(47, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Panel12)
         Me.Panel1.Controls.Add(Me.Label16)
         Me.Panel1.Controls.Add(Me.Label15)
         Me.Panel1.Controls.Add(Me.Label14)
@@ -404,12 +413,62 @@ Partial Class Form1
         Me.Panel1.Size = New System.Drawing.Size(281, 550)
         Me.Panel1.TabIndex = 7
         '
+        'Panel12
+        '
+        Me.Panel12.Controls.Add(Me.Label23)
+        Me.Panel12.Controls.Add(Me.RadioButton3)
+        Me.Panel12.Controls.Add(Me.RadioButton4)
+        Me.Panel12.Location = New System.Drawing.Point(0, 490)
+        Me.Panel12.Name = "Panel12"
+        Me.Panel12.Size = New System.Drawing.Size(282, 60)
+        Me.Panel12.TabIndex = 110
+        '
+        'Label23
+        '
+        Me.Label23.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Label23.AutoSize = True
+        Me.Label23.ForeColor = System.Drawing.Color.White
+        Me.Label23.Location = New System.Drawing.Point(96, 9)
+        Me.Label23.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(83, 18)
+        Me.Label23.TabIndex = 110
+        Me.Label23.Text = "Time delay"
+        '
+        'RadioButton3
+        '
+        Me.RadioButton3.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.Checked = True
+        Me.RadioButton3.ForeColor = System.Drawing.Color.White
+        Me.RadioButton3.Location = New System.Drawing.Point(141, 29)
+        Me.RadioButton3.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(59, 22)
+        Me.RadioButton3.TabIndex = 112
+        Me.RadioButton3.TabStop = True
+        Me.RadioButton3.Text = "Slow"
+        Me.RadioButton3.UseVisualStyleBackColor = True
+        '
+        'RadioButton4
+        '
+        Me.RadioButton4.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.RadioButton4.AutoSize = True
+        Me.RadioButton4.ForeColor = System.Drawing.Color.White
+        Me.RadioButton4.Location = New System.Drawing.Point(60, 29)
+        Me.RadioButton4.Margin = New System.Windows.Forms.Padding(4, 2, 4, 2)
+        Me.RadioButton4.Name = "RadioButton4"
+        Me.RadioButton4.Size = New System.Drawing.Size(55, 22)
+        Me.RadioButton4.TabIndex = 111
+        Me.RadioButton4.Text = "Fast"
+        Me.RadioButton4.UseVisualStyleBackColor = True
+        '
         'Label16
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(23, 188)
+        Me.Label16.Location = New System.Drawing.Point(23, 180)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(56, 19)
         Me.Label16.TabIndex = 30
@@ -420,7 +479,7 @@ Partial Class Form1
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.White
-        Me.Label15.Location = New System.Drawing.Point(23, 118)
+        Me.Label15.Location = New System.Drawing.Point(23, 110)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(51, 19)
         Me.Label15.TabIndex = 29
@@ -431,7 +490,7 @@ Partial Class Form1
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.White
-        Me.Label14.Location = New System.Drawing.Point(23, 284)
+        Me.Label14.Location = New System.Drawing.Point(23, 276)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(18, 19)
         Me.Label14.TabIndex = 28
@@ -442,7 +501,7 @@ Partial Class Form1
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(144, 218)
+        Me.Label13.Location = New System.Drawing.Point(144, 210)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(26, 19)
         Me.Label13.TabIndex = 27
@@ -452,7 +511,7 @@ Partial Class Form1
         '
         Me.TextBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.TextBox5.ForeColor = System.Drawing.Color.White
-        Me.TextBox5.Location = New System.Drawing.Point(55, 282)
+        Me.TextBox5.Location = New System.Drawing.Point(55, 274)
         Me.TextBox5.Margin = New System.Windows.Forms.Padding(3, 3, 3, 2)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(196, 26)
@@ -464,7 +523,7 @@ Partial Class Form1
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(23, 218)
+        Me.Label12.Location = New System.Drawing.Point(23, 210)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(26, 19)
         Me.Label12.TabIndex = 25
@@ -474,7 +533,7 @@ Partial Class Form1
         '
         Me.TextBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.TextBox4.ForeColor = System.Drawing.Color.White
-        Me.TextBox4.Location = New System.Drawing.Point(176, 214)
+        Me.TextBox4.Location = New System.Drawing.Point(176, 206)
         Me.TextBox4.Margin = New System.Windows.Forms.Padding(3, 3, 3, 2)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(75, 26)
@@ -486,7 +545,7 @@ Partial Class Form1
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(144, 148)
+        Me.Label11.Location = New System.Drawing.Point(144, 140)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(26, 19)
         Me.Label11.TabIndex = 23
@@ -496,7 +555,7 @@ Partial Class Form1
         '
         Me.TextBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.TextBox3.ForeColor = System.Drawing.Color.White
-        Me.TextBox3.Location = New System.Drawing.Point(55, 214)
+        Me.TextBox3.Location = New System.Drawing.Point(55, 206)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(3, 3, 3, 2)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(75, 26)
@@ -508,7 +567,7 @@ Partial Class Form1
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(23, 148)
+        Me.Label10.Location = New System.Drawing.Point(23, 140)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(26, 19)
         Me.Label10.TabIndex = 21
@@ -518,7 +577,7 @@ Partial Class Form1
         '
         Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.TextBox2.ForeColor = System.Drawing.Color.White
-        Me.TextBox2.Location = New System.Drawing.Point(176, 144)
+        Me.TextBox2.Location = New System.Drawing.Point(176, 136)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 3, 3, 2)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(75, 26)
@@ -550,7 +609,7 @@ Partial Class Form1
         '
         Me.Panel8.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(63, Byte), Integer))
-        Me.Panel8.Location = New System.Drawing.Point(1, 445)
+        Me.Panel8.Location = New System.Drawing.Point(1, 429)
         Me.Panel8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(281, 2)
@@ -568,7 +627,7 @@ Partial Class Form1
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(63, Byte), Integer))
-        Me.Panel6.Location = New System.Drawing.Point(-1, 445)
+        Me.Panel6.Location = New System.Drawing.Point(-1, 429)
         Me.Panel6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(281, 2)
@@ -577,7 +636,7 @@ Partial Class Form1
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(63, Byte), Integer))
-        Me.Panel5.Location = New System.Drawing.Point(0, 409)
+        Me.Panel5.Location = New System.Drawing.Point(0, 393)
         Me.Panel5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(281, 2)
@@ -589,7 +648,7 @@ Partial Class Form1
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.IndianRed
-        Me.Button3.Location = New System.Drawing.Point(0, 411)
+        Me.Button3.Location = New System.Drawing.Point(0, 395)
         Me.Button3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(281, 34)
@@ -603,7 +662,7 @@ Partial Class Form1
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(0, 375)
+        Me.Button2.Location = New System.Drawing.Point(0, 359)
         Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(281, 34)
@@ -627,7 +686,7 @@ Partial Class Form1
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(63, Byte), Integer))
-        Me.Panel4.Location = New System.Drawing.Point(0, 373)
+        Me.Panel4.Location = New System.Drawing.Point(0, 357)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(281, 2)
@@ -636,7 +695,7 @@ Partial Class Form1
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(63, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(1, 337)
+        Me.Panel3.Location = New System.Drawing.Point(1, 321)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(281, 2)
@@ -648,7 +707,7 @@ Partial Class Form1
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(1, 339)
+        Me.Button1.Location = New System.Drawing.Point(1, 323)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(281, 34)
@@ -661,7 +720,7 @@ Partial Class Form1
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(23, 256)
+        Me.Label2.Location = New System.Drawing.Point(23, 248)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(141, 19)
         Me.Label2.TabIndex = 8
@@ -671,7 +730,7 @@ Partial Class Form1
         '
         Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(41, Byte), Integer), CType(CType(43, Byte), Integer), CType(CType(47, Byte), Integer))
         Me.TextBox1.ForeColor = System.Drawing.Color.White
-        Me.TextBox1.Location = New System.Drawing.Point(55, 144)
+        Me.TextBox1.Location = New System.Drawing.Point(55, 136)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 3, 3, 2)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(75, 26)
@@ -739,6 +798,9 @@ Partial Class Form1
         'Panel7
         '
         Me.Panel7.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Panel7.Controls.Add(Me.Label24)
+        Me.Panel7.Controls.Add(Me.Label22)
+        Me.Panel7.Controls.Add(Me.Label21)
         Me.Panel7.Controls.Add(Me.Label20)
         Me.Panel7.Controls.Add(Me.Label19)
         Me.Panel7.Controls.Add(Me.Label18)
@@ -754,6 +816,26 @@ Partial Class Form1
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(749, 483)
         Me.Panel7.TabIndex = 9
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.ForeColor = System.Drawing.Color.DarkGray
+        Me.Label22.Location = New System.Drawing.Point(481, 3)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(49, 15)
+        Me.Label22.TabIndex = 31
+        Me.Label22.Text = "2 PART"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.ForeColor = System.Drawing.Color.DarkGray
+        Me.Label21.Location = New System.Drawing.Point(228, 3)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(49, 15)
+        Me.Label21.TabIndex = 30
+        Me.Label21.Text = "1 PART"
         '
         'Label20
         '
@@ -853,7 +935,7 @@ Partial Class Form1
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(109, 15)
+        Me.Label4.Location = New System.Drawing.Point(109, 24)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(219, 19)
         Me.Label4.TabIndex = 18
@@ -888,6 +970,17 @@ Partial Class Form1
         Me.Panel11.Size = New System.Drawing.Size(749, 30)
         Me.Panel11.TabIndex = 10
         '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Roboto", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.ForeColor = System.Drawing.Color.LightCoral
+        Me.Label24.Location = New System.Drawing.Point(115, 42)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(21, 15)
+        Me.Label24.TabIndex = 32
+        Me.Label24.Text = "ax"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -909,6 +1002,8 @@ Partial Class Form1
         Me.MenuStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel12.ResumeLayout(False)
+        Me.Panel12.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelTitleBar.ResumeLayout(False)
         Me.Panel7.ResumeLayout(False)
@@ -999,4 +1094,11 @@ Partial Class Form1
     Friend WithEvents ToolStripMenuItem8 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem9 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem10 As ToolStripMenuItem
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents RadioButton4 As RadioButton
+    Friend WithEvents RadioButton3 As RadioButton
+    Friend WithEvents Panel12 As Panel
+    Friend WithEvents Label24 As Label
 End Class

@@ -3,13 +3,14 @@ Imports System.Runtime.InteropServices
 
 Public Class Form1
     Dim graphic As Graphics
+    Dim timing As Integer = 99000000
     Dim msgError As String = "Importante: Datos incorrectos (número) o faltantes. "
     ' * i18n languages ES - EN
     Dim menu1Es As String = "Información del estudiante" : Dim menu1En As String = "Student information"
     Dim menu1Content1Es = "Ver información" : Dim menu1Content1En As String = "See information"
     Dim menu2Es As String = "Gráficos simétricos" : Dim menu2En As String = "Symetric graphics"
     Dim menu3Es As String = "Gráficos Aleatorios" : Dim menu3En As String = "Random graphics"
-    Dim graphicTextEs As String = "Linea simétrica" : Dim graphicTextEn As String = "Graphic"
+    Dim graphicTextEs As String = "Linea simétrica" : Dim graphicTextEn As String = "Symmetric line"
     Dim labelTitleBarEs As String = "Práctico de Gráficos" : Dim labelTitleBarEn As String = "Graphic Practice"
     Dim labelTextBoxEs As String = "Escribir n partes/líneas" : Dim labelTextBoxEn As String = "Write n parts/lines"
     Dim btnCreateGraphicEs As String = "Crear gráfico" : Dim btnCreateGraphicEn As String = "Create graphic"
@@ -94,7 +95,16 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         RadioButton1.Checked = True
         RadioButton2.Checked = False
+        RadioButton3.Checked = True
+        RadioButton4.Checked = False
         graphic = PictureBox1.CreateGraphics
+    End Sub
+
+    Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged
+        timing = 99000000
+    End Sub
+    Private Sub RadioButton4_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton4.CheckedChanged
+        timing = 20000000
     End Sub
 
     Private Sub VerInformaciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerInformaciónToolStripMenuItem.Click
@@ -110,24 +120,43 @@ Public Class Form1
         GraphicToolStripMenuItem2.Text = "3. " + graphicTextEs
         GraphicToolStripMenuItem3.Text = "4. " + graphicTextEs
         GraphicToolStripMenuItem4.Text = "5. " + graphicTextEs + " bezier"
-        GraphicToolStripMenuItem5.Text = "6. " + graphicTextEs + " random"
-        GraphicToolStripMenuItem6.Text = "7. " + graphicTextEs + " random"
-        GraphicToolStripMenuItem7.Text = "8. " + graphicTextEs + " random"
-        GraphicToolStripMenuItem8.Text = "9. " + graphicTextEs + " random"
-        GraphicToolStripMenuItem9.Text = "10. " + graphicTextEs + " random"
+        GraphicToolStripMenuItem5.Text = "6. " + graphicTextEs + " aleatoria"
+        GraphicToolStripMenuItem6.Text = "7. " + graphicTextEs + " aleatoria"
+        GraphicToolStripMenuItem7.Text = "8. " + graphicTextEs + " aleatoria"
+        GraphicToolStripMenuItem8.Text = "9. " + graphicTextEs + " aleatoria"
+        GraphicToolStripMenuItem9.Text = "10. " + graphicTextEs + " aleatoria"
         SymmetricGraphicsToolStripMenuItem.Text = "Lineas simétricas"
         RandomGraphicsToolStripMenuItem.Text = "Lineas aleatorias random"
         RectangleToolStripMenuItem.Text = "Rectangulos simétricos"
         ToolStripMenuItem1.Text = "Elipses simétricas"
+        ToolStripMenuItem2.Text = "1. " + "Rectangulos"
+        RectangleToolStripMenuItem1.Text = "2. " + "Rectangulos"
+        RectangleToolStripMenuItem2.Text = "3. " + "Rectangulos"
+        RectangleToolStripMenuItem3.Text = "4. " + "Rectangulos"
+        RectangleRandomToolStripMenuItem.Text = "5. " + "Rectangulos aleatorios"
+        RectangleRandomToolStripMenuItem1.Text = "6. " + "Rectangulos aleatorios"
+        RectangleRandomToolStripMenuItem2.Text = "7. " + "Rectangulos aleatorios"
+        RectangleRandomToolStripMenuItem3.Text = "8. " + "Rectangulos aleatorios"
+        ToolStripMenuItem3.Text = "1. " + "Elipses"
+        ToolStripMenuItem4.Text = "2. " + "Elipses"
+        ToolStripMenuItem5.Text = "3. " + "Elipses"
+        ToolStripMenuItem6.Text = "4. " + "Elipses"
+        ToolStripMenuItem7.Text = "5. " + "Elipses aleatorias"
+        ToolStripMenuItem8.Text = "6. " + "Elipses aleatorias"
+        ToolStripMenuItem9.Text = "7. " + "Elipses aleatorias"
+        ToolStripMenuItem10.Text = "8. " + "Elipses aleatorias"
         Label1.Text = changeEs
         Label2.Text = labelTextBoxEs
         Label3.Text = labelTitleBarEs
         Label4.Text = "Aquí se pintara el gráfico:"
         Label15.Text = "Ancho"
         Label16.Text = "Alto"
+        Label23.Text = "Retardo"
         Button1.Text = btnCreateGraphicEs
         Button2.Text = btnCleanGraphicsEs
         Button3.Text = btnResetEs
+        RadioButton4.Text = "Rapido"
+        RadioButton3.Text = "Lento"
     End Sub
     ' * English
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
@@ -138,21 +167,38 @@ Public Class Form1
         GraphicToolStripMenuItem2.Text = "3. " + graphicTextEn
         GraphicToolStripMenuItem3.Text = "4. " + graphicTextEn
         GraphicToolStripMenuItem4.Text = "5. " + graphicTextEn
-        GraphicToolStripMenuItem5.Text = "6. " + graphicTextEn
-        GraphicToolStripMenuItem6.Text = "7. " + graphicTextEn
-        GraphicToolStripMenuItem7.Text = "8. " + graphicTextEn
-        GraphicToolStripMenuItem8.Text = "9. " + graphicTextEn
-        GraphicToolStripMenuItem9.Text = "10. " + graphicTextEn
+        GraphicToolStripMenuItem5.Text = "6. " + graphicTextEn + " random"
+        GraphicToolStripMenuItem6.Text = "7. " + graphicTextEn + " random"
+        GraphicToolStripMenuItem7.Text = "8. " + graphicTextEn + " random"
+        GraphicToolStripMenuItem8.Text = "9. " + graphicTextEn + " random"
+        GraphicToolStripMenuItem9.Text = "10. " + graphicTextEn + " random"
         SymmetricGraphicsToolStripMenuItem.Text = "Symmetric lines"
         RandomGraphicsToolStripMenuItem.Text = "Symmetric random lines"
         RectangleToolStripMenuItem.Text = "Symmetric rectangles"
         ToolStripMenuItem1.Text = "Symmetric ellipses"
+        ToolStripMenuItem2.Text = "1. " + "Rectangles"
+        RectangleToolStripMenuItem1.Text = "2. " + "Rectangles"
+        RectangleToolStripMenuItem2.Text = "3. " + "Rectangles"
+        RectangleToolStripMenuItem3.Text = "4. " + "Rectangles"
+        RectangleRandomToolStripMenuItem.Text = "5. " + "Rectangle random"
+        RectangleRandomToolStripMenuItem1.Text = "6. " + "Rectangle random"
+        RectangleRandomToolStripMenuItem2.Text = "7. " + "Rectangle random"
+        RectangleRandomToolStripMenuItem3.Text = "8. " + "Rectangle random"
+        ToolStripMenuItem3.Text = "1. " + "Ellipses"
+        ToolStripMenuItem4.Text = "2. " + "Ellipses"
+        ToolStripMenuItem5.Text = "3. " + "Ellipses"
+        ToolStripMenuItem6.Text = "4. " + "Ellipses"
+        ToolStripMenuItem7.Text = "5. " + "Ellipses random"
+        ToolStripMenuItem8.Text = "6. " + "Ellipses random"
+        ToolStripMenuItem9.Text = "7. " + "Ellipses random"
+        ToolStripMenuItem10.Text = "8. " + "Ellipses random"
         Label1.Text = changeEn
         Label2.Text = labelTextBoxEn
         Label3.Text = labelTitleBarEn
         Label4.Text = "The graph will be drawn here:"
         Label15.Text = "Width"
         Label16.Text = "Height"
+        Label23.Text = "Time delay"
         Button1.Text = btnCreateGraphicEn
         Button2.Text = btnCleanGraphicsEn
         Button3.Text = btnResetEn
@@ -185,7 +231,7 @@ Public Class Form1
             pen.Width = 2
             Select Case gName
                 Case "line"
-                    graphic.DrawLine(pen, x, y, w, h) '' x1, y1, x2, y2
+                    graphic.DrawLine(pen, x, y, w, h) ' * x1, y1, x2, y2
                 Case "rectangle"
                     graphic.DrawRectangle(pen, x, y, w, h)
                 Case "ellipse"
@@ -212,12 +258,12 @@ Public Class Form1
             x1 = vi1 + (index - 1) * r1
             y2 = vi2 + (index - 1) * r2
             GraphicRandomColor(x1, y1, x2, y2, "line")
-            For j = 1 To 66000000
+            For j = 1 To timing
             Next
         Next
     End Sub
     ' *  2. Exercice symmetric graphics
-    Public Sub SymmetricGraphic2(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
+    Public Sub SymmetricGraphic2(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Boolean)
         Dim x1, x2, y1, y2, my, halfmx, r, vi As Single
         Dim index, j As UInt32
         my = by - ay : halfmx = (ax + bx) / 2
@@ -233,12 +279,12 @@ Public Class Form1
         For index = 1 To n + 1
             y2 = vi + (index - 1) * r
             GraphicRandomColor(x1, y1, x2, y2, "line")
-            For j = 1 To 66000000
+            For j = 1 To timing
             Next
         Next
     End Sub
     ' *  3. Exercice symmetric graphics
-    Public Sub SymmetricGraphic3(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
+    Public Sub SymmetricGraphic3(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Boolean)
         Dim x1, x2, y1, y2, my, halfmx, r, vi As Single
         Dim index, j As UInt32
         my = by - ay : halfmx = (ax + bx) / 2
@@ -253,12 +299,12 @@ Public Class Form1
         For index = 1 To n + 1
             y1 = vi + (index - 1) * r
             GraphicRandomColor(x1, y1, x2, y2, "line")
-            For j = 1 To 66000000
+            For j = 1 To timing
             Next
         Next
     End Sub
     ' *  4. Exercice symmetric graphics
-    Public Sub SymmetricGraphic4(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
+    Public Sub SymmetricGraphic4(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Boolean)
         Dim x1, x2, y1, y2, my, halfmx, r, vi As Single
         Dim index, j As UInt32
         my = by - ay : halfmx = (ax + bx) / 2
@@ -272,12 +318,12 @@ Public Class Form1
         For index = 1 To n
             y2 = vi + (index - 1) * r
             GraphicRandomColor(x1, y1, x2, y2, "line")
-            For j = 1 To 66000000
+            For j = 1 To timing
             Next
         Next
     End Sub
     ' *  5. Exercice symmetric graphics
-    Public Sub SymmetricGraphic5(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
+    Public Sub SymmetricGraphic5(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Boolean)
         Dim x1, x2, y1, y2, my, mx, halfmx, r1, r2, vi1, vi2 As Single
         Dim index, j As UInt32
         mx = bx - ax : my = by - ay : halfmx = (ax + bx) / 2
@@ -299,12 +345,13 @@ Public Class Form1
                 x2 = vi2 - (index - 1) * r2
                 GraphicRandomColor(x1, y1, x2, y2, "line")
             End If
-            For j = 1 To 66000000
+            For j = 1 To timing
             Next
         Next
     End Sub
+
     ' * 6. Exercise random graphics
-    Public Sub RandomLines6(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
+    Public Sub RandomLines6(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Boolean)
         Dim x1, x2, y1, y2, my, halfmx, halfmy As Single
         Dim index, j As UInt32
         my = by - ay : halfmx = (ax + bx) / 2 : halfmy = (ay + by) / 2
@@ -318,22 +365,22 @@ Public Class Form1
                 x2 = ax + Rnd() * (halfmx - ax)
             End If
             GraphicRandomColor(x1, y1, x2, y2, "line")
-            For j = 1 To 66000000
+            For j = 1 To timing
             Next
         Next
     End Sub
 
     ' * 7. Exercise random graphics
-    Public Sub RandomLines7(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
+    Public Sub RandomLines7(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Boolean)
         Dim x1, x2, y1, y2, my, halfmx As Single
         Dim index, j As UInt32
         my = by - ay : halfmx = (ax + bx) / 2
         CreateRectangleWithHalf(ax, bx, ay, by, "vertical") 'Vertical
         y1 = ay + (my / 2)
         If half Then
-            x1 = ax + (halfmx / 2)
+            x1 = (ax + halfmx) / 2
         Else
-            x1 = halfmx + (halfmx / 2)
+            x1 = halfmx + ((bx - ax) / 2) / 2
         End If
         For index = 1 To n
             y2 = ay + Rnd() * my
@@ -349,7 +396,7 @@ Public Class Form1
     End Sub
 
     ' * 8. Exercice random graphics
-    Public Sub RandomLines8(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
+    Public Sub RandomLines8(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Boolean)
         Dim x1, x2, y1, y2, my, halfmx As Single
         Dim index, j As UInt32
         CreateRectangleWithHalf(ax, bx, ay, by, "vertical") 'Vertical
@@ -363,15 +410,14 @@ Public Class Form1
             End If
             y2 = y1
             GraphicRandomColor(x1, y1, x2, y2, "line")
-            For j = 1 To 66000000
+            For j = 1 To timing
             Next
         Next
     End Sub
-
     ' * 9 Exercice random graphics
-    Public Sub RandomLines9(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
+    Public Sub RandomLines9(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Boolean)
         Dim x1, x2, y1, y2, halfmx As Single
-        Dim aux As Double = True
+        Dim aux As Boolean = True
         Dim index, j As UInt32
         CreateRectangleWithHalf(ax, bx, ay, by, "vertical") 'Vertical
         halfmx = (bx + ax) / 2 : y1 = ay : y2 = by
@@ -393,13 +439,12 @@ Public Class Form1
             End If
             aux = Not aux
             x1 = x2
-            For j = 1 To 99999000
+            For j = 1 To timing
             Next
         Next
     End Sub
-
     ' * 10 Exercice random graphics
-    Public Sub RandomLines10(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Double)
+    Public Sub RandomLines10(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Boolean)
         Dim x1, x2, y1, y2, my, halfmx As Single
         Dim index, j As UInt32
         my = by - ay : halfmx = (ax + bx) / 2
@@ -417,7 +462,7 @@ Public Class Form1
             End If
             GraphicRandomColor(x1, y1, x2, y2, "line")
             x1 = x2 : y1 = y2
-            For j = 1 To 99999000
+            For j = 1 To timing
             Next
         Next
     End Sub
@@ -430,6 +475,20 @@ Public Class Form1
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Refresh()
         Frame()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Refresh()
+        Frame()
+        TextBox1.Clear()
+        TextBox2.Clear()
+        TextBox3.Clear()
+        TextBox4.Clear()
+        TextBox5.Clear()
+        RadioButton1.Checked = True
+        RadioButton2.Checked = False
+        RadioButton3.Checked = True
+        RadioButton4.Checked = False
     End Sub
 
     Private Sub GraphicToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GraphicToolStripMenuItem.Click
@@ -522,7 +581,6 @@ Public Class Form1
         End Try
     End Sub
 
-
     ' * <--- SECOND PART OF PRACTICE --->
     ' * 1. Symmetric Rectangle
     Public Sub SymmetricRectangle1(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, graphicName As String)
@@ -538,7 +596,7 @@ Public Class Form1
             w = vi2 + (index - 1) * r2
             h = vi3 + (index - 1) * r3
             GraphicRandomColor(x, y, w, h, graphicName)
-            For j = 1 To 99999000
+            For j = 1 To timing
             Next
         Next
     End Sub
@@ -555,7 +613,7 @@ Public Class Form1
         For index = 1 To n
             y = vi1 + (index - 1) * r1
             GraphicRandomColor(x, y, w, h, graphicName)
-            For j = 1 To 99999000
+            For j = 1 To timing
             Next
         Next
     End Sub
@@ -574,7 +632,7 @@ Public Class Form1
             y = vi2 - (index - 1) * r2
             h = vi3 + (index - 1) * r3
             GraphicRandomColor(x, y, w, h, graphicName)
-            For j = 1 To 99999000
+            For j = 1 To timing
             Next
         Next
     End Sub
@@ -590,7 +648,7 @@ Public Class Form1
             x = vi1 + (index - 1) * r1
             y = vi2 - (index - 1) * r2
             GraphicRandomColor(x, y, w, h, graphicName)
-            For j = 1 To 99999000
+            For j = 1 To timing
             Next
         Next
     End Sub
@@ -612,7 +670,7 @@ Public Class Form1
             x = ax + Rnd() * (bx - ax)
             w = Rnd() * (bx - x)
             GraphicRandomColor(x, y, w, h, graphicName)
-            For j = 1 To 99999000
+            For j = 1 To timing
             Next
         Next
     End Sub
@@ -633,11 +691,10 @@ Public Class Form1
             x = ax + Rnd() * (bx - ax)
             w = bx - x
             GraphicRandomColor(x, y, w, h, graphicName)
-            For j = 1 To 99999000
+            For j = 1 To timing
             Next
         Next
     End Sub
-
     ' * 7. Symmetric Rectangle Random
     Public Sub SymmetricRectangleRandom7(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, half As Boolean, graphicName As String)
         Dim x, y, w, h, halfmy As Single
@@ -655,11 +712,10 @@ Public Class Form1
             x = ax + Rnd() * (bx - ax)
             w = bx - x
             GraphicRandomColor(x, y, w, h, graphicName)
-            For j = 1 To 99999000
+            For j = 1 To timing
             Next
         Next
     End Sub
-
     ' * 8. Symmetric Rectangle Random
     Public Sub SymmetricRectangleRandom8(ax As Single, bx As Single, ay As Single, by As Single, n As UInt32, graphicName As String)
         Dim x, y, w, h, halfmy, halfmx As Single
@@ -672,7 +728,7 @@ Public Class Form1
             w = (halfmx - x) * 2
             h = (halfmy - y) * 2
             GraphicRandomColor(x, y, w, h, graphicName)
-            For j = 1 To 99999000
+            For j = 1 To timing
             Next
         Next
     End Sub
