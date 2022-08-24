@@ -1,6 +1,9 @@
 # Práctico de Gráficos
 ### Lineas y Rectángulos Simétricos
 
+![Practice of visual basic graphics](https://user-images.githubusercontent.com/88288135/186324425-7aec102d-8980-41e2-a756-1a96a3ffffc8.gif)
+
+
 Realizar los gráficos como un proyecto en Visual Basic.
 - Todos los gráficos simétricos toman N Partes
 - Todos los gráficos aleatorios toman N Líneas
