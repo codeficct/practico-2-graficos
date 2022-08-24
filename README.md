@@ -14,9 +14,9 @@ Realizar los gráficos como un proyecto en Visual Basic.
 
 ## Contenido
 1. [Ejercicio 1](#ejercicio-1)
-2. [Ejercicio 2](#ejercicio-1)
-3. [Ejercicio 3](#ejercicio-1)
-4. [Ejercicio 4](#ejercicio-1)
+2. [Ejercicio 2](#ejercicio-2)
+3. [Ejercicio 3](#ejercicio-3)
+4. [Ejercicio 4](#ejercicio-4)
 5. [Ejercicio 5](#ejercicio-5)
 6. [Ejercicio 6](#ejercicio-6)
 7. [Ejercicio 7](#ejercicio-7)
